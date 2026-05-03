@@ -34,3 +34,7 @@ music_dataset
 .pytest_cache
 .ruff_cache
 .mypy_cache
+
+# ML pipeline outputs
+ml/data/
+ml/artifacts/

@@ -1,0 +1,48 @@
+# Smaller preset for 8 GB unified memory (MacBook Air class machines).
+# Usage: RECROS_ML_CONFIG=ml/config.mac_air.yaml ./ml/run_local.sh
+
+ingest:
+  max_ratings_rows: 900000
+
+paths:
+  processed_dir: ml/data/processed
+  features_dir: ml/data/features
+  artifacts_dir: ml/artifacts
+
+datasets:
+  movies_metadata: movie_dataset/movies_metadata.csv
+  movies_links: movie_dataset/links.csv
+  movies_ratings: movie_dataset/ratings.csv
+  movies_keywords: movie_dataset/keywords.csv
+  music_tracks: music_dataset/data_music.csv
+  books: book_dataset/book_data.csv
+
+split:
+  val_user_fraction: 0.1
+  random_seed: 42
+
+training:
+  positive_rating_threshold: 4.0
+  negatives_per_positive_movie: 3
+  cross_domain_samples_per_user: 12
+  bootstrap_weak_positive_threshold: 0.35
+  max_users: 8000
+  max_movie_rows_per_user: 60
+  max_training_rows: 350000
+
+lightgbm:
+  objective: binary
+  metric: auc
+  num_threads: 8
+  num_leaves: 48
+  learning_rate: 0.06
+  feature_fraction: 0.85
+  bagging_fraction: 0.85
+  bagging_freq: 1
+  min_data_in_leaf: 40
+  num_boost_round: 350
+  early_stopping_rounds: 40
+
+evaluation:
+  k_list: [5, 10, 20]
+  ranking_candidates_per_user: 80
