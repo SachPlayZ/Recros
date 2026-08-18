@@ -1,0 +1,13 @@
+.git
+.venv
+.venv-api
+__pycache__
+*.pyc
+.DS_Store
+movie_dataset/rating.csv
+movie_dataset/keywords.csv
+movie_dataset/links.csv
+movie_dataset/Cross_Domain_Recommendation_System_Report.tex
+ml/data
+tasks
+

@@ -1,0 +1,3 @@
+# Retrain nightly at 02:00. Install with: crontab -e
+0 2 * * * cd /Users/sachplayz/Projects/Recros && RECROS_ML_CONFIG=ml/config.full.yaml ./scripts/retrain.sh
+

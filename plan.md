@@ -8,13 +8,30 @@ Build an MVP of the cross-domain intelligent recommendation system from the arch
 
 - Create the greenfield monorepo structure with Next.js frontend, FastAPI backend, ML workspace, and local infra.
 - Define PostgreSQL schema for users, profiles, content, interactions, embeddings, recommendations, and model versions.
-- Build dataset ingestion scripts for The Movies Dataset, the Spotify music dataset, and the Books Dataset.
+- Build dataset ingestion scripts for The Movies Dataset, the Spotify music dataset, and the Books Dataset _(CSV → unified parquet catalog done under `ml/`; loading into Postgres still pending Phase 1)._
 - Implement onboarding quiz, profile normalization, and LLM-assisted profile enrichment.
 - Implement hybrid candidate generation from content similarity, similar users, metadata filters, and cross-domain expansion.
-- Write the full ML training pipeline: normalize datasets, synthesize cross-domain training pairs, build features, train LightGBM, evaluate, and export artifacts.
+- **Done:** Full ML training pipeline under `ml/`: ingest CSVs into unified `items` / `users` / `interactions`, synthesize cross-domain training pairs, tabular features, train LightGBM, offline ranking metrics, export versioned bundles, inference helper (`recros_ml.inference`).
 - Expose the recommendation API with ranker inference, diversity/fairness reranking, and explanation generation.
 - Build the recommendation UI and store feedback events for the improvement loop.
-- Add periodic retraining/evaluation scripts and model version tracking.
+- Add periodic retraining/evaluation scripts and model version tracking _(CLI pipeline is repeatable; scheduled jobs + DB-backed promotion still pending)._
+
+## ML pipeline status (implemented)
+
+The **`ml/`** workspace is in place with a reproducible command-line pipeline:
+
+| Piece | Location / notes |
+|--------|------------------|
+| Config | `ml/config.yaml` (default), `ml/config.mac_air.yaml` (lighter RAM preset), logging tunables under `logging:` |
+| One-shot local run | `ml/run_local.sh` from repo root (venv, `pip install -e ml/`, ingest → features → train → evaluate → export) |
+| Ingest & unified tables | `python -m recros_ml.ingest` → `ml/data/processed/*.parquet` (movies via ratings × links × metadata × keywords; music; books; dedupe `item_key`; optional `ingest.max_ratings_rows`) |
+| Features & training pairs | `python -m recros_ml.build_features` → `ml/data/features/train_pairs.parquet`, `feature_columns.json` |
+| Train | `python -m recros_ml.train` → `ml/artifacts/ranker_lgb.txt`, `train_meta.json`, `val_users.json` |
+| Evaluate | `python -m recros_ml.evaluate` → `ml/artifacts/eval_metrics.json` (NDCG@K, Recall@K, MAP@K, coverage, novelty proxies, cross-domain stats) |
+| Export bundle | `python -m recros_ml.export` → `ml/artifacts/bundle_<utc>/`, `bundle_latest` symlink or directory copy |
+| Inference hook | `recros_ml.inference.RankerInference.from_bundle(...)` for FastAPI wiring |
+
+**Still to align with product MVP:** serve the bundle from **`apps/api`**, generate **candidate feature rows** in the backend (Phase 3), and replace bootstrap labels with **real feedback** once stored (Phase 7).
 
 ## Recommended MVP Stack
 
@@ -33,8 +50,8 @@ Use a Python-first backend because the project has local datasets and needs mode
 The training code should target these sources:
 
 - Movies: Kaggle `rounakbanik/the-movies-dataset`.
-  - Local files found: `movie_dataset/movies_metadata.csv`, `movie_dataset/keywords.csv`, `movie_dataset/links.csv`, `movie_dataset/ratings.csv`.
-  - `ratings.csv` has the standard `userId,movieId,rating,timestamp` schema, so it can drive the first supervised ranker.
+  - Local files found: `movie_dataset/movies_metadata.csv`, `movie_dataset/keywords.csv`, `movie_dataset/links.csv`, `movie_dataset/rating.csv`.
+  - `rating.csv` has the standard `userId,movieId,rating,timestamp` schema, so it can drive the first supervised ranker.
   - Not currently found: `credits.csv`, `links_small.csv`.
   - Useful fields: movie title, overview, genres, popularity, vote average/count, release date, keywords, cast/crew, and explicit user ratings.
 - Music: Kaggle Spotify dataset used by `vatsalmavani/music-recommendation-system-using-spotify-dataset`.
@@ -48,7 +65,7 @@ The training code should target these sources:
 
 Because the movie dataset now includes real user ratings while books and music are still item-only, the MVP training code should support two training modes:
 
-- Supervised movie ranking from `ratings.csv`, joined through `links.csv` to `movies_metadata.csv` and `keywords.csv`.
+- Supervised movie ranking from `rating.csv`, joined through `links.csv` to `movies_metadata.csv` and `keywords.csv`.
 - Cross-domain bootstrap ranking for books and music using content similarity, popularity, category matches, synthetic weak labels, and later real app feedback.
 
 ## Target MVP Flow
@@ -77,10 +94,10 @@ flowchart LR
 
 Start with a small monorepo:
 
-- `apps/web`: Next.js frontend.
-- `apps/api`: FastAPI backend and recommendation service.
+- `apps/web`: Next.js frontend _(not created yet)_.
+- `apps/api`: FastAPI backend and recommendation service _(not created yet)_.
 - `packages/shared`: shared API types/schemas if useful.
-- `ml`: dataset preparation, feature generation, model training, evaluation, and exported artifacts.
+- **`ml`: present** — dataset ingest to parquet, feature generation, LightGBM train/eval/export, local run script (`ml/run_local.sh`).
 - `infra`: Docker Compose, database init, migrations, and deployment notes.
 - `docs`: architecture notes, ranking metrics, data contracts, and feedback loop design.
 
@@ -117,22 +134,30 @@ Implement hybrid candidate retrieval before ranking:
 
 Expose this behind an internal backend module like `candidate_generation`, not directly to the UI.
 
-## Phase 4: Training Code To Write
+## Phase 4: Training Code _(implemented under `ml/`)_
 
-Write the model-training code as a reproducible Python pipeline under `ml` so the training can be run with commands instead of manual ML work:
+The model-training code is a reproducible Python pipeline under **`ml/`**, runnable via CLI (no manual notebook steps).
 
-- `ml/config.yaml`: dataset paths, feature settings, train/test split, model parameters, and artifact paths.
-- `ml/src/recros_ml/ingest`: loaders for movies, music, and books.
-- `ml/src/recros_ml/normalize`: converts every dataset into common `items`, `users`, and `interactions` tables.
-- `ml/src/recros_ml/features`: builds user-item features such as text similarity, genre/category overlap, popularity-adjusted score, recency, domain match, creator match, and audio-feature similarity for music.
-- `ml/src/recros_ml/train.py`: trains the first LightGBM ranking model.
-- `ml/src/recros_ml/evaluate.py`: reports NDCG@K, Recall@K, MAP@K, coverage, novelty, and cross-domain diversity.
-- `ml/src/recros_ml/export.py`: exports the model, encoders, feature schema, metrics, and version metadata.
-- `ml/src/recros_ml/inference.py`: provides a simple function the FastAPI backend can call to score candidate items.
+**Delivered layout:**
 
-The first training implementation should use LightGBM because it is beginner-friendly, fast, strong on tabular ranking features, and easier to inspect than a neural model.
+- `ml/config.yaml` / `ml/config.mac_air.yaml`: dataset paths, ingest sampling caps, training/feature caps, split, LightGBM hyperparameters, artifact paths, logging intervals.
+- `ml/src/recros_ml/ingest` (+ `loaders.py`): loads movies, music, books CSVs; joins ratings × links × metadata × keywords; writes unified **`items`**, **`users`**, **`interactions`** parquet _(normalize is folded into ingest loaders rather than a separate package)_.
+- `ml/src/recros_ml/features`: builds supervised **user–item pair** rows with tabular features (genre overlap vs movie taste profile, popularity/year/item rating, domain one-hots, music audio fields from `extra_json`, etc.).
+- `ml/src/recros_ml/build_features.py`: CLI module that writes `train_pairs.parquet` and `feature_columns.json`.
+- `ml/src/recros_ml/train.py`: trains **LightGBM binary** classifier on pairs (early stopping, user-held-out validation split).
+- `ml/src/recros_ml/evaluate.py`: offline ranking metrics on validation users within the pair file (NDCG@K, Recall@K, MAP@K, coverage, novelty proxy, cross-domain fraction).
+- `ml/src/recros_ml/export.py`: copies model + schema + metrics into **`ml/artifacts/bundle_<utc>/`** and refreshes **`bundle_latest`**.
+- `ml/src/recros_ml/inference.py`: **`RankerInference`** bundle loader + **`predict_frame`** for backend scoring.
 
-Recommended commands:
+The first training implementation uses LightGBM because it is beginner-friendly, fast, strong on tabular ranking features, and easier to inspect than a neural model.
+
+**Recommended commands** (repo root; use `mac_air` preset on low-RAM laptops):
+
+```bash
+RECROS_ML_CONFIG=ml/config.mac_air.yaml ./ml/run_local.sh
+```
+
+Step-by-step equivalent:
 
 ```bash
 python -m recros_ml.ingest --config ml/config.yaml
@@ -144,8 +169,8 @@ python -m recros_ml.export --config ml/config.yaml
 
 Training strategy:
 
-- Use `movie_dataset/ratings.csv` as the strongest initial supervised signal.
-- Join `ratings.csv.movieId` to `links.csv.movieId`, then map `links.csv.tmdbId` to `movies_metadata.csv.id` and `keywords.csv.id`.
+- Use `movie_dataset/rating.csv` as the strongest initial supervised signal.
+- Join `rating.csv.movieId` to `links.csv.movieId`, then map `links.csv.tmdbId` to `movies_metadata.csv.id` and `keywords.csv.id`.
 - Convert high ratings to positive examples and low ratings to negative examples.
 - Generate candidate negatives from unseen movies and sampled cross-domain books/music.
 - Treat books and music as bootstrap domains using normalized book `average_rating` plus `ratings_count`, music `popularity`, metadata similarity, and pseudo-user clusters.
@@ -199,15 +224,15 @@ Before expanding the system, validate it with a small test group or offline repl
 ## Key MVP Deliverables
 
 - Working onboarding flow.
-- Imported dataset-backed content catalog.
+- Imported dataset-backed content catalog _(parquet catalog done; Postgres-backed catalog pending)_.
 - Persistent profile, content, interaction, and recommendation stores.
 - Hybrid candidate generator.
-- Complete beginner-friendly training code for movies, music, and books.
-- Trainable LightGBM ranker with exported artifacts and inference helper.
+- **Done:** Beginner-friendly training code for movies, music, and books (CLI pipeline + configs).
+- **Done:** Trainable LightGBM ranker with exported **`bundle_latest`** artifacts and **`RankerInference`** helper.
 - Diversity/fairness reranking module.
 - LLM-generated explanations.
 - Recommendation UI with feedback capture.
-- Retraining/evaluation script for model iteration.
+- Retraining/evaluation script for model iteration _(same CLI can be rerun; scheduling + promotion workflow pending)_.
 
 ## Deliberately Deferred
 

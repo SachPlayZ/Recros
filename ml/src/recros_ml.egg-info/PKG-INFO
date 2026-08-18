@@ -30,7 +30,19 @@ chmod +x ml/run_local.sh
 Optional:
 
 - Use the lighter preset (less RAM, faster): `RECROS_ML_CONFIG=ml/config.mac_air.yaml ./ml/run_local.sh`
+- Use all rows from `movie_dataset/rating.csv` while keeping training pairs bounded: `RECROS_ML_CONFIG=ml/config.full.yaml ./ml/run_local.sh`
 - Override thread caps (avoid oversubscription on laptops): `OMP_NUM_THREADS=8 ./ml/run_local.sh`
+
+### Logs (always streaming)
+
+- Shell script prints **timestamped phase banners** (`=== recros_ml.train ===`).
+- Python logs go to **stderr** with timestamps and flush after every line (`PYTHONUNBUFFERED=1` is set in `run_local.sh`).
+- Tune verbosity: `RECROS_LOG_LEVEL=DEBUG ./ml/run_local.sh` or per-step `python -m recros_ml.train -v`.
+- Feature generation prints progress every **N users** (`logging.feature_progress_every_users` in YAML).
+- LightGBM validation metrics print every **N rounds** (`logging.lightgbm_eval_period` in YAML).
+- Save full transcript: `./ml/run_local.sh 2>&1 | tee ml/last_run.log`
+
+When switching between `config.yaml` and `config.mac_air.yaml`, let **`ingest` run again** (the script always does) so `interactions.parquet` matches the preset’s `max_ratings_rows`. If you previously ingested with a larger sample, delete `ml/data/processed/` before rerunning with the lighter preset.
 
 ## Manual steps
 

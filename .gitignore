@@ -37,4 +37,11 @@ music_dataset
 
 # ML pipeline outputs
 ml/data/
-ml/artifacts/
+ml/artifacts/*
+!ml/artifacts/.gitkeep
+ml/last_run.log
+ml/full_run.log
+ml/retrain_*.log
+
+# Local Recros app state
+apps/api/data/

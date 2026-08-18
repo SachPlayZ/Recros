@@ -6,6 +6,8 @@ src/recros_ml/config.py
 src/recros_ml/evaluate.py
 src/recros_ml/export.py
 src/recros_ml/inference.py
+src/recros_ml/logging_setup.py
+src/recros_ml/smoke_predict.py
 src/recros_ml/train.py
 src/recros_ml.egg-info/PKG-INFO
 src/recros_ml.egg-info/SOURCES.txt

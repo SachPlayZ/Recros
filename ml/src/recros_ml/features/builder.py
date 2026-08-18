@@ -1,12 +1,15 @@
 from __future__ import annotations
 
 import json
+import logging
 import random
 from collections import defaultdict
 from typing import Any
 
 import numpy as np
 import pandas as pd
+
+log = logging.getLogger(__name__)
 
 AUDIO_KEYS = [
     "valence",
@@ -36,6 +39,14 @@ def _jaccard(a: set[str], b: set[str]) -> float:
     return inter / union if union else 0.0
 
 
+def _loc_item(items_idx: pd.DataFrame, ik: str) -> pd.Series:
+    """Single row for ``ik``; duplicate indices collapse to the first row."""
+    row = items_idx.loc[ik]
+    if isinstance(row, pd.DataFrame):
+        row = row.iloc[0]
+    return row
+
+
 def build_user_movie_genre_weights(
     interactions: pd.DataFrame,
     items_idx: pd.DataFrame,
@@ -49,7 +60,7 @@ def build_user_movie_genre_weights(
         ik = str(row.item_key)
         if ik not in items_idx.index:
             continue
-        it = items_idx.loc[ik]
+        it = _loc_item(items_idx, ik)
         w = float(row.rating) - pos_threshold + 0.1
         for g in _genre_set(str(it["genres_str"])):
             weights[uid][g] += w
@@ -71,17 +82,35 @@ def row_features(
     global_year_median: float,
     global_vote_median: float,
 ) -> dict[str, float]:
+    if isinstance(item, pd.DataFrame):
+        item = item.iloc[0]
+
+    def _cell(key: str):
+        v = item[key]
+        if isinstance(v, pd.Series):
+            v = v.iloc[0]
+        return v
+
     gprof_top = _top_genre_set(genre_profile)
-    ig = _genre_set(str(item["genres_str"]))
+    gs = _cell("genres_str")
+    ig = _genre_set(str(gs))
     genre_j = _jaccard(gprof_top, ig)
 
-    pop = float(item["popularity"]) if pd.notna(item["popularity"]) else 0.0
-    year = float(item["year"]) if pd.notna(item["year"]) else global_year_median
-    avg_r = float(item["avg_rating"]) if pd.notna(item["avg_rating"]) else global_vote_median
+    pop_v = _cell("popularity")
+    pop = float(pop_v) if pd.notna(pop_v) else 0.0
+    year_v = _cell("year")
+    year = float(year_v) if pd.notna(year_v) else global_year_median
+    avg_v = _cell("avg_rating")
+    avg_r = float(avg_v) if pd.notna(avg_v) else global_vote_median
+
+    dom = str(_cell("domain"))
 
     extra = {}
     try:
-        extra = json.loads(str(item.get("extra_json") or "{}"))
+        ex = item.get("extra_json", "{}")
+        if isinstance(ex, pd.Series):
+            ex = ex.iloc[0]
+        extra = json.loads(str(ex or "{}"))
     except json.JSONDecodeError:
         extra = {}
 
@@ -90,11 +119,11 @@ def row_features(
         "year": year,
         "rating_item": avg_r,
         "genre_jaccard": genre_j,
-        "desc_len_log": float(np.log1p(len(str(item.get("description") or "")))),
-        "title_len_log": float(np.log1p(len(str(item.get("title") or "")))),
-        "domain_movie": 1.0 if item["domain"] == "movie" else 0.0,
-        "domain_music": 1.0 if item["domain"] == "music" else 0.0,
-        "domain_book": 1.0 if item["domain"] == "book" else 0.0,
+        "desc_len_log": float(np.log1p(len(str(_cell("description"))))),
+        "title_len_log": float(np.log1p(len(str(_cell("title"))))),
+        "domain_movie": 1.0 if dom == "movie" else 0.0,
+        "domain_music": 1.0 if dom == "music" else 0.0,
+        "domain_book": 1.0 if dom == "book" else 0.0,
     }
 
     for k in AUDIO_KEYS:
@@ -106,10 +135,16 @@ def row_features(
 def build_training_frame(cfg: dict[str, Any]) -> tuple[pd.DataFrame, list[str]]:
     rng = random.Random(int(cfg["split"]["random_seed"]))
     np_rng = np.random.default_rng(int(cfg["split"]["random_seed"]))
+    log_cfg = cfg.get("logging") or {}
+    progress_every = int(log_cfg.get("feature_progress_every_users", 250))
 
     processed = cfg["paths"]["processed_dir"]
+    log.info("Loading items.parquet from %s", processed)
     items = pd.read_parquet(f"{processed}/items.parquet")
+    items = items.drop_duplicates(subset=["item_key"], keep="first").reset_index(drop=True)
+    log.info("Loading interactions.parquet...")
     interactions = pd.read_parquet(f"{processed}/interactions.parquet")
+    log.info("items=%s interactions=%s", len(items), len(interactions))
 
     items_idx = items.set_index("item_key", drop=False)
 
@@ -134,7 +169,9 @@ def build_training_frame(cfg: dict[str, Any]) -> tuple[pd.DataFrame, list[str]]:
         eligible_users = eligible_users[: int(max_users)]
 
     eligible_set = set(eligible_users)
+    log.info("Building genre profiles from positive movie ratings...")
     genre_profiles = build_user_movie_genre_weights(interactions, items_idx, pos_thr)
+    log.info("Users with genre profiles=%s", len(genre_profiles))
 
     year_med = float(np.nanmedian(items["year"].dropna())) if items["year"].notna().any() else 2000.0
     mv = items.loc[items["domain"] == "movie", "avg_rating"]
@@ -155,11 +192,17 @@ def build_training_frame(cfg: dict[str, Any]) -> tuple[pd.DataFrame, list[str]]:
 
     rows: list[dict[str, Any]] = []
     movie_key_set = set(movie_keys)
+    log.info(
+        "Generating pair rows (eligible_users=%s max_training_rows=%s progress_every=%s)...",
+        len(eligible_users),
+        max_rows,
+        progress_every,
+    )
 
     def append_row(uid: int, ik: str, label: int) -> None:
         if ik not in items_idx.index:
             return
-        it = items_idx.loc[ik]
+        it = _loc_item(items_idx, ik)
         prof = genre_profiles.get(uid, {})
         f = row_features(it, prof, year_med, global_vote_median)
         f["user_id"] = uid
@@ -167,7 +210,7 @@ def build_training_frame(cfg: dict[str, Any]) -> tuple[pd.DataFrame, list[str]]:
         f["label"] = int(label)
         rows.append(f)
 
-    for uid in eligible_users:
+    for ui, uid in enumerate(eligible_users):
         rated = user_ratings.get(uid, {})
         if len(rated) > max_mu:
             subs = rng.sample(sorted(rated.items()), max_mu)
@@ -193,16 +236,27 @@ def build_training_frame(cfg: dict[str, Any]) -> tuple[pd.DataFrame, list[str]]:
         for _ in range(cd_n):
             if rng.random() < 0.5 and book_keys:
                 bik = rng.choice(book_keys)
-                book = items_idx.loc[bik]
+                book = _loc_item(items_idx, bik)
                 gj = _jaccard(prof_set, _genre_set(str(book["genres_str"])))
                 lbl = 1 if gj >= weak_thr else 0
                 append_row(uid, bik, lbl)
             elif music_keys:
                 mik = rng.choice(music_keys)
-                music = items_idx.loc[mik]
-                pop = float(music["popularity"]) if pd.notna(music["popularity"]) else 0.0
+                music = _loc_item(items_idx, mik)
+                pop_v = music["popularity"]
+                if isinstance(pop_v, pd.Series):
+                    pop_v = pop_v.iloc[0]
+                pop = float(pop_v) if pd.notna(pop_v) else 0.0
                 lbl = 1 if pop >= music_pop_p75 else 0
                 append_row(uid, mik, lbl)
+
+        if progress_every > 0 and (ui + 1) % progress_every == 0:
+            log.info(
+                "features progress users=%s/%s accumulated_rows=%s",
+                ui + 1,
+                len(eligible_users),
+                len(rows),
+            )
 
         if len(rows) >= max_rows:
             break
@@ -213,4 +267,5 @@ def build_training_frame(cfg: dict[str, Any]) -> tuple[pd.DataFrame, list[str]]:
 
     frame = pd.DataFrame(rows)
     feature_cols = sorted([c for c in frame.columns if c not in ("user_id", "item_key", "label")])
+    log.info("Built training frame rows=%s cols=%s positive_rate=%.4f", len(frame), len(feature_cols), float(frame["label"].mean()) if len(frame) else 0.0)
     return frame, feature_cols

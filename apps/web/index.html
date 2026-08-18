@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recros — one taste, many rabbit holes</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <nav class="nav">
+        <div class="brand"><span class="brand-mark">r</span><span>recros</span></div>
+        <div class="nav-note">cross-domain taste engine <span class="status-dot"></span></div>
+      </nav>
+
+      <section id="onboarding" class="onboarding">
+        <div class="eyebrow">A better way to wander</div>
+        <h1>One taste.<br /><em>Many rabbit holes.</em></h1>
+        <p class="lede">Tell us what pulls you in. Recros connects the dots between what you watch, read, and listen to.</p>
+
+        <div class="onboard-grid">
+          <div class="onboard-panel">
+            <label>What are you here for?</label>
+            <div class="chips" data-group="domains">
+              <button data-value="movie">Films</button><button data-value="book">Books</button><button data-value="music">Music</button>
+            </div>
+            <label>What keeps you curious?</label>
+            <div class="chips" data-group="genres">
+              <button data-value="Science Fiction">Science fiction</button><button data-value="Drama">Human stories</button><button data-value="Fantasy">Fantasy</button><button data-value="Comedy">Comedy</button><button data-value="Thriller">Thrillers</button><button data-value="Romance">Romance</button><button data-value="History">History</button><button data-value="Mystery">Mystery</button>
+            </div>
+            <label>Pick a mood</label>
+            <div class="chips" data-group="moods">
+              <button data-value="thoughtful">Thoughtful</button><button data-value="joyful">Joyful</button><button data-value="dark">Dark</button><button data-value="calm">Calm</button><button data-value="energizing">Energizing</button>
+            </div>
+            <label class="range-label">How far should we wander? <span id="range-value">balanced</span></label>
+            <input id="exploration" type="range" min="0" max="1" step="0.1" value="0.5" />
+            <button id="start" class="primary">Build my taste profile <span>→</span></button>
+          </div>
+          <div class="onboard-aside">
+            <div class="aside-card"><span class="quote-mark">“</span><p>Recommendations should feel like a friend who knows your taste — and still surprises you.</p><span class="aside-caption">THE RECROS PRINCIPLE</span></div>
+            <div class="mini-stats"><div><strong>03</strong><span>domains</span></div><div><strong>∞</strong><span>directions</span></div><div><strong>01</strong><span>taste profile</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="app" class="app hidden">
+        <header class="app-header">
+          <div><div class="eyebrow">Your taste, in motion</div><h2>Good things to fall into.</h2><p id="profile-summary">A mix shaped around your curiosities.</p></div>
+          <button id="edit-profile" class="ghost">Edit profile</button>
+        </header>
+        <div class="toolbar"><div class="tabs" id="domain-tabs"><button class="active" data-domain="all">All paths</button><button data-domain="movie">Films</button><button data-domain="book">Books</button><button data-domain="music">Music</button></div><button id="refresh" class="refresh">↻ Refresh</button></div>
+        <div id="recommendations" class="recommendations"><div class="loading">Following the thread<span>…</span></div></div>
+        <div class="feedback-note"><span>✦</span> Your choices tune the next set. Like, save, or skip anything.</div>
+      </section>
+      <footer><span>RECROS / 2026</span><span>THE SHORTEST PATH TO A NEW OBSESSION</span></footer>
+    </main>
+    <script src="/assets/app.js"></script>
+  </body>
+</html>
+

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import logging
 from collections import defaultdict
 from pathlib import Path
 
@@ -10,6 +11,9 @@ import numpy as np
 import pandas as pd
 
 from recros_ml.config import load_config
+from recros_ml.logging_setup import add_log_arguments, setup_logging_args
+
+log = logging.getLogger(__name__)
 
 
 def _dcg(relevances: np.ndarray, k: int) -> float:
@@ -53,12 +57,15 @@ def average_precision_at_k(relevances: np.ndarray, k: int) -> float:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Offline ranking metrics on held-out users.")
     parser.add_argument("--config", type=str, default="ml/config.yaml")
+    add_log_arguments(parser)
     args = parser.parse_args()
+    setup_logging_args(args)
 
     cfg = load_config(args.config)
     feat_dir = Path(cfg["paths"]["features_dir"])
     art_dir = Path(cfg["paths"]["artifacts_dir"])
 
+    log.info("Loading features and validation split...")
     df = pd.read_parquet(feat_dir / "train_pairs.parquet")
     feature_cols: list[str] = json.loads((feat_dir / "feature_columns.json").read_text())
     val_users = set(json.loads((art_dir / "val_users.json").read_text()))
@@ -67,9 +74,11 @@ def main() -> None:
     best_it = int(train_meta.get("best_iteration") or -1)
 
     model = lgb.Booster(model_file=str(art_dir / "ranker_lgb.txt"))
+    log.info("Loaded booster best_iteration(meta)=%s", best_it)
 
     val_df = df[df["user_id"].isin(val_users)].copy()
     X = val_df[feature_cols]
+    log.info("Scoring val subset rows=%s ...", len(val_df))
     val_df["score"] = model.predict(X, num_iteration=best_it)
 
     ks = [int(k) for k in cfg["evaluation"]["k_list"]]
@@ -91,6 +100,7 @@ def main() -> None:
     novelty_scores: list[float] = []
 
     users_evaluated = 0
+    log.info("Computing ranking metrics per user (cap=%s k_max=%s)...", cap, k_max)
     for _uid, part in val_df.groupby("user_id"):
         part = part.sort_values("score", ascending=False).head(cap)
         rel = part["label"].to_numpy(dtype=float)
@@ -136,7 +146,8 @@ def main() -> None:
 
     out_path = art_dir / "eval_metrics.json"
     out_path.write_text(json.dumps(metrics, indent=2))
-    print(json.dumps(metrics, indent=2))
+    log.info("Wrote metrics -> %s", out_path)
+    log.info("%s", json.dumps(metrics, indent=2))
 
 
 if __name__ == "__main__":

@@ -2,11 +2,14 @@ from __future__ import annotations
 
 import ast
 import json
+import logging
 import re
 from pathlib import Path
 from typing import Any
 
 import pandas as pd
+
+log = logging.getLogger(__name__)
 
 
 def _parse_genre_like(cell: Any) -> list[str]:
@@ -67,13 +70,25 @@ def load_links(path: Path) -> pd.DataFrame:
     return df.dropna(subset=["movieId", "tmdbId"])
 
 
-def load_ratings(path: Path) -> pd.DataFrame:
-    df = pd.read_csv(path)
+def load_ratings(path: Path, max_rows: int | None = None) -> pd.DataFrame:
+    read_kwargs = {"usecols": ["userId", "movieId", "rating", "timestamp"]}
+    if max_rows is not None:
+        log.info("Reading at most %s ratings rows from %s", max_rows, path)
+        read_kwargs["nrows"] = int(max_rows)
+    df = pd.read_csv(path, **read_kwargs)
     df["userId"] = pd.to_numeric(df["userId"], errors="coerce").astype("Int64")
     df["movieId"] = pd.to_numeric(df["movieId"], errors="coerce").astype("Int64")
     df["rating"] = pd.to_numeric(df["rating"], errors="coerce")
-    df["timestamp"] = pd.to_numeric(df["timestamp"], errors="coerce").astype("Int64")
-    return df.dropna(subset=["userId", "movieId", "rating"])
+    numeric_timestamp = pd.to_numeric(df["timestamp"], errors="coerce")
+    if numeric_timestamp.notna().mean() >= 0.9:
+        timestamp = numeric_timestamp
+    else:
+        parsed_timestamp = pd.to_datetime(df["timestamp"], errors="coerce", utc=True)
+        timestamp = parsed_timestamp.map(
+            lambda value: int(value.timestamp()) if pd.notna(value) else pd.NA
+        )
+    df["timestamp"] = timestamp.astype("Int64")
+    return df.dropna(subset=["userId", "movieId", "rating", "timestamp"])
 
 
 def load_music(path: Path) -> pd.DataFrame:
@@ -231,22 +246,42 @@ def build_all_tables(cfg: dict[str, Any]) -> tuple[pd.DataFrame, pd.DataFrame, p
     ingest_cfg = cfg.get("ingest") or {}
     seed = int(cfg.get("split", {}).get("random_seed", 42))
 
+    log.info("Loading movies_metadata: %s", ds["movies_metadata"])
     movies_raw = load_movies_metadata(Path(ds["movies_metadata"]))
+    log.info("movies_metadata rows=%s", len(movies_raw))
+    log.info("Loading keywords: %s", ds["movies_keywords"])
     keywords = load_keywords(Path(ds["movies_keywords"]))
+    log.info("Loading links: %s", ds["movies_links"])
     links = load_links(Path(ds["movies_links"]))
-    ratings = load_ratings(Path(ds["movies_ratings"]))
+    log.info("Loading ratings: %s", ds["movies_ratings"])
     mr = ingest_cfg.get("max_ratings_rows")
-    if mr is not None and len(ratings) > int(mr):
-        ratings = ratings.sample(n=int(mr), random_state=seed).reset_index(drop=True)
+    ratings = load_ratings(Path(ds["movies_ratings"]), max_rows=int(mr) if mr is not None else None)
+    log.info("ratings rows=%s", len(ratings))
+    log.info("Loading music: %s", ds["music_tracks"])
     music_raw = load_music(Path(ds["music_tracks"]))
+    log.info("music rows=%s", len(music_raw))
+    log.info("Loading books: %s", ds["books"])
     books_raw = load_books(Path(ds["books"]))
+    log.info("books rows=%s", len(books_raw))
 
+    log.info("Building normalized movie/music/book item rows...")
     movies_kw = attach_keywords(movies_raw, keywords)
     items_movie = build_movie_items(movies_kw)
     items_music = build_music_items(music_raw)
     items_book = build_book_items(books_raw)
     items = pd.concat([items_movie, items_music, items_book], ignore_index=True)
+    items = items.drop_duplicates(subset=["item_key"], keep="first").reset_index(drop=True)
+    log.info(
+        "Catalog items=%s (movie=%s music=%s book=%s)",
+        len(items),
+        len(items_movie),
+        len(items_music),
+        len(items_book),
+    )
 
+    log.info("Building interactions from ratings x links...")
     interactions = build_interactions(ratings, links)
+    log.info("interactions rows=%s", len(interactions))
     users = build_users(interactions)
+    log.info("distinct users=%s", len(users))
     return items, users, interactions

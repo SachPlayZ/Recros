@@ -2,17 +2,23 @@ from __future__ import annotations
 
 import argparse
 import json
+import logging
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 
 from recros_ml.config import load_config
+from recros_ml.logging_setup import add_log_arguments, setup_logging_args
+
+log = logging.getLogger(__name__)
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Bundle model, schema, and metrics for deployment.")
     parser.add_argument("--config", type=str, default="ml/config.yaml")
+    add_log_arguments(parser)
     args = parser.parse_args()
+    setup_logging_args(args)
 
     cfg = load_config(args.config)
     art_dir = Path(cfg["paths"]["artifacts_dir"])
@@ -21,6 +27,7 @@ def main() -> None:
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     bundle = art_dir / f"bundle_{stamp}"
     bundle.mkdir(parents=True, exist_ok=True)
+    log.info("Creating bundle %s", bundle)
 
     copies = [
         (art_dir / "ranker_lgb.txt", bundle / "ranker_lgb.txt"),
@@ -31,14 +38,17 @@ def main() -> None:
     ]
     for src, dst in copies:
         if src.exists():
+            log.info("Copy %s -> %s", src.name, dst.name)
             shutil.copy2(src, dst)
+        else:
+            log.warning("Skip missing optional file %s", src)
 
     manifest = {
         "version": stamp,
         "created_utc": stamp,
         "repo_root": cfg["_repo_root"],
         "config_path": cfg["_config_path"],
-        "files": [p.name for _, p in copies if p.exists()],
+        "files": [src.name for src, _ in copies if src.exists()],
     }
     (bundle / "manifest.json").write_text(json.dumps(manifest, indent=2))
 
@@ -50,10 +60,12 @@ def main() -> None:
             shutil.rmtree(latest)
     try:
         latest.symlink_to(bundle.name, target_is_directory=True)
+        log.info("Symlink ml/artifacts/bundle_latest -> %s", bundle.name)
     except OSError:
         shutil.copytree(bundle, latest)
+        log.info("Copied bundle_latest directory from %s (symlink not supported)", bundle.name)
 
-    print(f"Exported bundle -> {bundle}")
+    log.info("Export complete -> %s", bundle)
 
 
 if __name__ == "__main__":

@@ -12,7 +12,7 @@ paths:
 datasets:
   movies_metadata: movie_dataset/movies_metadata.csv
   movies_links: movie_dataset/links.csv
-  movies_ratings: movie_dataset/ratings.csv
+  movies_ratings: movie_dataset/rating.csv
   movies_keywords: movie_dataset/keywords.csv
   music_tracks: music_dataset/data_music.csv
   books: book_dataset/book_data.csv
@@ -47,3 +47,8 @@ lightgbm:
 evaluation:
   k_list: [5, 10, 20]
   ranking_candidates_per_user: 100
+
+# Frequent logs during long steps (features loop + LightGBM eval prints).
+logging:
+  lightgbm_eval_period: 10
+  feature_progress_every_users: 250
