@@ -2,6 +2,17 @@
 
 Recros is a cross-domain recommendation app for discovering movies, books, and music through one evolving taste profile.
 
+## Get the datasets
+
+The CSVs aren't in git (about 740 MB, Kaggle licenses). Download them once from Kaggle:
+
+```bash
+pip install kaggle   # then put your API token in ~/.kaggle/kaggle.json (kaggle.com → Settings → API)
+./scripts/fetch_datasets.sh
+```
+
+This fills `movie_dataset/`, `music_dataset/` and `book_dataset/`. Sources: [The Movies Dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset), [MovieLens 20M](https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset), [Spotify 1921-2020](https://www.kaggle.com/datasets/vatsalmavani/spotify-dataset), [7k Books](https://www.kaggle.com/datasets/dylanjcastillo/7k-books-with-metadata).
+
 ## Run the MVP
 
 ```bash
@@ -13,7 +24,7 @@ PYTHONPATH=apps/api .venv-api/bin/uvicorn recros_api.main:app --reload
 
 Open [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-The app stores local state in `apps/api/data/recros.db` (ignored by git). The seeder reads the bundled CSV datasets. Users can choose domains, genres, moods, and exploration level; recommendations are scored across domains and updated from like/save/skip feedback.
+The app stores local state in `apps/api/data/recros.db` (ignored by git). The seeder reads the downloaded CSV datasets. Users can choose domains, genres, moods, and exploration level; recommendations are scored across domains and updated from like/save/skip feedback.
 
 ## Auth and operations
 

@@ -1,6 +1,6 @@
 # Recros ML pipeline (local / Apple Silicon)
 
-Runs entirely on CPU. Tested layout: **Python 3.11+**, repo root = directory that contains `ml/` and the `*_dataset/` folders from the Kaggle downloads (paths in `ml/config.yaml`).
+Runs entirely on CPU. Tested layout: **Python 3.11+**, repo root = directory that contains `ml/` and the `*_dataset/` folders from the Kaggle downloads (`./scripts/fetch_datasets.sh`) (paths in `ml/config.yaml`).
 
 ## One-shot run (Mac M4 Air friendly)
 
