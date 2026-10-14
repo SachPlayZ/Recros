@@ -1,0 +1,2094 @@
+[
+  {
+    "lto_id": "movie: 12 Monkeys (1995)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: 20 (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: 2010: The Year We Make Contact (1984)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: 2020 Texas Gladiators (1984)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: 2067 (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: 3000 A.D. (1952)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: 4D Man (1959)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: A Bomb Was Stolen (1961)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: A Fire in the Sky (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: A Great Space Voyage (1975)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: A Long Return (1975)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: A Message from Mars (1913)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: A Novice at X-rays (1898)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: A Trip to Mars (1918)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Aelita (1924)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Aeon Flux (2005)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Aftershock (1990)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Algol: Tragedy of Power (1920)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Alien 3 (1992)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Alien Abduction (2005)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Alien Dead (1980)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Alien Intruder (1993)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Alien Seed (1989)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Alien Species (1996)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Alien Terminator (1988)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Alien vs Predator (2004)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Alienator (1990)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Alita: Battle Angel (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: All Monsters Attack (1969)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Alraune (1930)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: American Cyborg: Steel Warrior (1993)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Andy Colbys Incredible Adventure (1988)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Anna to the Infinite Power (1983)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Annihilator (1986)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: AntMan and the Wasp (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Aquanauts (1980)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Arcadia of My Youth (1982)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Archive (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Around the World in 80 Days (1956)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: As Time Goes By (1988)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Assassin (1986)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Assassin 33 AD (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Atom Age Vampire (1960)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Atomic Rulers (1964)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Attack from Space (1964)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Avengers: Endgame (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Avengers: Infinity War (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Babylon 5: The Legend Of The Rangers (2002)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Bad Channels (1992)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Battle Beyond the Sun (1962)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Beau Travail (1999)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Before I Hang (1940)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Beyond Atlantis (1973)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Bill and Ted Face the Music (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Bill and Teds Bogus Journey (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Bill and Teds Excellent Adventure (1989)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Bionic Ever After? (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Bionic Showdown: The Six Million Dollar Man and the Bionic Woman (1989)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Black Oxen (1923)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Black Panther (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Blade Runner 2049 (2017)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Bloodshot (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Body Melt (1993)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Brain Twisters (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: BrainWaves (1983)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Brave New World (1980)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Breach (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Bride of ReAnimator (1990)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Bumblebee (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Burst City (1982)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Cafe Flesh (1982)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Capricorn One (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Captain Marvel (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Caravan of Courage An Ewok Adventure (1984)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Chaos Walking (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Cimmaron (1931)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Circuit Breaker (1996)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: City Limits (1985)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: City Under the Sea (1965)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Cloned (1997)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Color Out of Space (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Contract (1985)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Cosmic Sin (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Cosmic Slop (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Cosmic Voyage (1936)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Cosmos: War of the Planets (1977)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Counterblast (1948)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Creature of Destruction (1968)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Creepozoids (1987)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Critters 2: The Main Course (1988)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Critters Attack (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Crusher Joe: The Movie (1983)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Cyborg 2087 (1966)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Cyborg 3: The Recycler (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Cyborg Cop (1993)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Cyborg Cop 2 (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Cyborg Soldier (2008)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Dark Metropolis (2010)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Dark Phoenix (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Dark Planet (1997)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Day the World Ended (1955)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Dead by Midnight (1997)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Deadpool 2 (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Death Game (1996)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Death Powder (1986)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Death Run (1987)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Decoys 2: The Second Seduction (2007)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Deep Blue Sea 2 (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Deep Blue Sea 3 (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Deja Vu (2006)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Deluge (1933)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Destination Inner Space (1966)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Die Gstettensaga: The Rise of Echsenfriedl (2014)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Dimension 5 (1966)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Doctor Bloods Coffin (1961)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Dogora (1964)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Dont Look Up (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Dr Strangelove (1964)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Dr. Jekyll and Mr. Hyde (1920 I)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Dr. Jekyll and Mr. Hyde (1920 II)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Dr. Renault's Secret (1942)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Dune (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Duplicates (1992)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Earth II (1971)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Earth Star Voyager (1988)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Earthbound (1981)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Ebirah Horror of the Deep (1966)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Eliminators (1986)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Empire of Ash (1988)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Empire of Ash III (1989)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Encounter (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Endgame (1983)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Escape (1971)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Escape from Galaxy 3 (1981)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Evil Aliens (2005)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Evil Brain from Outer Space (1964)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: ExoMan (1977)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: F.P.1 Doesn't Respond (1932)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Falling Fire (1997)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Fanny and Alexander (1982)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Fatal Sky (1990)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Finch (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Fire Maidens from Outer Space (1956)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Firebird 2015 AD (1981)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Flatland: The Movie (2007)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Flight to Mars (1951)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Footprints on the Moon (1975)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Frankenstein (2025)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Frankenstein Meets the Space Monster (1965)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Frankenstein: The College Years (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Frankenstein: The True Story (1973)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Frankensteins Daughter (1958)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Fugitive Alien (1986)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Furia (1999)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Galaxis (1995)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Gamera 2: Attack of Legion (1996)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Gamera 3: Revenge of Iris (1999)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Gamera the Giant Monster (1965)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Gamera: Guardian of the Universe (1995)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Gamera: Super Monster (1980)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Gargantua (1998)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Gemini Man (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Genesis II (1973)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Ghost Patrol (1936)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Godzilla 2000: Millennium (1999)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Godzilla vs Kong (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Godzilla vs Monster Zero (1965)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Godzilla: City on the Edge of Battle (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Godzilla: King of the Monsters (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Godzilla: Planet of the Monsters (2017)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Godzilla: The Planet Eater (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Gorath (1962)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Gugusse and the Automaton (1897)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: H G Wells The Shape of Things to Come (1979)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Half Human (1955)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Hardware Wars (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Hauser's Memory (1970)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Her Husbands Affairs (1947)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: High Treason (1929)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Horrors of Spider Island (1960)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: How Green Was My Valley (1940)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: HuMan (1975)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Humanoids from the Deep (1996)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: I Come in Peace (1990)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: I'll Never Forget You (1951)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: In the Year 2889 (1967)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Invaders from Space (1964)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Invasion (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Invasion for Flesh and Blood (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Invasion from Inner Earth (1974)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Island City (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: It (1990)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: It Happened Here (1964)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Ivan Vasilievich Back to the Future (1973)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Journey to the Center of Time (1967)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Journey to the Center of the Earth (1993)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Jurassic World: Fallen Kingdom (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Knight Rider 2000 (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Knight Rider 2010 (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: L'Atlantide (1932)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: La Charcuterie m\u00e9canique (1895)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: La Jetee (1962)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Legend of Dinosaurs  Monster Birds (1977)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Libra (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Life Returns (1935)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Liquid Sky (1983)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Lords of the Deep (1989)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Loss of Sensation (1935)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Lost Planet Airmen (1951)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Malevil (1981)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Man from Atlantis (1977)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Man from Atlantis II: The Death Scouts (1977)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Man from Atlantis III: Killer Spores (1977)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Man from Atlantis IV: The Disappearances (1977)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Man in the Moon (1960)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Man with the Transplanted Brain (1972)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Master of the Shadowless Kick: Wong Kei-Ying (2016)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Max Headroom: 20 Minutes into the Future (1985)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Meet the Hollowheads (1989)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Memoirs of a Survivor (1981)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Men Must Fight (1933)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Men in Black: International (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Mesa of Lost Women (1953)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Meteor Apocalypse (2010)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Million Dollar Duck (1971)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Mimic 3: Sentinel (2003)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Mindwarp (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Minor Premise (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Mission Mars (1968)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Mission Stardust (1967)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Monster from Green Hell (1958)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Monster from the Ocean Floor (1954)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Monster on the Campus (1958)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Monstroid (1980)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Moon Pilot (1962)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Morels Invention (1974)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: MoscowCassiopeia (1974)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Mosquito (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Most Dangerous Man Alive (1961)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: MotherAndroid (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Mr. Murder (1998)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Murder in Space (1985)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Murder on the Moon (1989)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Mutant Species (1995)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Mutant on the Bounty (1989)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Mutiny in Outer Space (1965)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Mysterious Two (1982)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Needle in a Timestack (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Nemesis 3: Prey Harder (1996)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Nemesis 5: The New Model (2017)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Neon City (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: New Eden (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Night Caller from Outer Space (1965)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Night Raiders (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Night of the Bloody Apes (1969)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Nightflyers (1987)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Non-Stop New York (1937)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Nosferatu A Symphony of Horror (1922)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Not Like Us (1995)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Not of This Earth (1957)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Not of This Earth (1995)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Not of This World (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Odin: Photon Sailer Starlight (1985)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Official Denial (1993)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Omega Cop (1990)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: On the Threshold of Space (1956)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Once Upon a Time... (1990)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Outer Touch (1979)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Outside the Wire (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Overdrawn at the Memory Bank (1983)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Oxygen (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: PG: Psycho Goreman (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Parasite (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Per Aspera Ad Astra (1981)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: PeutEtre (1999)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Phantom from Space (1953)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Phoenix 2772 (1980)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Plague (1979)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Planeta Bur (1962)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Plughead Rewired: Circuitry Man II (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Plymouth (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Possessor (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Post Impact (2004)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Prayer of the Rollerboys (1990)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Prehistoric Women (1950)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Prison Ship (1986)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Prisoners of YamagiriMaru (1988)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Probe (1972)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Progeny (1999)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Programmed to Kill (1987)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Project Metalbeast (1995)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Prototype (1983)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Pulse (1988)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Quatermass 2 (1957)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Quest for Love (1971)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Radioactive Dreams (1985)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Ravagers (1979)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Ready Player One (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Red Dwarf: The Promised Land (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Red Planet Mars (1952)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Rememory (2017)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Reminiscence (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Return to the Lost World (1992)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Riders to the Stars (1954)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Rising Storm (1989)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Road to the Stars (1957)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Robot Stories (2003): Clay",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Robot Stories (2003): Machine Love",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Robot Stories (2003): My Robot Baby",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Robowar (1988)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Rubbers Lover (1996)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Running Against Time (1990)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Scared to Death (1980)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Scenes from a Marriage (1974)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Scorcher (2002)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Scream and Scream Again (1970)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Settlers (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Seven (1995)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Shadow on the Land (1968)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: She Demons (1958)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: She Devil (1957)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Simone (2002)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Six Hours to Live (1932)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Skullduggery (1970)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Skylines (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Solaris (1968)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Soldier (1998)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Solo: A Star Wars Story (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Son of Ingagi (1940)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Space Invasion of Lapland (1959)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Space Master X7 (1958)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Space Sweepers (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Spaceman (1997)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Special Report: Journey to Mars (1996)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Spider-Man (1977)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: SpiderMan Strikes Back (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: SpiderMan: Far From Home (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: SpiderMan: Homecoming (2017)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: SpiderMan: Into the SpiderVerse (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: SpiderMan: The Dragons Challenge (1981)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Sputnik (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Srazhenie (1986)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Star Crystal (1986)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Star Knight (1985)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Star Pilot (1966)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Star Wars Holiday Special (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Star Wars: The Last Jedi (2017)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Star Wars: The Rise of Skywalker (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Starcrash (1979)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Starcrossed (1985)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Starship Troopers: Traitor of Mars (2017)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Steel and Lace (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Stowaway (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Stowaway to the Moon (1975)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Strange Holiday (1945)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Strange New World (1975)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Stranger from Venus (1954)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Strawberry Mansion (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Superintelligence (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Survival Earth (1985)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Suspect Device (1995)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Syngenor (1990)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Tales of Hoffman (1916)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Teenage Monster (1958)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Teenage Zombies (1959)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: TekWar: The Movie (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Tenet (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Terminator: Dark Fate (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Airship Destroyer (1909)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Alpha Incident (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Android Affair (1995)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Ape Man (1943)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The AstroZombies (1968)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Astronaut (1972)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Atlantis Interceptors (1983)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Aurora Encounter (1986)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Beast with a Million Eyes (1955)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Bermuda Triangle (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Blue Yonder (1985)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Boy Who Turned Yellow (1972)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Brain (1962)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Cape Canaveral Monsters (1960)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Clone Master (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Colossus of New York (1958)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Companion (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Corpse Vanishes (1942)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Cosmic Man (1959)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Crazy Ray (1924)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Curse (1987)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Cyclops (1957)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Day Time Ended (1979)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Day the Earth Stopped (2008)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Death Ray (1925)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Disappearance of Flight 412 (1974)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Eclipse, or the Courtship of the Sun and Moon (1907)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The End of the World (1916)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The End of the World (1931)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Extraordinary Adventures of Saturnino Farandola (1913)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Final Programme (1973)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Flying Serpent (1946)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Girl the Gold Watch & Everything (1980)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Head (1959)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Henderson Monster (1980)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Human Vapor (1960)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Incredible Hulk (1977)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Incredible Hulk: Death in the Family (1977)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Incredible Hulk: Married (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Invisible Man (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Invisible Woman (1983)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Jungle (1952)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Kovak Box (2006)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Lady Vanishes",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Lady and the Monster (1944)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Last Child (1971)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Last Dinosaur (1977)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Last War (1961)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Launching of Spaceship-1 (1940)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Lawless Land (1988)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Lesson (1987)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Lifeforce Experiment (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Lost World (1992)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Love War (1970)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Mad Ghoul (1943)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Madmen of Mandoras (1963)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Man Who Thought Life (1969)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Man Who Turned to Stone (1957)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Man in Half Moon Street (1945)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Manster (1959)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Matrix Resurrections (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Mechanical Man (1921)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Medusa Touch (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Midnight Sky (2020)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Monkey King 3 (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Monolith Monsters (1957)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Monster Maker (1944)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Mystery of the Third Planet (1981)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Navy vs the Night Monsters (1966)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Neptune Factor (1973)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Nest (1988)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Night the World Exploded (1957)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Noah (1975)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Nutty Professor (2008)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Osiris Chronicles (1998)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Pass (1988)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The People (1972)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Perfect Woman (1949)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Phantom from 10000 Leagues (1955)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Planets Against Us (1962)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Pod People (1983)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Power (1968)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Predator (2018)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Rat Saviour (1976)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Resurrection of Zachary Wheeler (1971)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Return of Godzilla (1984)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Return of the Six Million Dollar Man and the Bionic Woman (1987)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Salute of the Jugger (1989)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Secret of the Telegian (1960)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Six Million Dollar Man: The Moon and the Desert (1973)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Six Million Dollar Man: The Solid Gold Kidnapping (1973)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Six Million Dollar Man: Wine Women and War (1973)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Stepford Children (1987)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Stepford Husbands (1996)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Stranger Within (1974)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Super Inframan (1975)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Terror Beneath the Sea (1966)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Time Machine (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Tomorrow War (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Unknown Terror (1957)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Vampire (1957)",
+    "reason": "nonunique_or_missing_imdb_link"
+  },
+  {
+    "lto_id": "movie: The Wandering Earth (2019)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The War of the Worlds: Next Century (1983)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Wasp Woman (1995)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Wicked City (1992)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The X-Rays (1897)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The XFiles Fight the Future (1998)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: The Yesterday Machine (1963)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: They Saved Hitler's Brain (1968)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: This Is Not a Test (1962)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Thrill Seekers (1999)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Tidal Wave (1973)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Tides (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Timequest (2000)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Timescape (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Timestalkers (1987)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Trancers 4: Jack of Swords (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Trancers 5: Sudden Deth (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Trancers 6 (2002)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Trancers II (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Trancers III (1992)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Trancers: City of Lost Angels (1988)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Two Lost Worlds (1951)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: UFO: Target Earth (1974)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Under the Seas (1907)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Under the Skin (2013)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Unearthly Stranger (1964)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Unidentified Flying Oddball (1979)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Universal Soldier III: Unfinished Business (1998)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Unknown Island (1948)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Unknown World (1951)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Untamed Women (1952)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: V for Vendetta (2005)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Vampire Vixens from Venus (1995)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Variety Lights (1951)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Vegas in Space (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Venus Flytrap (1967)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Visitors from the Galaxy (1981)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Voyagers (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: War of the Robots (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: War of the Satellites (1958)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Warning (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Watchers III (1994)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Watchers IV (1998)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Wavelength (1983)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Where Have All the People Gone (1974)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: White Dwarf (1995)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Wild Wild Planet (1966)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: X-Men Last Stand (2006)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Xenogenesis (1978)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Xtro II: The Second Encounter (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Yesterday's Target (1996)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Zeiram (1991)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Zone 414 (2021)",
+    "reason": "nonunique_or_missing_title_year"
+  },
+  {
+    "lto_id": "movie: Zontar the Thing from Venus (1966)",
+    "reason": "nonunique_or_missing_title_year"
+  }
+]

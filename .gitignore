@@ -45,3 +45,8 @@ ml/retrain_*.log
 
 # Local Recros app state
 apps/api/data/
+
+# Local research environment and PDF inspection scratch files
+.venv-*/
+tmp/
+.commandcode/

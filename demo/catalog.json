@@ -1,0 +1,21 @@
+{
+  "provenance": "Hand-authored fictional catalog for a software demonstration. These are not real catalog records or human preference labels.",
+  "synthetic": true,
+  "items": [
+    {"id":"movie:space","domain":"movie","title":"Beyond the Last Planet","description":"An astronaut crew journeys beyond Earth to explore unknown planets and map distant star systems.","popularity":90},
+    {"id":"book:space","domain":"book","title":"The Cartographer of Stars","description":"A researcher boards a spacecraft and travels between distant worlds, documenting places no human has visited.","popularity":12},
+    {"id":"music:space","domain":"music","title":"Voyager's Ballad","description":"A folk song whose lyrics tell of astronauts sailing between planets and discovering new worlds.","popularity":8},
+    {"id":"movie:loss","domain":"movie","title":"The Empty Chair","description":"After her father's death, a daughter struggles with bereavement and learns to live with his absence.","popularity":60},
+    {"id":"book:loss","domain":"book","title":"Letters Never Sent","description":"A widow writes to her deceased husband while mourning the life they once shared.","popularity":10},
+    {"id":"music:loss","domain":"music","title":"Elegy at Dawn","description":"The lyrics mourn a loved one's death and describe the sorrow of a family left behind.","popularity":18},
+    {"id":"movie:resist","domain":"movie","title":"The Silent Square","description":"Citizens organize a nonviolent rebellion against an authoritarian regime that censors their speech.","popularity":75},
+    {"id":"book:resist","domain":"book","title":"Ink Against the Crown","description":"Underground printers defy a dictator's censorship and rally citizens to overthrow oppressive rule.","popularity":7},
+    {"id":"music:resist","domain":"music","title":"Voices in the Street","description":"A protest song calls on workers to resist an oppressive government and demand political freedom.","popularity":13},
+    {"id":"movie:friends","domain":"movie","title":"The Long Way Home","description":"Two lifelong friends support each other through a difficult journey, showing the strength of their bond.","popularity":50},
+    {"id":"book:friends","domain":"book","title":"A Table for Two","description":"Two strangers become close companions, building mutual trust and a lasting friendship over many years.","popularity":9},
+    {"id":"music:friends","domain":"music","title":"Beside You","description":"The lyrics celebrate a loyal friend who stays by your side and the enduring bond between companions.","popularity":16},
+    {"id":"movie:control","domain":"movie","title":"Bread in Thirty Minutes","description":"A cooking tutorial demonstrates measuring flour, kneading dough, and baking a loaf of bread.","popularity":95},
+    {"id":"book:control","domain":"book","title":"Tables and Measurements","description":"A reference manual lists unit conversions and arithmetic formulas for everyday measurements.","popularity":80},
+    {"id":"music:control","domain":"music","title":"Track 07","description":"No description or lyric information is available for this audio recording.","popularity":98}
+  ]
+}

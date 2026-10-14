@@ -1,0 +1,5003 @@
+[
+  {
+    "state": {
+      "id": "0017",
+      "source": {
+        "id": "movie: Doctor Bloods Coffin (1961)",
+        "title": "Doctor Bloods Coffin",
+        "domain": "movie",
+        "source_file": "stories/film/film-scifi-1960s.st.txt"
+      },
+      "target_domain": "book",
+      "source_themes": [
+        "father and son",
+        "heart transplant",
+        "human vs. monster",
+        "mad scientist stereotype",
+        "revival long after death",
+        "romantic love",
+        "unethical experimentation for scientific progress",
+        "unethical human experimentation",
+        "zombie"
+      ],
+      "request_pairs": [
+        {
+          "prefer": "speculative experience",
+          "avoid": "what if my personal identity came into question"
+        },
+        {
+          "prefer": "individual humans",
+          "avoid": "human self-reflection"
+        },
+        {
+          "prefer": "social ethical dilemma",
+          "avoid": "property rights vs. public interest"
+        },
+        {
+          "prefer": "human character",
+          "avoid": "opposition to authority"
+        }
+      ],
+      "features": [
+        "alternate reality",
+        "human character",
+        "human self-reflection",
+        "individual humans",
+        "opposition to authority",
+        "personal human experience",
+        "property rights vs. public interest",
+        "social ethical dilemma",
+        "social ethical issue",
+        "society",
+        "speculative experience",
+        "the human world",
+        "what if my personal identity came into question"
+      ],
+      "edges": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          12,
+          10
+        ]
+      ],
+      "lower": [
+        0,
+        1,
+        -3,
+        1,
+        -3,
+        0,
+        -3,
+        1,
+        0,
+        0,
+        1,
+        0,
+        -3
+      ],
+      "upper": [
+        0,
+        3,
+        -1,
+        3,
+        -1,
+        0,
+        -1,
+        3,
+        0,
+        0,
+        3,
+        0,
+        -1
+      ],
+      "midpoint": [
+        0,
+        2,
+        -2,
+        2,
+        -2,
+        0,
+        -2,
+        2,
+        0,
+        0,
+        2,
+        0,
+        -2
+      ],
+      "missing_fraction": 0.75,
+      "weight_width": 1,
+      "candidates": [
+        {
+          "id": "novel: The Island of Doctor Moreau (1896)",
+          "title": "The Island of Doctor Moreau",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: Never Let Me Go (2005)",
+          "title": "Never Let Me Go",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: Stoner (1965)",
+          "title": "Stoner",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: We (1920)",
+          "title": "We",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: Radetzky March (1932)",
+          "title": "Radetzky March",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: Journey to the Center of the Earth (1867)",
+          "title": "Journey to the Center of the Earth",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: Strange Case of Dr Jekyll and Mr Hyde (1886)",
+          "title": "Strange Case of Dr Jekyll and Mr Hyde",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: The Fall (1956)",
+          "title": "The Fall",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        }
+      ],
+      "observed": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          0,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        [
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        [
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null
+        ],
+        [
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          1,
+          null,
+          null,
+          null
+        ],
+        [
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0
+        ]
+      ],
+      "reference": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    "result": {
+      "id": "0017",
+      "source_domain": "movie",
+      "target_domain": "book",
+      "missing_fraction": 0.75,
+      "weight_width": 1,
+      "facets": 13,
+      "known_before": 22,
+      "known_after": 32,
+      "normalization": 24,
+      "selected": 0,
+      "flat_selected": 5,
+      "interval_selected": 1,
+      "exact_mmr": 12,
+      "flat_bound_same_item": 24,
+      "interval_bound_same_item": 24,
+      "flat_selection_coherent_regret": 12,
+      "interval_selection_coherent_regret": 12,
+      "exact_bounds": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "flat_bounds": [
+        24,
+        18,
+        18,
+        18,
+        18,
+        15,
+        21,
+        21
+      ],
+      "interval_bounds": [
+        24,
+        18,
+        18,
+        18,
+        22,
+        19,
+        21,
+        21
+      ],
+      "max_regret_challenger": 1,
+      "cut_runtime_seconds": 0.010625751987390686,
+      "cuts": 56,
+      "reference_midpoint_regret": 0,
+      "illustration_witness": {
+        "value": 12,
+        "chosen_labels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "challenger_labels": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "weights": [
+          0,
+          1,
+          -3,
+          1,
+          -3,
+          0,
+          -3,
+          1,
+          0,
+          0,
+          1,
+          0,
+          -3
+        ],
+        "graph_nodes": 41,
+        "graph_edges": 74,
+        "violations": 0,
+        "unpenalized_value": 12
+      }
+    },
+    "selection": "Post hoc largest bound-gap illustrations; not independently held-out examples."
+  },
+  {
+    "state": {
+      "id": "0263",
+      "source": {
+        "id": "novel: Twenty Thousand Leagues Under the Seas (1872)",
+        "title": "Twenty Thousand Leagues Under the Seas",
+        "domain": "book",
+        "source_file": "stories/literature/novel-various.st.txt"
+      },
+      "target_domain": "movie",
+      "source_themes": [
+        "Atlantis",
+        "anger",
+        "bird in a gilded cage",
+        "collecting objects",
+        "colonialism",
+        "coping with the death of one's entire family",
+        "coping with the death of someone",
+        "electricity",
+        "endangered species",
+        "facing bloodthirsty savages",
+        "fishing",
+        "helping a stranger in need",
+        "human vs. beast",
+        "human vs. captivity",
+        "hunting",
+        "master and servant",
+        "misanthropy",
+        "pleasure in nature",
+        "polar exploration",
+        "speculative submarine",
+        "speculative weapon",
+        "the desire for vengeance",
+        "the desire to get away from it all",
+        "the thirst for knowledge",
+        "voyage under the sea"
+      ],
+      "request_pairs": [
+        {
+          "prefer": "human character",
+          "avoid": "disillusionment"
+        },
+        {
+          "prefer": "human vs. beast",
+          "avoid": "facing a ferocious beast"
+        },
+        {
+          "prefer": "form of government",
+          "avoid": "anarchy"
+        },
+        {
+          "prefer": "human vs. human",
+          "avoid": "facing a genius adversary"
+        }
+      ],
+      "features": [
+        "anarchy",
+        "disillusionment",
+        "facing a ferocious beast",
+        "facing a genius adversary",
+        "facing adversity",
+        "form of government",
+        "human challenge in life",
+        "human character",
+        "human vs. beast",
+        "human vs. human",
+        "human vs. nature",
+        "individual humans",
+        "national social issue",
+        "personal human experience",
+        "society",
+        "the human world"
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          12
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          14,
+          15
+        ]
+      ],
+      "lower": [
+        -3,
+        -3,
+        -3,
+        -3,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "upper": [
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        3,
+        0,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "midpoint": [
+        -2,
+        -2,
+        -2,
+        -2,
+        0,
+        2,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "missing_fraction": 0.75,
+      "weight_width": 1,
+      "candidates": [
+        {
+          "id": "movie: 20000 Leagues Under the Sea (1916)",
+          "title": "20000 Leagues Under the Sea",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-before-1920.st.txt"
+        },
+        {
+          "id": "movie: 20000 Leagues Under the Sea (1954)",
+          "title": "20000 Leagues Under the Sea",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1950s.st.txt"
+        },
+        {
+          "id": "movie: Around the World Under the Sea (1966)",
+          "title": "Around the World Under the Sea",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1960s.st.txt"
+        },
+        {
+          "id": "movie: Under the Seas (1907)",
+          "title": "Under the Seas",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-before-1920.st.txt"
+        },
+        {
+          "id": "movie: The Mysterious Island (1929)",
+          "title": "The Mysterious Island",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1920s.st.txt"
+        },
+        {
+          "id": "movie: The Core (2003)",
+          "title": "The Core",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-2000s.st.txt"
+        },
+        {
+          "id": "movie: Captain Nemo and the Underwater City (1969)",
+          "title": "Captain Nemo and the Underwater City",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1960s.st.txt"
+        },
+        {
+          "id": "movie: From Hell It Came (1957)",
+          "title": "From Hell It Came",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1950s.st.txt"
+        }
+      ],
+      "observed": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ],
+        [
+          null,
+          0,
+          0,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1
+        ],
+        [
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1
+        ],
+        [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1
+        ]
+      ],
+      "reference": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "result": {
+      "id": "0263",
+      "source_domain": "book",
+      "target_domain": "movie",
+      "missing_fraction": 0.75,
+      "weight_width": 1,
+      "facets": 16,
+      "known_before": 34,
+      "known_after": 58,
+      "normalization": 24,
+      "selected": 0,
+      "flat_selected": 2,
+      "interval_selected": 2,
+      "exact_mmr": 12,
+      "flat_bound_same_item": 21,
+      "interval_bound_same_item": 21,
+      "flat_selection_coherent_regret": 12,
+      "interval_selection_coherent_regret": 12,
+      "exact_bounds": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "flat_bounds": [
+        21,
+        18,
+        12,
+        21,
+        21,
+        21,
+        21,
+        18
+      ],
+      "interval_bounds": [
+        21,
+        18,
+        12,
+        21,
+        23,
+        21,
+        21,
+        18
+      ],
+      "max_regret_challenger": 1,
+      "cut_runtime_seconds": 0.010866086020541843,
+      "cuts": 56,
+      "reference_midpoint_regret": 0,
+      "illustration_witness": {
+        "value": 12,
+        "chosen_labels": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "challenger_labels": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          -3,
+          -3,
+          -3,
+          -3,
+          0,
+          1,
+          0,
+          3,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "graph_nodes": 50,
+        "graph_edges": 100,
+        "violations": 0,
+        "unpenalized_value": 12
+      }
+    },
+    "selection": "Post hoc largest bound-gap illustrations; not independently held-out examples."
+  },
+  {
+    "state": {
+      "id": "0215",
+      "source": {
+        "id": "novel: The Driver's Seat (1970)",
+        "title": "The Driver's Seat",
+        "domain": "book",
+        "source_file": "stories/literature/novel-various.st.txt"
+      },
+      "target_domain": "movie",
+      "source_themes": [
+        "contemplating suicide",
+        "is there a purpose to life",
+        "mental illness",
+        "pathological lying",
+        "sadomasochism"
+      ],
+      "request_pairs": [
+        {
+          "prefer": "human life choice",
+          "avoid": "working hard vs. taking it easy in life"
+        },
+        {
+          "prefer": "human mental condition",
+          "avoid": "Stockholm syndrome"
+        },
+        {
+          "prefer": "human character",
+          "avoid": "humility"
+        },
+        {
+          "prefer": "metaphysics",
+          "avoid": "nihilism"
+        }
+      ],
+      "features": [
+        "Stockholm syndrome",
+        "human challenge in life",
+        "human character",
+        "human health condition",
+        "human life choice",
+        "human mental condition",
+        "human tough decision",
+        "humility",
+        "individual humans",
+        "metaphysics",
+        "nihilism",
+        "personal human experience",
+        "philosophy",
+        "the human world",
+        "the natural world",
+        "working hard vs. taking it easy in life"
+      ],
+      "edges": [
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          12,
+          14
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          15,
+          4
+        ]
+      ],
+      "lower": [
+        -3,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        -3,
+        0,
+        1,
+        -3,
+        0,
+        0,
+        0,
+        0,
+        -3
+      ],
+      "upper": [
+        -1,
+        0,
+        3,
+        0,
+        3,
+        3,
+        0,
+        -1,
+        0,
+        3,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "midpoint": [
+        -2,
+        0,
+        2,
+        0,
+        2,
+        2,
+        0,
+        -2,
+        0,
+        2,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        -2
+      ],
+      "missing_fraction": 0.75,
+      "weight_width": 1,
+      "candidates": [
+        {
+          "id": "movie: Tetsuo: The Iron Man (1989)",
+          "title": "Tetsuo: The Iron Man",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1980s.st.txt"
+        },
+        {
+          "id": "movie: Scent of a Woman (1992)",
+          "title": "Scent of a Woman",
+          "domain": "movie",
+          "source_file": "stories/film/film-miscellaneous.st.txt"
+        },
+        {
+          "id": "movie: Through a Glass Darkly (1961)",
+          "title": "Through a Glass Darkly",
+          "domain": "movie",
+          "source_file": "stories/film/film-ingmar-bergman.st.txt"
+        },
+        {
+          "id": "movie: Full Metal Jacket (1987)",
+          "title": "Full Metal Jacket",
+          "domain": "movie",
+          "source_file": "stories/film/film-miscellaneous.st.txt"
+        },
+        {
+          "id": "movie: Killer of Sheep (1978)",
+          "title": "Killer of Sheep",
+          "domain": "movie",
+          "source_file": "stories/film/film-timeout-top100.st.txt"
+        },
+        {
+          "id": "movie: The Cell (2000)",
+          "title": "The Cell",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-2000s.st.txt"
+        },
+        {
+          "id": "movie: The Man from Earth (2007)",
+          "title": "The Man from Earth",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-2000s.st.txt"
+        },
+        {
+          "id": "movie: Stalker (1979)",
+          "title": "Stalker",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1970s.st.txt"
+        }
+      ],
+      "observed": [
+        [
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          1,
+          null,
+          null,
+          null,
+          0,
+          1,
+          0,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null
+        ],
+        [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          1,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          1,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0
+        ],
+        [
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      ],
+      "reference": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      ]
+    },
+    "result": {
+      "id": "0215",
+      "source_domain": "book",
+      "target_domain": "movie",
+      "missing_fraction": 0.75,
+      "weight_width": 1,
+      "facets": 16,
+      "known_before": 34,
+      "known_after": 58,
+      "normalization": 24,
+      "selected": 7,
+      "flat_selected": 0,
+      "interval_selected": 0,
+      "exact_mmr": 9,
+      "flat_bound_same_item": 18,
+      "interval_bound_same_item": 20,
+      "flat_selection_coherent_regret": 12,
+      "interval_selection_coherent_regret": 12,
+      "exact_bounds": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        9
+      ],
+      "flat_bounds": [
+        15,
+        21,
+        21,
+        21,
+        21,
+        18,
+        15,
+        18
+      ],
+      "interval_bounds": [
+        15,
+        21,
+        21,
+        21,
+        23,
+        18,
+        17,
+        20
+      ],
+      "max_regret_challenger": 2,
+      "cut_runtime_seconds": 0.010880667046876624,
+      "cuts": 56,
+      "reference_midpoint_regret": 0,
+      "illustration_witness": {
+        "value": 9,
+        "chosen_labels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "challenger_labels": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "weights": [
+          -3,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          -3,
+          0,
+          1,
+          -3,
+          0,
+          0,
+          0,
+          0,
+          -3
+        ],
+        "graph_nodes": 50,
+        "graph_edges": 94,
+        "violations": 0,
+        "unpenalized_value": 9
+      }
+    },
+    "selection": "Post hoc largest bound-gap illustrations; not independently held-out examples."
+  },
+  {
+    "state": {
+      "id": "0197",
+      "source": {
+        "id": "novel: Stoner (1965)",
+        "title": "Stoner",
+        "domain": "book",
+        "source_file": "stories/literature/novel-various.st.txt"
+      },
+      "target_domain": "movie",
+      "source_themes": [
+        "academic occupation",
+        "civilians suffering in war",
+        "clash of wills",
+        "coping with a terminal illness",
+        "extramarital affair",
+        "father and daughter",
+        "father and son",
+        "favoritism at work",
+        "friendship",
+        "husband and wife",
+        "integrity",
+        "mother and daughter",
+        "mother and son",
+        "office politics",
+        "romantic love",
+        "teaching occupation",
+        "workplace rivalry"
+      ],
+      "request_pairs": [
+        {
+          "prefer": "humans interacting",
+          "avoid": "bluffing"
+        },
+        {
+          "prefer": "romantic love",
+          "avoid": "tragic love"
+        },
+        {
+          "prefer": "family affairs",
+          "avoid": "dark family secret"
+        },
+        {
+          "prefer": "human character",
+          "avoid": "distaste for attention"
+        }
+      ],
+      "features": [
+        "bluffing",
+        "dark family secret",
+        "distaste for attention",
+        "family affairs",
+        "human character",
+        "human emotion",
+        "humans in group",
+        "humans interacting",
+        "individual humans",
+        "love",
+        "personal human experience",
+        "romantic love",
+        "the human world",
+        "tragic love"
+      ],
+      "edges": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          13,
+          11
+        ]
+      ],
+      "lower": [
+        -3,
+        -3,
+        -3,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -3
+      ],
+      "upper": [
+        -1,
+        -1,
+        -1,
+        3,
+        3,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        3,
+        0,
+        -1
+      ],
+      "midpoint": [
+        -2,
+        -2,
+        -2,
+        2,
+        2,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        2,
+        0,
+        -2
+      ],
+      "missing_fraction": 0.75,
+      "weight_width": 1,
+      "candidates": [
+        {
+          "id": "movie: Doctor Zhivago (1965)",
+          "title": "Doctor Zhivago",
+          "domain": "movie",
+          "source_file": "stories/film/film-miscellaneous.st.txt"
+        },
+        {
+          "id": "movie: Tokyo Story (1953)",
+          "title": "Tokyo Story",
+          "domain": "movie",
+          "source_file": "stories/film/film-timeout-top100.st.txt"
+        },
+        {
+          "id": "movie: Night of the Lepus (1972)",
+          "title": "Night of the Lepus",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1970s.st.txt"
+        },
+        {
+          "id": "movie: Chinatown (1974)",
+          "title": "Chinatown",
+          "domain": "movie",
+          "source_file": "stories/film/film-timeout-top100.st.txt"
+        },
+        {
+          "id": "movie: Lost in Translation (2003)",
+          "title": "Lost in Translation",
+          "domain": "movie",
+          "source_file": "stories/film/film-timeout-top100.st.txt"
+        },
+        {
+          "id": "movie: Marnie (1964)",
+          "title": "Marnie",
+          "domain": "movie",
+          "source_file": "stories/film/film-alfred-hitchcock.st.txt"
+        },
+        {
+          "id": "movie: Shadow of a Doubt (1943)",
+          "title": "Shadow of a Doubt",
+          "domain": "movie",
+          "source_file": "stories/film/film-alfred-hitchcock.st.txt"
+        },
+        {
+          "id": "movie: Robot Stories (2003): Clay",
+          "title": "Robot Stories (2003): Clay",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-2000s.st.txt"
+        }
+      ],
+      "observed": [
+        [
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null
+        ],
+        [
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          0,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0
+        ],
+        [
+          0,
+          null,
+          0,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "reference": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      ]
+    },
+    "result": {
+      "id": "0197",
+      "source_domain": "book",
+      "target_domain": "movie",
+      "missing_fraction": 0.75,
+      "weight_width": 1,
+      "facets": 14,
+      "known_before": 32,
+      "known_after": 55,
+      "normalization": 24,
+      "selected": 0,
+      "flat_selected": 4,
+      "interval_selected": 6,
+      "exact_mmr": 12,
+      "flat_bound_same_item": 21,
+      "interval_bound_same_item": 21,
+      "flat_selection_coherent_regret": 12,
+      "interval_selection_coherent_regret": 12,
+      "exact_bounds": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "flat_bounds": [
+        21,
+        18,
+        21,
+        21,
+        12,
+        18,
+        12,
+        21
+      ],
+      "interval_bounds": [
+        21,
+        18,
+        21,
+        21,
+        18,
+        20,
+        16,
+        21
+      ],
+      "max_regret_challenger": 2,
+      "cut_runtime_seconds": 0.010737666008935776,
+      "cuts": 56,
+      "reference_midpoint_regret": 2,
+      "illustration_witness": {
+        "value": 12,
+        "chosen_labels": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "challenger_labels": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "weights": [
+          -3,
+          -3,
+          -3,
+          1,
+          3,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -3
+        ],
+        "graph_nodes": 44,
+        "graph_edges": 89,
+        "violations": 0,
+        "unpenalized_value": 12
+      }
+    },
+    "selection": "Post hoc largest bound-gap illustrations; not independently held-out examples."
+  },
+  {
+    "state": {
+      "id": "0016",
+      "source": {
+        "id": "movie: Doctor Bloods Coffin (1961)",
+        "title": "Doctor Bloods Coffin",
+        "domain": "movie",
+        "source_file": "stories/film/film-scifi-1960s.st.txt"
+      },
+      "target_domain": "book",
+      "source_themes": [
+        "father and son",
+        "heart transplant",
+        "human vs. monster",
+        "mad scientist stereotype",
+        "revival long after death",
+        "romantic love",
+        "unethical experimentation for scientific progress",
+        "unethical human experimentation",
+        "zombie"
+      ],
+      "request_pairs": [
+        {
+          "prefer": "speculative experience",
+          "avoid": "what if my personal identity came into question"
+        },
+        {
+          "prefer": "individual humans",
+          "avoid": "human self-reflection"
+        },
+        {
+          "prefer": "social ethical dilemma",
+          "avoid": "property rights vs. public interest"
+        },
+        {
+          "prefer": "human character",
+          "avoid": "opposition to authority"
+        }
+      ],
+      "features": [
+        "alternate reality",
+        "human character",
+        "human self-reflection",
+        "individual humans",
+        "opposition to authority",
+        "personal human experience",
+        "property rights vs. public interest",
+        "social ethical dilemma",
+        "social ethical issue",
+        "society",
+        "speculative experience",
+        "the human world",
+        "what if my personal identity came into question"
+      ],
+      "edges": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          12,
+          10
+        ]
+      ],
+      "lower": [
+        0,
+        2,
+        -2,
+        2,
+        -2,
+        0,
+        -2,
+        2,
+        0,
+        0,
+        2,
+        0,
+        -2
+      ],
+      "upper": [
+        0,
+        2,
+        -2,
+        2,
+        -2,
+        0,
+        -2,
+        2,
+        0,
+        0,
+        2,
+        0,
+        -2
+      ],
+      "midpoint": [
+        0,
+        2,
+        -2,
+        2,
+        -2,
+        0,
+        -2,
+        2,
+        0,
+        0,
+        2,
+        0,
+        -2
+      ],
+      "missing_fraction": 0.75,
+      "weight_width": 0,
+      "candidates": [
+        {
+          "id": "novel: The Island of Doctor Moreau (1896)",
+          "title": "The Island of Doctor Moreau",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: Never Let Me Go (2005)",
+          "title": "Never Let Me Go",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: Stoner (1965)",
+          "title": "Stoner",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: We (1920)",
+          "title": "We",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: Radetzky March (1932)",
+          "title": "Radetzky March",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: Journey to the Center of the Earth (1867)",
+          "title": "Journey to the Center of the Earth",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: Strange Case of Dr Jekyll and Mr Hyde (1886)",
+          "title": "Strange Case of Dr Jekyll and Mr Hyde",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: The Fall (1956)",
+          "title": "The Fall",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        }
+      ],
+      "observed": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          0,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        [
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        [
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null
+        ],
+        [
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          1,
+          null,
+          null,
+          null
+        ],
+        [
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0
+        ]
+      ],
+      "reference": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    "result": {
+      "id": "0016",
+      "source_domain": "movie",
+      "target_domain": "book",
+      "missing_fraction": 0.75,
+      "weight_width": 0,
+      "facets": 13,
+      "known_before": 22,
+      "known_after": 32,
+      "normalization": 16,
+      "selected": 0,
+      "flat_selected": 5,
+      "interval_selected": 5,
+      "exact_mmr": 8,
+      "flat_bound_same_item": 16,
+      "interval_bound_same_item": 16,
+      "flat_selection_coherent_regret": 8,
+      "interval_selection_coherent_regret": 8,
+      "exact_bounds": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "flat_bounds": [
+        16,
+        12,
+        12,
+        12,
+        12,
+        10,
+        14,
+        14
+      ],
+      "interval_bounds": [
+        16,
+        12,
+        12,
+        12,
+        12,
+        10,
+        14,
+        14
+      ],
+      "max_regret_challenger": 1,
+      "cut_runtime_seconds": 0.010586162999970838,
+      "cuts": 56,
+      "reference_midpoint_regret": 0,
+      "illustration_witness": {
+        "value": 8,
+        "chosen_labels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "challenger_labels": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "weights": [
+          0,
+          2,
+          -2,
+          2,
+          -2,
+          0,
+          -2,
+          2,
+          0,
+          0,
+          2,
+          0,
+          -2
+        ],
+        "graph_nodes": 41,
+        "graph_edges": 66,
+        "violations": 0,
+        "unpenalized_value": 8
+      }
+    },
+    "selection": "Post hoc largest bound-gap illustrations; not independently held-out examples."
+  },
+  {
+    "state": {
+      "id": "0131",
+      "source": {
+        "id": "movie: Tron (1982)",
+        "title": "Tron",
+        "domain": "movie",
+        "source_file": "stories/film/film-scifi-1980s.st.txt"
+      },
+      "target_domain": "book",
+      "source_themes": [
+        "AI risk to civilization",
+        "apostacy",
+        "boyfriend and girlfriend",
+        "coping with being tortured",
+        "early computer",
+        "heresy",
+        "human vs. captivity",
+        "human vs. sentient machine",
+        "old flames",
+        "romantic love",
+        "sentient computer",
+        "speculative virtual reality",
+        "totalitarian dystopia",
+        "what if I was trapped inside a game"
+      ],
+      "request_pairs": [
+        {
+          "prefer": "organized religion",
+          "avoid": "devil worship"
+        },
+        {
+          "prefer": "human vs. captivity",
+          "avoid": "what if I fell into the clutches of a person with malicious intent"
+        },
+        {
+          "prefer": "speculative social institution",
+          "avoid": "society in which victims sentence their own assailants"
+        },
+        {
+          "prefer": "technology",
+          "avoid": "tidal power"
+        }
+      ],
+      "features": [
+        "alternate reality",
+        "devil worship",
+        "facing adversity",
+        "human challenge in life",
+        "human vs. captivity",
+        "human vs. human",
+        "individual humans",
+        "organized religion",
+        "personal human experience",
+        "science",
+        "society in which victims sentence their own assailants",
+        "speculative experience",
+        "speculative social institution",
+        "speculative society",
+        "technology",
+        "the human world",
+        "the natural world",
+        "tidal power",
+        "what if I fell into the clutches of a person with malicious intent",
+        "what if I were in a tight spot"
+      ],
+      "edges": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          16
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          9,
+          16
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          14,
+          9
+        ],
+        [
+          17,
+          14
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          18,
+          4
+        ],
+        [
+          19,
+          11
+        ]
+      ],
+      "lower": [
+        0,
+        -3,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -3,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        -3,
+        -3,
+        0
+      ],
+      "upper": [
+        0,
+        -1,
+        0,
+        0,
+        3,
+        0,
+        0,
+        3,
+        0,
+        0,
+        -1,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        -1,
+        -1,
+        0
+      ],
+      "midpoint": [
+        0,
+        -2,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        0,
+        0,
+        -2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        0,
+        -2,
+        -2,
+        0
+      ],
+      "missing_fraction": 0.75,
+      "weight_width": 1,
+      "candidates": [
+        {
+          "id": "novel: We (1920)",
+          "title": "We",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: Children of Time (2015)",
+          "title": "Children of Time",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: We the Living (1936)",
+          "title": "We the Living",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: The Futurological Congress (1971)",
+          "title": "The Futurological Congress",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: Journey to the Center of the Earth (1867)",
+          "title": "Journey to the Center of the Earth",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: Herland (1915)",
+          "title": "Herland",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: The Time Machine (1895)",
+          "title": "The Time Machine",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        },
+        {
+          "id": "novel: The Buried Giant (2015)",
+          "title": "The Buried Giant",
+          "domain": "book",
+          "source_file": "stories/literature/novel-various.st.txt"
+        }
+      ],
+      "observed": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0
+        ],
+        [
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          1,
+          1,
+          null,
+          0,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          1,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ],
+        [
+          1,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null
+        ],
+        [
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          0,
+          1,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      ],
+      "reference": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "result": {
+      "id": "0131",
+      "source_domain": "movie",
+      "target_domain": "book",
+      "missing_fraction": 0.75,
+      "weight_width": 1,
+      "facets": 20,
+      "known_before": 36,
+      "known_after": 75,
+      "normalization": 24,
+      "selected": 5,
+      "flat_selected": 0,
+      "interval_selected": 2,
+      "exact_mmr": 11,
+      "flat_bound_same_item": 18,
+      "interval_bound_same_item": 18,
+      "flat_selection_coherent_regret": 12,
+      "interval_selection_coherent_regret": 12,
+      "exact_bounds": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11,
+        12,
+        12
+      ],
+      "flat_bounds": [
+        15,
+        18,
+        15,
+        15,
+        21,
+        18,
+        15,
+        18
+      ],
+      "interval_bounds": [
+        17,
+        18,
+        15,
+        15,
+        21,
+        18,
+        15,
+        18
+      ],
+      "max_regret_challenger": 0,
+      "cut_runtime_seconds": 0.011789376963861287,
+      "cuts": 56,
+      "reference_midpoint_regret": 0,
+      "illustration_witness": {
+        "value": 11,
+        "chosen_labels": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "challenger_labels": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "weights": [
+          0,
+          -3,
+          0,
+          0,
+          3,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -3,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          -3,
+          -3,
+          0
+        ],
+        "graph_nodes": 62,
+        "graph_edges": 106,
+        "violations": 0,
+        "unpenalized_value": 11
+      }
+    },
+    "selection": "Post hoc largest bound-gap illustrations; not independently held-out examples."
+  },
+  {
+    "state": {
+      "id": "0262",
+      "source": {
+        "id": "novel: Twenty Thousand Leagues Under the Seas (1872)",
+        "title": "Twenty Thousand Leagues Under the Seas",
+        "domain": "book",
+        "source_file": "stories/literature/novel-various.st.txt"
+      },
+      "target_domain": "movie",
+      "source_themes": [
+        "Atlantis",
+        "anger",
+        "bird in a gilded cage",
+        "collecting objects",
+        "colonialism",
+        "coping with the death of one's entire family",
+        "coping with the death of someone",
+        "electricity",
+        "endangered species",
+        "facing bloodthirsty savages",
+        "fishing",
+        "helping a stranger in need",
+        "human vs. beast",
+        "human vs. captivity",
+        "hunting",
+        "master and servant",
+        "misanthropy",
+        "pleasure in nature",
+        "polar exploration",
+        "speculative submarine",
+        "speculative weapon",
+        "the desire for vengeance",
+        "the desire to get away from it all",
+        "the thirst for knowledge",
+        "voyage under the sea"
+      ],
+      "request_pairs": [
+        {
+          "prefer": "human character",
+          "avoid": "disillusionment"
+        },
+        {
+          "prefer": "human vs. beast",
+          "avoid": "facing a ferocious beast"
+        },
+        {
+          "prefer": "form of government",
+          "avoid": "anarchy"
+        },
+        {
+          "prefer": "human vs. human",
+          "avoid": "facing a genius adversary"
+        }
+      ],
+      "features": [
+        "anarchy",
+        "disillusionment",
+        "facing a ferocious beast",
+        "facing a genius adversary",
+        "facing adversity",
+        "form of government",
+        "human challenge in life",
+        "human character",
+        "human vs. beast",
+        "human vs. human",
+        "human vs. nature",
+        "individual humans",
+        "national social issue",
+        "personal human experience",
+        "society",
+        "the human world"
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          12
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          14,
+          15
+        ]
+      ],
+      "lower": [
+        -2,
+        -2,
+        -2,
+        -2,
+        0,
+        2,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "upper": [
+        -2,
+        -2,
+        -2,
+        -2,
+        0,
+        2,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "midpoint": [
+        -2,
+        -2,
+        -2,
+        -2,
+        0,
+        2,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "missing_fraction": 0.75,
+      "weight_width": 0,
+      "candidates": [
+        {
+          "id": "movie: 20000 Leagues Under the Sea (1916)",
+          "title": "20000 Leagues Under the Sea",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-before-1920.st.txt"
+        },
+        {
+          "id": "movie: 20000 Leagues Under the Sea (1954)",
+          "title": "20000 Leagues Under the Sea",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1950s.st.txt"
+        },
+        {
+          "id": "movie: Around the World Under the Sea (1966)",
+          "title": "Around the World Under the Sea",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1960s.st.txt"
+        },
+        {
+          "id": "movie: Under the Seas (1907)",
+          "title": "Under the Seas",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-before-1920.st.txt"
+        },
+        {
+          "id": "movie: The Mysterious Island (1929)",
+          "title": "The Mysterious Island",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1920s.st.txt"
+        },
+        {
+          "id": "movie: The Core (2003)",
+          "title": "The Core",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-2000s.st.txt"
+        },
+        {
+          "id": "movie: Captain Nemo and the Underwater City (1969)",
+          "title": "Captain Nemo and the Underwater City",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1960s.st.txt"
+        },
+        {
+          "id": "movie: From Hell It Came (1957)",
+          "title": "From Hell It Came",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1950s.st.txt"
+        }
+      ],
+      "observed": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ],
+        [
+          null,
+          0,
+          0,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1
+        ],
+        [
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1
+        ],
+        [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1
+        ]
+      ],
+      "reference": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "result": {
+      "id": "0262",
+      "source_domain": "book",
+      "target_domain": "movie",
+      "missing_fraction": 0.75,
+      "weight_width": 0,
+      "facets": 16,
+      "known_before": 34,
+      "known_after": 58,
+      "normalization": 16,
+      "selected": 0,
+      "flat_selected": 2,
+      "interval_selected": 2,
+      "exact_mmr": 8,
+      "flat_bound_same_item": 14,
+      "interval_bound_same_item": 14,
+      "flat_selection_coherent_regret": 8,
+      "interval_selection_coherent_regret": 8,
+      "exact_bounds": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "flat_bounds": [
+        14,
+        12,
+        8,
+        14,
+        14,
+        14,
+        14,
+        12
+      ],
+      "interval_bounds": [
+        14,
+        12,
+        8,
+        14,
+        14,
+        14,
+        14,
+        12
+      ],
+      "max_regret_challenger": 1,
+      "cut_runtime_seconds": 0.0109063310228521,
+      "cuts": 56,
+      "reference_midpoint_regret": 0,
+      "illustration_witness": {
+        "value": 8,
+        "chosen_labels": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "challenger_labels": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          -2,
+          -2,
+          -2,
+          -2,
+          0,
+          2,
+          0,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "graph_nodes": 50,
+        "graph_edges": 92,
+        "violations": 0,
+        "unpenalized_value": 8
+      }
+    },
+    "selection": "Post hoc largest bound-gap illustrations; not independently held-out examples."
+  },
+  {
+    "state": {
+      "id": "0257",
+      "source": {
+        "id": "novel: The War of the Worlds (1898)",
+        "title": "The War of the Worlds",
+        "domain": "book",
+        "source_file": "stories/literature/novel-various.st.txt"
+      },
+      "target_domain": "movie",
+      "source_themes": [
+        "Martian extraterrestrial",
+        "alien point of view",
+        "atrocities of war",
+        "attack from outer space by a genocidal enemy",
+        "brother and brother",
+        "chemical weapons",
+        "civilians suffering in war",
+        "death ray",
+        "facing an invading force",
+        "facing an overpowering adversary",
+        "gender neutral being",
+        "husband and wife",
+        "imperialism",
+        "interplanetary space travel",
+        "telepathic being",
+        "the future of human evolution",
+        "the horrors of war"
+      ],
+      "request_pairs": [
+        {
+          "prefer": "society",
+          "avoid": "history"
+        },
+        {
+          "prefer": "biologically distinguished being",
+          "avoid": "biologically symbiotic beings"
+        },
+        {
+          "prefer": "family affairs",
+          "avoid": "caring for an elderly relative"
+        },
+        {
+          "prefer": "speculative being",
+          "avoid": "fictional character come to life"
+        }
+      ],
+      "features": [
+        "alternate reality",
+        "biologically distinguished being",
+        "biologically symbiotic beings",
+        "caring for an elderly relative",
+        "coping with life issues",
+        "family affairs",
+        "fictional character come to life",
+        "history",
+        "human challenge in life",
+        "human health condition",
+        "humans in group",
+        "individual humans",
+        "personal human experience",
+        "society",
+        "speculative being",
+        "the human world"
+      ],
+      "edges": [
+        [
+          1,
+          14
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          14
+        ],
+        [
+          7,
+          13
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          14,
+          0
+        ]
+      ],
+      "lower": [
+        0,
+        1,
+        -3,
+        -3,
+        0,
+        1,
+        -3,
+        -3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "upper": [
+        0,
+        3,
+        -1,
+        -1,
+        0,
+        3,
+        -1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        0
+      ],
+      "midpoint": [
+        0,
+        2,
+        -2,
+        -2,
+        0,
+        2,
+        -2,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "missing_fraction": 0.75,
+      "weight_width": 1,
+      "candidates": [
+        {
+          "id": "movie: War of the Worlds (2005)",
+          "title": "War of the Worlds",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-2000s.st.txt"
+        },
+        {
+          "id": "movie: Stranger from Venus (1954)",
+          "title": "Stranger from Venus",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1950s.st.txt"
+        },
+        {
+          "id": "movie: Babylon 5: In The Beginning (1998)",
+          "title": "Babylon 5: In The Beginning",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1990s.st.txt"
+        },
+        {
+          "id": "movie: Babylon 5: A Call to Arms (1999)",
+          "title": "Babylon 5: A Call to Arms",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1990s.st.txt"
+        },
+        {
+          "id": "movie: Attack from Space (1964)",
+          "title": "Attack from Space",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1960s.st.txt"
+        },
+        {
+          "id": "movie: Journey to the Seventh Planet (1962)",
+          "title": "Journey to the Seventh Planet",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1960s.st.txt"
+        },
+        {
+          "id": "movie: The Planets Against Us (1962)",
+          "title": "The Planets Against Us",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1960s.st.txt"
+        },
+        {
+          "id": "movie: Battle Beyond the Sun (1962)",
+          "title": "Battle Beyond the Sun",
+          "domain": "movie",
+          "source_file": "stories/film/film-scifi-1960s.st.txt"
+        }
+      ],
+      "observed": [
+        [
+          null,
+          null,
+          null,
+          null,
+          0,
+          1,
+          0,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1
+        ],
+        [
+          1,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ],
+        [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null
+        ],
+        [
+          null,
+          0,
+          null,
+          0,
+          null,
+          1,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null
+        ],
+        [
+          1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null
+        ],
+        [
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null
+        ]
+      ],
+      "reference": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "result": {
+      "id": "0257",
+      "source_domain": "book",
+      "target_domain": "movie",
+      "missing_fraction": 0.75,
+      "weight_width": 1,
+      "facets": 16,
+      "known_before": 37,
+      "known_after": 56,
+      "normalization": 24,
+      "selected": 0,
+      "flat_selected": 0,
+      "interval_selected": 0,
+      "exact_mmr": 6,
+      "flat_bound_same_item": 12,
+      "interval_bound_same_item": 16,
+      "flat_selection_coherent_regret": 6,
+      "interval_selection_coherent_regret": 6,
+      "exact_bounds": [
+        6,
+        9,
+        12,
+        9,
+        12,
+        12,
+        9,
+        9
+      ],
+      "flat_bounds": [
+        12,
+        12,
+        21,
+        12,
+        15,
+        18,
+        15,
+        15
+      ],
+      "interval_bounds": [
+        16,
+        16,
+        23,
+        16,
+        17,
+        20,
+        19,
+        17
+      ],
+      "max_regret_challenger": 1,
+      "cut_runtime_seconds": 0.010907461037277244,
+      "cuts": 56,
+      "reference_midpoint_regret": 2,
+      "illustration_witness": {
+        "value": 6,
+        "chosen_labels": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "challenger_labels": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          0,
+          1,
+          -3,
+          -3,
+          0,
+          1,
+          -3,
+          -3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "graph_nodes": 50,
+        "graph_edges": 103,
+        "violations": 0,
+        "unpenalized_value": 6
+      }
+    },
+    "selection": "Post hoc largest bound-gap illustrations; not independently held-out examples."
+  }
+]

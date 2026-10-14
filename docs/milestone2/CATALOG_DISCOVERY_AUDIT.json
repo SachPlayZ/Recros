@@ -1,0 +1,42 @@
+{
+  "catalogue": 222915,
+  "domains": {
+    "movie": 45437,
+    "music": 170657,
+    "book": 6821
+  },
+  "text_features": 35000,
+  "movie_rating_rows_read": 20000263,
+  "positive_movie_interactions": 9973646,
+  "historical_users_with_index_rows": 138493,
+  "historical_movie_columns": 45463,
+  "recent_source_additions": 7,
+  "built_seconds": 35.9,
+  "scope": "Full catalogue content retrieval and movie-only historical audience affinity. No shared book/song users or independent preference evaluation.",
+  "recent_sources": "demo/catalog/recent.20261014.json",
+  "label_coverage": {
+    "movie": {
+      "genres": 42994,
+      "languages": 45433,
+      "production_countries": 39151,
+      "setting_mentions": 6432,
+      "era_mentions": 1865
+    },
+    "book": {
+      "genres": 6713,
+      "languages": 0,
+      "production_countries": 0,
+      "setting_mentions": 1151,
+      "era_mentions": 572
+    },
+    "music": {
+      "genres": 0,
+      "languages": 0,
+      "production_countries": 0,
+      "setting_mentions": 1,
+      "era_mentions": 0
+    }
+  },
+  "label_note": "Genre/category and movie language/country fields are source metadata. Setting/era fields are literal summary mentions, not verified setting. Missing values stay unknown.",
+  "source_parquet_sha256": "1a471e12d88828f5833a4fa9cf9fc638bb064d45efa9d87d830f1dc110a37c95"
+}

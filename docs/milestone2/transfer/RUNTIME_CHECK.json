@@ -1,0 +1,100 @@
+{
+  "scope": "Read-only local integration requests, not human ratings.",
+  "requests": [
+    {
+      "case": "teacher",
+      "kind": "recommend",
+      "item_id": "book:9780743454551",
+      "certificate": {
+        "modeled_regret": 0.0,
+        "bound": 0.25,
+        "worlds_checked": 64,
+        "witness": {
+          "world": "corner-0",
+          "alternative": "book:9780743454551",
+          "regret": 0.0
+        },
+        "minimum_source_support": 0.75,
+        "scope": "Conditional on the binary feature interpretation and independent intervals. It does not bound liking, fright, engagement or satisfaction."
+      },
+      "student_run": null,
+      "counts": {
+        "evidence_bank_candidates": 102,
+        "shortlist": 8
+      }
+    },
+    {
+      "case": "remove",
+      "kind": "recommend",
+      "item_id": "book:annihilation",
+      "certificate": {
+        "modeled_regret": 0.0,
+        "bound": 0.25,
+        "worlds_checked": 128,
+        "witness": {
+          "world": "corner-0",
+          "alternative": "book:annihilation",
+          "regret": 0.0
+        },
+        "minimum_source_support": 0.75,
+        "scope": "Conditional on the binary feature interpretation and independent intervals. It does not bound liking, fright, engagement or satisfaction."
+      },
+      "student_run": null,
+      "counts": {
+        "evidence_bank_candidates": 102,
+        "shortlist": 8
+      }
+    },
+    {
+      "case": "credits",
+      "kind": "abstain",
+      "item_id": null,
+      "certificate": {
+        "modeled_regret": 1.0,
+        "bound": 0.25,
+        "worlds_checked": 256,
+        "witness": {
+          "world": "corner-1",
+          "alternative": "book:9780521290609",
+          "regret": 1.0
+        },
+        "minimum_source_support": 0.75,
+        "scope": "Conditional on the binary feature interpretation and independent intervals. It does not bound liking, fright, engagement or satisfaction."
+      },
+      "student_run": null,
+      "counts": {
+        "evidence_bank_candidates": 102,
+        "shortlist": 8
+      }
+    },
+    {
+      "case": "student",
+      "kind": "recommend",
+      "item_id": "book:9780743454551",
+      "certificate": {
+        "modeled_regret": 0.0,
+        "bound": 0.25,
+        "worlds_checked": 128,
+        "witness": {
+          "world": "corner-0",
+          "alternative": "book:9780743454551",
+          "regret": 0.0
+        },
+        "minimum_source_support": 0.75,
+        "scope": "Conditional on the binary feature interpretation and independent intervals. It does not bound liking, fright, engagement or satisfaction."
+      },
+      "student_run": {
+        "parameter_count": 562464,
+        "device": "cpu",
+        "wall_ms": 48.76,
+        "first_load_may_be_included": true,
+        "proposed": 9,
+        "retained": 8
+      },
+      "counts": {
+        "evidence_bank_candidates": 102,
+        "shortlist": 8
+      }
+    }
+  ]
+}

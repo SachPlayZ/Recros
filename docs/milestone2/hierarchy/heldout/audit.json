@@ -1,0 +1,392 @@
+{
+  "protocol_sha256": "274be049eaca299152d310e9c418bdf4dffa6306162b05b0286f0a19e9b11fa0",
+  "audit_protocol_sha256": "be793bb6bf1ba539fe138966fe74720ddddf8e0162c130104b675af1e253318e",
+  "results_sha256": "0d1c7eee8c021e824364bd2443529355b19c53aab4bf727828a306350b427ed0",
+  "test_users": 320,
+  "available_movies": 789,
+  "background_ratings": 3024833,
+  "candidate_range": [
+    254,
+    769
+  ],
+  "full_catalog_baselines": {
+    "popularity": {
+      "ndcg": {
+        "mean": 0.2135881681732404,
+        "ci95": [
+          0.18398491483018664,
+          0.2446407066987025
+        ],
+        "n": 320
+      },
+      "recall": {
+        "mean": 0.09952265641843328,
+        "ci95": [
+          0.0838878240676065,
+          0.11626649653397686
+        ],
+        "n": 320
+      },
+      "precision": {
+        "mean": 0.19,
+        "ci95": [
+          0.16312500000000002,
+          0.21937499999999996
+        ],
+        "n": 320
+      },
+      "map": {
+        "mean": 0.15057204861111112,
+        "ci95": [
+          0.12532647569444444,
+          0.1781462456597222
+        ],
+        "n": 320
+      }
+    },
+    "genre_content": {
+      "ndcg": {
+        "mean": 0.02613593283207305,
+        "ci95": [
+          0.017994810862123713,
+          0.03649989032462939
+        ],
+        "n": 320
+      },
+      "recall": {
+        "mean": 0.011209096690427064,
+        "ci95": [
+          0.006756133458924594,
+          0.016486894078812802
+        ],
+        "n": 320
+      },
+      "precision": {
+        "mean": 0.024375,
+        "ci95": [
+          0.016875,
+          0.033125
+        ],
+        "n": 320
+      },
+      "map": {
+        "mean": 0.013159722222222222,
+        "ci95": [
+          0.008596267361111113,
+          0.019095312499999993
+        ],
+        "n": 320
+      }
+    },
+    "itemknn": {
+      "ndcg": {
+        "mean": 0.23199381503906014,
+        "ci95": [
+          0.20158630187226864,
+          0.2630466267633702
+        ],
+        "n": 320
+      },
+      "recall": {
+        "mean": 0.11887515245448217,
+        "ci95": [
+          0.10028336467400045,
+          0.13936111094684436
+        ],
+        "n": 320
+      },
+      "precision": {
+        "mean": 0.20375000000000004,
+        "ci95": [
+          0.17625000000000002,
+          0.231875
+        ],
+        "n": 320
+      },
+      "map": {
+        "mean": 0.16158072916666666,
+        "ci95": [
+          0.13588789062499998,
+          0.18800865885416662
+        ],
+        "n": 320
+      }
+    },
+    "hybrid": {
+      "ndcg": {
+        "mean": 0.23847903291324216,
+        "ci95": [
+          0.20836560188896652,
+          0.26964416972179545
+        ],
+        "n": 320
+      },
+      "recall": {
+        "mean": 0.12237486964905231,
+        "ci95": [
+          0.10395594156609138,
+          0.14295916605463138
+        ],
+        "n": 320
+      },
+      "precision": {
+        "mean": 0.210625,
+        "ci95": [
+          0.181875,
+          0.23937499999999998
+        ],
+        "n": 320
+      },
+      "map": {
+        "mean": 0.16674739583333334,
+        "ci95": [
+          0.14091647135416666,
+          0.19352825520833333
+        ],
+        "n": 320
+      }
+    },
+    "ease": {
+      "ndcg": {
+        "mean": 0.22472319125765133,
+        "ci95": [
+          0.1951527996903949,
+          0.25439991763111236
+        ],
+        "n": 320
+      },
+      "recall": {
+        "mean": 0.12370199929956245,
+        "ci95": [
+          0.1040088209716221,
+          0.1451536827134183
+        ],
+        "n": 320
+      },
+      "precision": {
+        "mean": 0.1975,
+        "ci95": [
+          0.17250000000000001,
+          0.224375
+        ],
+        "n": 320
+      },
+      "map": {
+        "mean": 0.15110937500000002,
+        "ci95": [
+          0.12794615885416666,
+          0.17601586371527778
+        ],
+        "n": 320
+      }
+    }
+  },
+  "by_mask": {
+    "0.5": {
+      "positive_target_user_ndcg": {
+        "popularity": {
+          "mean": 0.23709621272801423,
+          "ci95": [
+            0.20689560097429285,
+            0.26831812544713723
+          ],
+          "n": 314
+        },
+        "genre_content": {
+          "mean": 0.18822977112973893,
+          "ci95": [
+            0.1614219076839028,
+            0.2172544190189277
+          ],
+          "n": 314
+        },
+        "itemknn": {
+          "mean": 0.24147715491342953,
+          "ci95": [
+            0.21058974979818626,
+            0.2720568629793622
+          ],
+          "n": 314
+        },
+        "hybrid": {
+          "mean": 0.24303595710903658,
+          "ci95": [
+            0.21138609580995477,
+            0.2743339159935703
+          ],
+          "n": 314
+        },
+        "ease": {
+          "mean": 0.2364112192681393,
+          "ci95": [
+            0.20725694824189894,
+            0.26744257490262074
+          ],
+          "n": 314
+        },
+        "flat_regret": {
+          "mean": 0.23553894684862992,
+          "ci95": [
+            0.2072393602246285,
+            0.26578169144582087
+          ],
+          "n": 314
+        },
+        "hierarchy_regret": {
+          "mean": 0.2366065798790925,
+          "ci95": [
+            0.20846144530697736,
+            0.2667069726199802
+          ],
+          "n": 314
+        },
+        "marginal_imputation": {
+          "mean": 0.24462871414691603,
+          "ci95": [
+            0.2151386261774639,
+            0.2746551323703427
+          ],
+          "n": 314
+        },
+        "complete_annotation_diagnostic": {
+          "mean": 0.2403643622816111,
+          "ci95": [
+            0.2103521325531646,
+            0.271055622960287
+          ],
+          "n": 314
+        }
+      },
+      "relative_mean_query_reduction": 0.06466302367941712,
+      "users_with_savings": 19,
+      "mean_savings_among_users_with_savings": 7.473684210526316,
+      "both_certified_users": 250,
+      "both_certified_paired_saved_queries": {
+        "mean": 0.324,
+        "ci95": [
+          0.12,
+          0.6080999999999994
+        ],
+        "n": 250
+      },
+      "neither_certified_users": 65,
+      "neither_certified_with_zero_queries": 0,
+      "warnings": [
+        "Capped-cost mean is a resource metric, not successful certification for every user.",
+        "Paired savings among both-certified users is a descriptive selected subset, not a new primary endpoint."
+      ]
+    },
+    "0.75": {
+      "positive_target_user_ndcg": {
+        "popularity": {
+          "mean": 0.23709621272801423,
+          "ci95": [
+            0.20689560097429285,
+            0.26831812544713723
+          ],
+          "n": 314
+        },
+        "genre_content": {
+          "mean": 0.18822977112973893,
+          "ci95": [
+            0.1614219076839028,
+            0.2172544190189277
+          ],
+          "n": 314
+        },
+        "itemknn": {
+          "mean": 0.24147715491342953,
+          "ci95": [
+            0.21058974979818626,
+            0.2720568629793622
+          ],
+          "n": 314
+        },
+        "hybrid": {
+          "mean": 0.24303595710903658,
+          "ci95": [
+            0.21138609580995477,
+            0.2743339159935703
+          ],
+          "n": 314
+        },
+        "ease": {
+          "mean": 0.2364112192681393,
+          "ci95": [
+            0.20725694824189894,
+            0.26744257490262074
+          ],
+          "n": 314
+        },
+        "flat_regret": {
+          "mean": 0.23016166389112408,
+          "ci95": [
+            0.2010818547190225,
+            0.2597429970929954
+          ],
+          "n": 314
+        },
+        "hierarchy_regret": {
+          "mean": 0.22846720998005354,
+          "ci95": [
+            0.19949698858876216,
+            0.25734910367871255
+          ],
+          "n": 314
+        },
+        "marginal_imputation": {
+          "mean": 0.23875685724694448,
+          "ci95": [
+            0.2083519376606071,
+            0.26883146618766
+          ],
+          "n": 314
+        },
+        "complete_annotation_diagnostic": {
+          "mean": 0.2403643622816111,
+          "ci95": [
+            0.2103521325531646,
+            0.271055622960287
+          ],
+          "n": 314
+        }
+      },
+      "relative_mean_query_reduction": 0.03817471590909094,
+      "users_with_savings": 26,
+      "mean_savings_among_users_with_savings": 8.26923076923077,
+      "both_certified_users": 119,
+      "both_certified_paired_saved_queries": {
+        "mean": 1.0,
+        "ci95": [
+          0.4619747899159664,
+          1.6218487394957983
+        ],
+        "n": 119
+      },
+      "neither_certified_users": 191,
+      "neither_certified_with_zero_queries": 0,
+      "warnings": [
+        "Capped-cost mean is a resource metric, not successful certification for every user.",
+        "Paired savings among both-certified users is a descriptive selected subset, not a new primary endpoint."
+      ]
+    }
+  },
+  "verified_invariants": [
+    "disjoint validation/test users",
+    "no future ratings in background fit or profiles",
+    "same fixed recommendations for the two lookup stopping rules",
+    "coherent cost never exceeds propagated-flat cost on the shared schedule",
+    "zero selected theme weight exactly preserves hybrid ranking",
+    "unique candidate identities",
+    "frozen corpus/ratings/protocol hashes"
+  ],
+  "test_rows": 1280,
+  "unavailable_test_positive_targets": 854,
+  "limits": [
+    "Full-catalog baseline audit is separate from same-pool primary comparison.",
+    "A full-catalog hierarchy reranking experiment was not performed.",
+    "Observed ratings reflect historical exposure; unobserved nonrelevance is an offline approximation.",
+    "LTO absence is not an independently verified negative theme label.",
+    "25% preference-width intervals were a fixed sensitivity assumption, not calibrated user uncertainty."
+  ]
+}

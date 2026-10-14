@@ -1,0 +1,204 @@
+{
+  "schema": "recros-transfer-sources-v1",
+  "selection": "Eighteen project-selected candidates, six per domain. Source content and missingness vary; no representative-sampling claim.",
+  "items": [
+    {
+      "id": "movie:ex-machina",
+      "domain": "movie",
+      "title": "Ex Machina",
+      "creators": "Alex Garland",
+      "source_url": "https://a24films.com/films/ex-machina",
+      "source_kind": "official studio synopsis",
+      "evidence_text": "A programmer visits a reclusive technology CEO at a private mountain estate. He must evaluate the capabilities and consciousness of an artificial intelligence named Ava, whose emotional intelligence is more deceptive than expected.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "movie:coherence",
+      "domain": "movie",
+      "title": "Coherence",
+      "creators": "James Ward Byrkit",
+      "source_url": "https://oscilloscope.net/films/film/coherence/",
+      "source_kind": "official distributor description",
+      "evidence_text": "The distributor describes a closely focused science-fiction relationship drama whose tension and mystery intensify quickly.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "movie:witch",
+      "domain": "movie",
+      "title": "The Witch",
+      "creators": "Robert Eggers",
+      "source_url": "https://a24films.com/films/witch",
+      "source_kind": "official studio synopsis",
+      "evidence_text": "A family settles beside an ominous forest in seventeenth-century New England. Unsettling events and the disappearance of a child lead to mounting paranoia and accusations within the family.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "movie:lighthouse",
+      "domain": "movie",
+      "title": "The Lighthouse",
+      "creators": "Robert Eggers",
+      "source_url": "https://a24films.com/films/the-lighthouse",
+      "source_kind": "official studio synopsis",
+      "evidence_text": "The studio describes a hypnotic, hallucinatory story about two lighthouse keepers isolated on a remote and mysterious New England island in the 1890s.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "movie:after-yang",
+      "domain": "movie",
+      "title": "After Yang",
+      "creators": "Kogonada",
+      "source_url": "https://a24films.com/films/after-yang",
+      "source_kind": "official studio synopsis",
+      "evidence_text": "Jake searches for a way to repair his daughter's android companion. During this search he notices the life he has overlooked and reconnects with his wife and daughter.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "movie:ghost-story",
+      "domain": "movie",
+      "title": "A Ghost Story",
+      "creators": "David Lowery",
+      "source_url": "https://a24films.com/films/a-ghost-story",
+      "source_kind": "official studio synopsis",
+      "evidence_text": "A deceased man returns as a ghost to console his grieving wife. Unable to participate in life as before, he travels through memory and history, confronting questions of existence, loss and human connection.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "book:martian",
+      "domain": "book",
+      "title": "The Martian",
+      "creators": "Andy Weir",
+      "source_url": "https://www.penguinrandomhouse.com/books/234102/the-martian-by-andy-weir/",
+      "source_kind": "official publisher synopsis",
+      "evidence_text": "Astronaut Mark Watney is stranded alone on Mars after his crew believes him dead. Using engineering skills and ingenuity, he confronts successive survival problems in a hostile environment.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "book:piranesi",
+      "domain": "book",
+      "title": "Piranesi",
+      "creators": "Susanna Clarke",
+      "source_url": "https://www.bloomsbury.com/uk/piranesi-9781526622433/",
+      "source_kind": "official publisher synopsis",
+      "evidence_text": "Piranesi records the halls, statues and tides of an immense House. New messages and an unknown visitor lead him to search for lost texts and uncover secrets as his familiar world becomes strange and dangerous.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "book:annihilation",
+      "domain": "book",
+      "title": "Annihilation",
+      "creators": "Jeff VanderMeer",
+      "source_url": "https://us.macmillan.com/books/9780374710774/annihilation/",
+      "source_kind": "publisher-hosted introduction by Karen Joy Fowler",
+      "evidence_text": "Explorers enter the isolated wilderness of Area X after earlier expeditions ended disastrously. Their investigation encounters unmapped structures and mysterious biological writing. The publisher-hosted introduction describes vivid surroundings that are beautiful yet threatening.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "book:house-of-leaves",
+      "domain": "book",
+      "title": "House of Leaves",
+      "creators": "Mark Z. Danielewski",
+      "source_url": "https://www.penguinrandomhouse.com/books/36526/house-of-leaves-by-mark-z-danielewski/",
+      "source_kind": "official publisher description",
+      "evidence_text": "The publisher presents a horror novel centered on a house larger inside than outside, and describes its reading experience as immersive and maze-like.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "book:hill-house",
+      "domain": "book",
+      "title": "The Haunting of Hill House",
+      "creators": "Shirley Jackson",
+      "source_url": "https://www.penguinrandomhouse.com/books/321924/the-haunting-of-hill-house-by-shirley-jackson-introduction-by-laura-miller/9780143039983/",
+      "source_kind": "official publisher synopsis",
+      "evidence_text": "A researcher looking for evidence of a haunting brings three others to the notoriously unfriendly Hill House. Unexplained events occur during their stay, and the house seems to choose one of them.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "book:spaceborn",
+      "domain": "book",
+      "title": "Record of a Spaceborn Few",
+      "creators": "Becky Chambers",
+      "source_url": "https://www.hodder.co.uk/titles/becky-chambers/record-of-a-spaceborn-few/9781473647633/",
+      "source_kind": "official publisher synopsis",
+      "evidence_text": "Centuries after humanity leaves Earth, people in the Exodus Fleet consider what their lives and home mean. The publisher frames the story around belonging, tradition and finding a place in a changing universe.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "music:bury-a-friend",
+      "domain": "music",
+      "title": "bury a friend",
+      "creators": "Billie Eilish",
+      "source_url": "https://en.wikipedia.org/wiki/Bury_a_Friend",
+      "source_kind": "secondary article reporting the artist's explanation",
+      "evidence_text": "Billie Eilish described this song as told from the perspective of a monster underneath a bed. Its presentation uses distorted vocals and unsettling production, linking the imagined creature with personal fears.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "music:everything-i-wanted",
+      "domain": "music",
+      "title": "everything i wanted",
+      "creators": "Billie Eilish",
+      "source_url": "https://en.wikipedia.org/wiki/Everything_I_Wanted",
+      "source_kind": "secondary article reporting songwriter interviews",
+      "evidence_text": "This Billie Eilish song developed from a disturbing dream and feelings about fame. She and her brother Finneas reshaped it around their mutual support and understanding. The arrangement uses restrained piano and bass.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "music:red-right-hand",
+      "domain": "music",
+      "title": "Red Right Hand",
+      "creators": "Nick Cave and the Bad Seeds",
+      "source_url": "https://www.nickcave.com/lyric/red-right-hand/",
+      "source_kind": "high-level interpretation of the official song text; no lyrics reproduced",
+      "evidence_text": "The song portrays a threatening stranger amid ominous surroundings. Its narrative associates his influence with fear and danger.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "music:lean-on-me",
+      "domain": "music",
+      "title": "Lean on Me",
+      "creators": "Bill Withers",
+      "source_url": "https://en.wikipedia.org/wiki/Lean_on_Me_(song)",
+      "source_kind": "secondary article on song history",
+      "evidence_text": "Bill Withers' song centers on people helping each other through difficulties and the support of a community.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "music:space-oddity",
+      "domain": "music",
+      "title": "Space Oddity",
+      "creators": "David Bowie",
+      "source_url": "https://en.wikipedia.org/wiki/Space_Oddity",
+      "source_kind": "secondary article on song narrative",
+      "evidence_text": "David Bowie's song tells of astronaut Major Tom and his flight into space, during which contact with Ground Control is lost.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    },
+    {
+      "id": "music:dream-of-arrakis",
+      "domain": "music",
+      "title": "Dream of Arrakis",
+      "creators": "Hans Zimmer",
+      "source_url": "https://www.watertower-music.com/release/dune-original-motion-picture-soundtrack/",
+      "source_kind": "official label track credits only",
+      "evidence_text": "Dream of Arrakis appears in the track list of the Dune soundtrack, whose score is written by Hans Zimmer. The supplied page identifies the track but does not describe its narrative or musical atmosphere.",
+      "evidence_kind": "original source paraphrase",
+      "checked_at": "2026-10-14"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "facets": 32,
+    "native_ms": 0.3247499989811331,
+    "milp_ms": 4.854166007135063,
+    "python_ms": 1.1865839987876825,
+    "median_time_ratio_milp_over_native": 14.94739344838943,
+    "cases": 3
+  },
+  {
+    "facets": 128,
+    "native_ms": 0.7492080039810389,
+    "milp_ms": 5.636667003273033,
+    "python_ms": 4.561166002531536,
+    "median_time_ratio_milp_over_native": 7.523500781253915,
+    "cases": 3
+  },
+  {
+    "facets": 512,
+    "native_ms": 2.485042001353577,
+    "milp_ms": 13.162499999452848,
+    "python_ms": 27.90662500046892,
+    "median_time_ratio_milp_over_native": 5.296691159458621,
+    "cases": 3
+  },
+  {
+    "facets": 2048,
+    "native_ms": 8.817083995381836,
+    "milp_ms": 34.31070900114719,
+    "python_ms": 108.95212499599438,
+    "median_time_ratio_milp_over_native": 3.8913896044449916,
+    "cases": 3
+  }
+]

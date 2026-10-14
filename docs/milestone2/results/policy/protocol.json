@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "seed": 20261014,
+  "cases": 24,
+  "batch_size": 8,
+  "max_model_calls": 9,
+  "requested_model": "deepseek/deepseek-v4-flash",
+  "prompt": "You are selecting the next action for independent, controlled recommendation tasks.\nUse only each supplied public state. Do not use tools, browse, read files, or invent observations.\nThe possible_worlds table is the full declared model, not a probability distribution.\nFor a deterministic recommendation, terminal loss is its maximum regret over remaining worlds:\nmax_world(max_candidate utility - chosen_candidate utility). Abstaining costs abstention_loss.\nYour objective is to minimize information-action costs plus worst-case terminal loss, over\nthe remaining information-action budget. You may plan ahead; recommend and abstain cost no\ninformation action. Each information action can be used at most once. Stopping is always allowed.\nask_user obtains the actual preference from the environment; do not answer on the user's behalf.\ninspect_evidence obtains the held-back cached item descriptions and source excerpts.\nEvery possible action observation is in the world table. A later state will contain the actual\nobservation. Never assume an unrevealed preference or candidate assignment. Different cases\nhave separate hidden states; do not transfer observations between them.\nReturn only JSON: {\"decisions\":[{\"case_id\":\"ID\", \"kind\":\"ask_user|inspect_evidence|recommend|abstain\", \"item\":\"A|B\"}]}.\nOmit item unless recommending. Return exactly one decision for every supplied case_id.\nDo not output answers, justifications, or intermediate reasoning.\nTASKS:\n",
+  "design": "Six directed domain pairs \u00d7 four known/unknown conditions; twelve reused curated works.",
+  "preferences": "Scripted theme choices. No participants, no held-out natural preference labels.",
+  "primary_measure": "Mean modeled worst-case terminal loss plus used action costs; report coverage too.",
+  "costs": {
+    "ask_user": 0.04,
+    "inspect_evidence": 0.02,
+    "abstain": 0.45
+  },
+  "baselines": [
+    "exact",
+    "one_step",
+    "information_gain",
+    "always_ask",
+    "always_inspect",
+    "no_actions",
+    "deepseek"
+  ],
+  "fairness": "Same structured world table, action budget and observations. Candidate identities masked until evidence access; actual preference supplied only when known or asked.",
+  "failure_rule": "No retry or substitute policy. Failed/invalid decisions reported separately, excluded from completed-episode means; completion denominator always shown.",
+  "limitations": [
+    "Finite hypothesis set and binary utilities are supplied, not inferred from raw text.",
+    "Evidence action returns existing cached annotations; it is not a fresh model call.",
+    "Batched CLI latency is not per-recommendation latency.",
+    "Fixed small repeated cases support no population confidence intervals.",
+    "Model response is stochastic; cache reproduces this run only.",
+    "Local freeze before inference is not an externally preregistered study."
+  ],
+  "source_sha256": {
+    "apps/api/recros_api/decision.py": "b29a3418d54842974e6eddbbd167554023498d404c02a943c84c5467d627cd49",
+    "apps/api/recros_api/deliberation.py": "a94c6b56b3c2d5c0db717b49cbb2d632f22559b89cd81b0ac4272a24986d3059",
+    "ml/src/recros_ml/research/policy_benchmark.py": "e82ce35f08e88bcabdb0159a09fd59c3eeb45bda286bc40294c040dabd157b29",
+    "ml/src/recros_ml/research/commandcode.py": "9812d251d36582a90f9b97703c7bbad37245b7d7e3b2e77dbde124f8a9c53bb5",
+    "demo/catalog.real.deepseek.annotated.json": "b444d6ac897825092c0bc2fcb2239e9a9ace8c7f03464e3fac66606ac1dca488"
+  },
+  "case_sha256": "e50b39123324b2c9cf0f86c73d86586f09f27bf600f4786944b4b15c5306ba20"
+}

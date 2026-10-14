@@ -1,0 +1,188 @@
+{
+  "protocol_sha256": "075d8e513dc8733abf1407153a44e083099aba06332d5bd2dae547a5e0c4a090",
+  "states": 276,
+  "unique_source_works": 46,
+  "exact_cut_count": 15456,
+  "bound_order_failures": 0,
+  "reference_bound_failures": 0,
+  "states_with_strict_hierarchy_tightening": 100,
+  "mean_exact_normalized_mmr": 0.24909420289855072,
+  "mean_flat_normalized_bound_same_item": 0.3179347826086957,
+  "mean_independent_normalized_bound_same_item": 0.4009661835748792,
+  "mean_flat_selection_coherent_regret": 0.2557367149758454,
+  "mean_interval_selection_coherent_regret": 0.2650966183574879,
+  "coverage": [
+    {
+      "threshold": 0,
+      "exact_count": 23,
+      "flat_count_same_recommendation": 23,
+      "independent_count_same_recommendation": 18
+    },
+    {
+      "threshold": 0.05,
+      "exact_count": 23,
+      "flat_count_same_recommendation": 23,
+      "independent_count_same_recommendation": 18
+    },
+    {
+      "threshold": 0.1,
+      "exact_count": 33,
+      "flat_count_same_recommendation": 33,
+      "independent_count_same_recommendation": 18
+    },
+    {
+      "threshold": 0.2,
+      "exact_count": 101,
+      "flat_count_same_recommendation": 91,
+      "independent_count_same_recommendation": 52
+    },
+    {
+      "threshold": 0.3,
+      "exact_count": 167,
+      "flat_count_same_recommendation": 152,
+      "independent_count_same_recommendation": 101
+    },
+    {
+      "threshold": 0.5,
+      "exact_count": 276,
+      "flat_count_same_recommendation": 229,
+      "independent_count_same_recommendation": 199
+    }
+  ],
+  "scale_timings": [
+    {
+      "facets": 32,
+      "replicate": 0,
+      "value": 27,
+      "cut_seconds": 0.0011661660028039478,
+      "milp_seconds": 0.005547666994971223,
+      "nodes": 98,
+      "edges": 211,
+      "equal": true
+    },
+    {
+      "facets": 32,
+      "replicate": 1,
+      "value": 33,
+      "cut_seconds": 0.001011166998068802,
+      "milp_seconds": 0.005187249997106846,
+      "nodes": 98,
+      "edges": 214,
+      "equal": true
+    },
+    {
+      "facets": 32,
+      "replicate": 2,
+      "value": 18,
+      "cut_seconds": 0.0013291249997564591,
+      "milp_seconds": 0.000771250000980217,
+      "nodes": 98,
+      "edges": 229,
+      "equal": true
+    },
+    {
+      "facets": 128,
+      "replicate": 0,
+      "value": 140,
+      "cut_seconds": 0.004782707997947,
+      "milp_seconds": 0.0058092920007766224,
+      "nodes": 386,
+      "edges": 882,
+      "equal": true
+    },
+    {
+      "facets": 128,
+      "replicate": 1,
+      "value": 39,
+      "cut_seconds": 0.0038039999999455176,
+      "milp_seconds": 0.0013776249979855493,
+      "nodes": 386,
+      "edges": 915,
+      "equal": true
+    },
+    {
+      "facets": 128,
+      "replicate": 2,
+      "value": 98,
+      "cut_seconds": 0.004651125003874768,
+      "milp_seconds": 0.005451999997603707,
+      "nodes": 386,
+      "edges": 902,
+      "equal": true
+    },
+    {
+      "facets": 512,
+      "replicate": 0,
+      "value": 416,
+      "cut_seconds": 0.02824924999731593,
+      "milp_seconds": 0.01206754200393334,
+      "nodes": 1538,
+      "edges": 3648,
+      "equal": true
+    },
+    {
+      "facets": 512,
+      "replicate": 1,
+      "value": 409,
+      "cut_seconds": 0.02214691699919058,
+      "milp_seconds": 0.013271541996800806,
+      "nodes": 1538,
+      "edges": 3569,
+      "equal": true
+    },
+    {
+      "facets": 512,
+      "replicate": 2,
+      "value": 514,
+      "cut_seconds": 0.02992429099685978,
+      "milp_seconds": 0.014644499999121763,
+      "nodes": 1538,
+      "edges": 3508,
+      "equal": true
+    },
+    {
+      "facets": 2048,
+      "replicate": 0,
+      "value": 1593,
+      "cut_seconds": 0.11218516700319014,
+      "milp_seconds": 0.04234324999561068,
+      "nodes": 6146,
+      "edges": 14621,
+      "equal": true
+    },
+    {
+      "facets": 2048,
+      "replicate": 1,
+      "value": 1129,
+      "cut_seconds": 0.11596166700473987,
+      "milp_seconds": 0.03460645800078055,
+      "nodes": 6146,
+      "edges": 14914,
+      "equal": true
+    },
+    {
+      "facets": 2048,
+      "replicate": 2,
+      "value": 1008,
+      "cut_seconds": 0.11848179200023878,
+      "milp_seconds": 0.03385804199933773,
+      "nodes": 6146,
+      "edges": 15063,
+      "equal": true
+    }
+  ],
+  "milp_failures": [],
+  "cut_total_seconds": 6.147243256637012,
+  "total_seconds": 7.001797207994969,
+  "structural_fault_counterexample": {
+    "assumed_hierarchy_gap": 0,
+    "one_fault_upper_bound": 1,
+    "actual_violating_labels": [
+      0,
+      1
+    ],
+    "actual_gap": 1
+  },
+  "scope": "Scripted preferences and artificially masked closed-world LTO tag references. No human enjoyment, extraction correctness, or trained SLM improvement is measured.",
+  "demo_selection": "Post hoc largest bound-gap cases; descriptive illustrations only."
+}

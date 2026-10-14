@@ -1,0 +1,209 @@
+{
+  "protocol_sha256": "e378725a809740fd00da7e15e08ac04944d042186ab6b0bb77d349160a0ea2b8",
+  "generated_at": "2026-10-14T07:39:06.988175+00:00",
+  "scope": "Development source-reading test, single analyst labels. Frozen locally before model extraction, not external preregistration.",
+  "items": 18,
+  "feature_decisions": 72,
+  "source_reading": {
+    "tp": 21,
+    "fp": 0,
+    "fn": 4,
+    "precision": 1.0,
+    "recall": 0.84,
+    "f1": 0.9130434782608696,
+    "false_positive_pairs": [],
+    "false_negative_pairs": [
+      [
+        "book:house-of-leaves",
+        "unease"
+      ],
+      [
+        "book:piranesi",
+        "unease"
+      ],
+      [
+        "movie:after-yang",
+        "interiority"
+      ],
+      [
+        "movie:coherence",
+        "unease"
+      ]
+    ],
+    "rejected_claims": []
+  },
+  "retrieval": {
+    "requests": 12,
+    "requests_with_positive_source_labels": 11,
+    "bm25_macro_ndcg3": 0.9017927990134715,
+    "model_macro_ndcg3": 0.9786691488171474,
+    "rows": [
+      {
+        "domain": "movie",
+        "feature": "inquiry",
+        "relevant_passages": 2,
+        "bm25_ndcg3": 0.9197207891481876,
+        "model_ndcg3": 1.0,
+        "decision": "recommend",
+        "chosen_id": "movie:after-yang",
+        "chosen_matches_source_label": true
+      },
+      {
+        "domain": "movie",
+        "feature": "unease",
+        "relevant_passages": 3,
+        "bm25_ndcg3": 1.0,
+        "model_ndcg3": 0.7653606369886217,
+        "decision": "recommend",
+        "chosen_id": "movie:lighthouse",
+        "chosen_matches_source_label": true
+      },
+      {
+        "domain": "movie",
+        "feature": "interiority",
+        "relevant_passages": 2,
+        "bm25_ndcg3": 1.0,
+        "model_ndcg3": 1.0,
+        "decision": "recommend",
+        "chosen_id": "movie:ghost-story",
+        "chosen_matches_source_label": true
+      },
+      {
+        "domain": "movie",
+        "feature": "connection",
+        "relevant_passages": 2,
+        "bm25_ndcg3": 1.0,
+        "model_ndcg3": 1.0,
+        "decision": "recommend",
+        "chosen_id": "movie:after-yang",
+        "chosen_matches_source_label": true
+      },
+      {
+        "domain": "book",
+        "feature": "inquiry",
+        "relevant_passages": 4,
+        "bm25_ndcg3": 1.0,
+        "model_ndcg3": 1.0,
+        "decision": "recommend",
+        "chosen_id": "book:annihilation",
+        "chosen_matches_source_label": true
+      },
+      {
+        "domain": "book",
+        "feature": "unease",
+        "relevant_passages": 4,
+        "bm25_ndcg3": 1.0,
+        "model_ndcg3": 1.0,
+        "decision": "recommend",
+        "chosen_id": "book:annihilation",
+        "chosen_matches_source_label": true
+      },
+      {
+        "domain": "book",
+        "feature": "interiority",
+        "relevant_passages": 1,
+        "bm25_ndcg3": 0.0,
+        "model_ndcg3": 1.0,
+        "decision": "recommend",
+        "chosen_id": "book:spaceborn",
+        "chosen_matches_source_label": true
+      },
+      {
+        "domain": "book",
+        "feature": "connection",
+        "relevant_passages": 1,
+        "bm25_ndcg3": 1.0,
+        "model_ndcg3": 1.0,
+        "decision": "recommend",
+        "chosen_id": "book:spaceborn",
+        "chosen_matches_source_label": true
+      },
+      {
+        "domain": "music",
+        "feature": "inquiry",
+        "relevant_passages": 0,
+        "bm25_ndcg3": null,
+        "model_ndcg3": null,
+        "decision": "abstain",
+        "chosen_id": null,
+        "chosen_matches_source_label": null
+      },
+      {
+        "domain": "music",
+        "feature": "unease",
+        "relevant_passages": 2,
+        "bm25_ndcg3": 1.0,
+        "model_ndcg3": 1.0,
+        "decision": "recommend",
+        "chosen_id": "music:bury-a-friend",
+        "chosen_matches_source_label": true
+      },
+      {
+        "domain": "music",
+        "feature": "interiority",
+        "relevant_passages": 2,
+        "bm25_ndcg3": 1.0,
+        "model_ndcg3": 1.0,
+        "decision": "recommend",
+        "chosen_id": "music:bury-a-friend",
+        "chosen_matches_source_label": true
+      },
+      {
+        "domain": "music",
+        "feature": "connection",
+        "relevant_passages": 2,
+        "bm25_ndcg3": 1.0,
+        "model_ndcg3": 1.0,
+        "decision": "recommend",
+        "chosen_id": "music:everything-i-wanted",
+        "chosen_matches_source_label": true
+      }
+    ]
+  },
+  "provenance_interventions": [
+    {
+      "intervention": "changed_source",
+      "original_accepted_claims": 21,
+      "accepted_claims_after": 0,
+      "recommendations_after": 0,
+      "requests": 12
+    },
+    {
+      "intervention": "fabricated_quote",
+      "original_accepted_claims": 21,
+      "accepted_claims_after": 0,
+      "recommendations_after": 0,
+      "requests": 12
+    },
+    {
+      "intervention": "unknown_feature",
+      "original_accepted_claims": 21,
+      "accepted_claims_after": 0,
+      "recommendations_after": 0,
+      "requests": 12
+    },
+    {
+      "intervention": "deleted_evidence",
+      "original_accepted_claims": 21,
+      "accepted_claims_after": 0,
+      "recommendations_after": 0,
+      "requests": 12
+    }
+  ],
+  "annotation_usage": {
+    "requested_model": "deepseek/deepseek-v4-flash",
+    "provider": "Command Code CLI",
+    "usage": {
+      "inputTokens": 17992,
+      "outputTokens": 3605,
+      "cacheReadTokens": 8192,
+      "cacheWriteTokens": 0
+    },
+    "duration_ms": 31106,
+    "session_id": "ffcb8fdd-d7cf-4b9d-ab74-8e90a0885b8b",
+    "prompt_sha256": "3cd4f719eb6ae877edaea3c4ce73530aafba3f51f5143fca7e0191ce3e3693d5",
+    "source_sha256": "d0ed214089c17bbf6bee0d5c51e51d15abc22064d9108d18e1c845e84412b292",
+    "protocol_sha256": "e378725a809740fd00da7e15e08ac04944d042186ab6b0bb77d349160a0ea2b8",
+    "scope": "Source feature interpretation; exact quotation is a separate provenance check."
+  }
+}

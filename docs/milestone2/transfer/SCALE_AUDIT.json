@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-10-14T08:09:41.495904+00:00",
+  "index": {
+    "input": "apps/api/data/familiar-catalog.db",
+    "input_sha256": "26166bfce18e4e9a482e39da2e63c0bd52425716e3cd67757440d3a4f94bc4dc",
+    "counts": {
+      "book": 6416,
+      "movie": 43650
+    },
+    "eligibility": "Movie/book summaries of at least 60 characters.",
+    "music_note": "Spotify records have acoustic metadata but no narrative summary; not included in this text index."
+  },
+  "annotation_pool": 192,
+  "combined_items": 210,
+  "combined_domains": {
+    "movie": 102,
+    "book": 102,
+    "music": 6
+  },
+  "items_with_supported_features_by_domain": {
+    "movie": 63,
+    "book": 70,
+    "music": 4
+  },
+  "accepted_features": {
+    "inquiry": 48,
+    "unease": 43,
+    "connection": 37,
+    "interiority": 46
+  },
+  "accepted_claims": 174,
+  "failed_batches_or_items": [
+    {
+      "start": 144,
+      "count": 24,
+      "error_type": "invalid_id_schema"
+    }
+  ],
+  "unannotated_records_due_to_missing_cache": 0,
+  "unannotated_records_total": 24,
+  "scope": "Query-selected evidence bank, no independent preference labels or representative-sampling claim.",
+  "evaluation_note": "No held-out preference or source-label accuracy measured on this scaled bank.",
+  "model_call_count": 8,
+  "rejected_claim_count": 25
+}

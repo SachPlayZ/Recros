@@ -1,0 +1,40 @@
+{
+  "protocol_sha256": "274be049eaca299152d310e9c418bdf4dffa6306162b05b0286f0a19e9b11fa0",
+  "users": 320,
+  "mask": 0.5,
+  "timing_scope": "Supplemental post-result single replay on this Mac; certification-prefix computation including propagation, excluding fit, retrieval, source I/O and annotation latency. Flat always timed first; exploratory timing only.",
+  "flat_ms": {
+    "mean": 1.9508659310758958,
+    "ci95": [
+      1.6663209262782175,
+      2.232893311118573
+    ],
+    "n": 320
+  },
+  "hierarchy_ms": {
+    "mean": 29.877064412198706,
+    "ci95": [
+      25.536576097638317,
+      34.231681559429035
+    ],
+    "n": 320
+  },
+  "added_compute_ms": {
+    "mean": 27.92619848112281,
+    "ci95": [
+      23.829248491970247,
+      31.96585866589089
+    ],
+    "n": 320
+  },
+  "saved_queries": {
+    "mean": 0.44375,
+    "ci95": [
+      0.196796875,
+      0.75
+    ],
+    "n": 320
+  },
+  "break_even_uniform_annotation_latency_ms": 62.93227826731901,
+  "interpretation": "Conditional mean total-latency tradeoff: mean added compute divided by mean saved lookups. No actual human or model annotation latency is measured; cheap existing tags may make the exact certificate unnecessary."
+}

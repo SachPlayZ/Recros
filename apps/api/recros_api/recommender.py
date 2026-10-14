@@ -8,6 +8,7 @@ from typing import Any
 
 from .db import get_conn
 from .ranker import get_ranker
+from .discovery import Candidate, rerank
 
 
 WORD_RE = re.compile(r"[a-z0-9']+")
@@ -122,7 +123,7 @@ def _feedback_context(user_id: int) -> tuple[set[str], set[str], set[str], Count
     for row in rows:
         if row["item_id"] not in liked:
             continue
-        liked_words.update(x for x in (row["genres"] + "|" + row["tags"]).split("|") if x)
+        liked_words.update(x.lower() for x in (row["genres"] + "|" + row["tags"]).split("|") if x)
         for creator in (row["creators"] or "").split(","):
             if creator.strip():
                 liked_creators[creator.strip().lower()] += 1
@@ -160,14 +161,16 @@ def _reason(row: Any, profile: dict[str, Any], genre_match: int, liked_words: Co
         return f"A strong {row['domain']} pick for your mix"
     if profile["exploration"] > 0.65:
         return "A fresh direction beyond your usual picks"
-    return "Popular with people exploring this space"
+    return "A catalog suggestion based on metadata and popularity"
 
 
-def recommend(user_id: int, limit: int = 12, domain: str = "all") -> list[dict[str, Any]]:
+def recommend_with_trace(user_id: int, limit: int = 12, domain: str = "all", policy: str = "discovery") -> dict:
+    if policy not in {"relevance", "discovery"}:
+        raise ValueError("Unknown ranking policy")
     profile = get_profile(user_id)
     hidden, _liked, seen, liked_words, liked_creators = _feedback_context(user_id)
     profile_genres = {x.lower() for x in profile["genres"]}
-    profile_words = _list_words(profile["themes"] + profile["moods"] + profile["disliked_terms"])
+    profile_words = _list_words(profile["themes"] + profile["moods"])
     disliked_words = _list_words(profile["disliked_terms"])
     requested_domains = {domain} if domain in {"movie", "music", "book"} else None
 
@@ -193,11 +196,14 @@ def recommend(user_id: int, limit: int = 12, domain: str = "all") -> list[dict[s
         text_words = _words(" ".join((row["title"], row["description"], row["creators"], row["tags"])))
         genre_match = len(genres & profile_genres)
         theme_match = len(text_words & profile_words)
-        dislike_match = len(text_words & disliked_words)
+        dislike_match = len((text_words | _words(row["genres"])) & disliked_words)
+        if dislike_match:
+            continue  # Explicit exclusions must survive both rankers and reranking.
         creator_match = sum(v for k, v in liked_creators.items() if k in row["creators"].lower())
         liked_tag_match = sum(liked_words.get(g, 0) for g in genres)
         popularity = min(math.log1p(max(float(row["popularity"] or 0), 0.0)) / 12.0, 1.0)
-        quality = min(max(float(row["rating"] or 0.0) / 5.0, 0.0), 1.0)
+        rating_scale = 10.0 if row["domain"] == "movie" else 5.0
+        quality = min(max(float(row["rating"] or 0.0) / rating_scale, 0.0), 1.0)
         novelty = 1.0 - popularity
         heuristic_score = (
             genre_match * 2.8
@@ -215,15 +221,31 @@ def recommend(user_id: int, limit: int = 12, domain: str = "all") -> list[dict[s
         score = model_score * 5.0 + heuristic_score * 0.3 if model_scores is not None else heuristic_score
         scored.append((score, row, _reason(row, profile, genre_match, liked_words)))
 
-    scored.sort(key=lambda item: item[0], reverse=True)
-    selected: list[dict[str, Any]] = []
-    domain_counts: Counter[str] = Counter()
-    max_per_domain = max(2, math.ceil(limit * 0.6))
+    # Compare popularity only within each domain; raw units differ across sources.
+    domain_pop: dict[str, list[float]] = defaultdict(list)
+    for _, row, _ in scored:
+        domain_pop[row['domain']].append(float(row['popularity'] or 0))
+    for values in domain_pop.values():
+        values.sort()
+    from bisect import bisect_left, bisect_right
+    candidates = []
+    by_id = {}
     for score, row, reason in scored:
-        if domain_counts[row["domain"]] >= max_per_domain:
-            continue
-        selected.append(_item(row, reason, score))
-        domain_counts[row["domain"]] += 1
-        if len(selected) >= limit:
-            break
-    return selected
+        pop = float(row['popularity'] or 0)
+        values = domain_pop[row['domain']]
+        novelty = 1 - (bisect_left(values, pop) + bisect_right(values, pop)) / (2 * len(values))
+        candidates.append(Candidate(row['id'], max(0.0, score), novelty,
+                                    frozenset(_genre_set(row['genres']) | {row['domain']})))
+        by_id[row['id']] = (row, reason)
+    candidates.sort(key=lambda c: (-c.score, c.key))
+    budget = profile['exploration'] * .10 if policy == 'discovery' else 0.0
+    selected, certificate = rerank(candidates[:max(200, limit)], limit, budget)
+    return {'items': [_item(by_id[c.key][0], by_id[c.key][1], c.score) for c in selected],
+            'policy': policy, 'certificate': certificate,
+            'ranker': 'lightgbm+heuristic' if model_scores is not None else 'heuristic',
+            'candidate_count': len(candidates),
+            'certificate_scope': 'Discounted nonnegative predicted scores, not measured user satisfaction'}
+
+
+def recommend(user_id: int, limit: int = 12, domain: str = "all") -> list[dict[str, Any]]:
+    return recommend_with_trace(user_id, limit, domain)['items']

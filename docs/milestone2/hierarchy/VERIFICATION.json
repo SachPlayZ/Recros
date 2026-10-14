@@ -1,0 +1,27 @@
+{
+  "tests_passed": 105,
+  "exhaustive_joint_cases": 240,
+  "exhaustive_fault_cases": 90,
+  "general_milp_matches": 12,
+  "protocol_hashes": {
+    "docs/milestone2/results/policy/protocol.json": "2e4dd83d638f73515a2c7cd760c92760fef6fc3ba8727a7a6737bcdb3478c6df",
+    "docs/milestone2/transfer/protocol.json": "e378725a809740fd00da7e15e08ac04944d042186ab6b0bb77d349160a0ea2b8",
+    "docs/milestone2/hierarchy/protocol.json": "075d8e513dc8733abf1407153a44e083099aba06332d5bd2dae547a5e0c4a090"
+  },
+  "browser_checks": [
+    "Toy: flat gap 1, hard coherent gap 0",
+    "Allow one structural fault: toy upper bound 1",
+    "Eight actual LTO-derived target rows load with live CPU results",
+    "Flat witness lists impossible parent/child combinations",
+    "One-fault real-case bounds computed and displayed"
+  ],
+  "no_human_ratings_submitted": true,
+  "deck": {
+    "path": "docs/milestone2/deliverables/Recros_hierarchy_result.pptx",
+    "sha256": "023fd478c0c07845c9982d5ed52493803ed7f8d7184339df259593348fa445fd",
+    "slides": 8,
+    "all_slides_visually_reviewed": true,
+    "native_powerpoint_execution": false
+  },
+  "scope": "Mathematical/structural experiment; global originality and human preference gain unverified."
+}

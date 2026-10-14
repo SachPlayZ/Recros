@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "created_utc": "2026-10-14T12:41:54.924559+00:00",
+  "data_source": "https://zenodo.org/records/19367236",
+  "data_sha256": "6bc9333514a9c96f36b73b0fc87c9581d23f4d29a47a424635c9054200b9de50",
+  "ontology_facets": 2990,
+  "ontology_edges": 3335,
+  "annotated_movies": 1765,
+  "annotated_books": 23,
+  "unique_source_works": 46,
+  "skipped_sources": [],
+  "states": 276,
+  "candidates_per_state": 8,
+  "mask_fractions": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "weight_widths": [
+    0,
+    1
+  ],
+  "random_seed": 20261014,
+  "primary": "Exact joint-uncertainty gap and witness agreement; paired bound slack after sound unary propagation.",
+  "secondary": "Conditional bound coverage at normalized regret thresholds; runtime against a general MILP oracle.",
+  "scope": "Scripted preferences and artificially masked closed-world LTO tag references. No human enjoyment, extraction correctness, or trained SLM improvement is measured.",
+  "reference_rule": "Listed tags and their ancestors are 1; unlisted active tags are 0 only within this controlled structural test.",
+  "scale_seed": 90210,
+  "scale_cases": 12,
+  "scale_oracle_time_limit_seconds": 15,
+  "corruption_probe": "A declared subgenre-parent counterexample and exhaustive small-budget tests; structural implication faults only.",
+  "data_issues": {
+    "unresolved_parent_references": [],
+    "unmapped_story_terms": []
+  },
+  "states_sha256": "6beda9c4299efd596efffe5509c53d1e422e69a1ece669583350acee620f730e",
+  "scales_sha256": "144f7b18f33e75487b6f3ce26b44c968de601adc699a187ef39970121cf908df"
+}

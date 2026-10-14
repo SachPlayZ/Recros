@@ -1,0 +1,14 @@
+# Versions used for the October 13 pilot. Python 3.12, Apple Silicon.
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.18.1
+fastapi==0.143.0
+httpx==0.28.1
+uvicorn==0.54.0
+pytest==9.1.1
+networkx==3.7
+pyyaml==6.0.3
+
+# Optional original three-domain source restoration and parquet ingestion.
+kagglehub==1.0.2
+pyarrow==26.0.0

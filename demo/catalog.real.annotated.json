@@ -1,0 +1,241 @@
+{
+  "provenance": "Twelve real works selected by the project for a mechanism demo. Descriptions are brief original paraphrases of the linked Wikipedia articles, checked October 13, 2026. The selection emphasizes four themes and is not a representative test dataset. No lyrics, review labels or popularity measurements are included.",
+  "synthetic": false,
+  "items": [
+    {
+      "id": "movie:2001",
+      "domain": "movie",
+      "title": "2001: A Space Odyssey",
+      "description": "Scientists and astronauts travel to Jupiter to investigate an alien monolith, accompanied by the computer HAL.",
+      "source_url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey",
+      "annotation": {
+        "facets": [
+          {
+            "concept": "space exploration",
+            "quote": "travel to Jupiter"
+          },
+          {
+            "concept": "mystery",
+            "quote": "investigate an alien monolith"
+          }
+        ],
+        "description_sha256": "caee43b06f8d66cabf013e3a261ee06629644b56b2a53764218203c466fbec19",
+        "model": "inclusionai/ling-3.1-flash:free"
+      }
+    },
+    {
+      "id": "book:rama",
+      "domain": "book",
+      "title": "Rendezvous with Rama",
+      "description": "Human explorers intercept a huge alien spacecraft entering the Solar System and investigate its unfamiliar interior.",
+      "source_url": "https://en.wikipedia.org/wiki/Rendezvous_with_Rama",
+      "annotation": {
+        "facets": [
+          {
+            "concept": "space exploration",
+            "quote": "entering the Solar System"
+          },
+          {
+            "concept": "mystery",
+            "quote": "investigate its unfamiliar interior"
+          }
+        ],
+        "description_sha256": "52173c7d24a489a0b72048b4312e183c4441384cd872fc3207e7129aa4494255",
+        "model": "inclusionai/ling-3.1-flash:free"
+      }
+    },
+    {
+      "id": "music:space-oddity",
+      "domain": "music",
+      "title": "Space Oddity",
+      "description": "David Bowie's song follows the fictional astronaut Major Tom, whose spacecraft loses contact with Ground Control.",
+      "source_url": "https://en.wikipedia.org/wiki/Space_Oddity",
+      "annotation": {
+        "facets": [
+          {
+            "concept": "space exploration",
+            "quote": "fictional astronaut Major Tom"
+          },
+          {
+            "concept": "mystery",
+            "quote": "loses contact with Ground Control"
+          }
+        ],
+        "description_sha256": "424c0866bec8a60c54e19fe998767e67612936acd8883e8fbf82bdfa63ba7124",
+        "model": "inclusionai/ling-3.1-flash:free"
+      }
+    },
+    {
+      "id": "movie:manchester",
+      "domain": "movie",
+      "title": "Manchester by the Sea",
+      "description": "Lee Chandler faces bereavement and responsibility for his nephew while struggling with enduring grief and guilt over his past.",
+      "source_url": "https://en.wikipedia.org/wiki/Manchester_by_the_Sea_(film)",
+      "annotation": {
+        "facets": [
+          {
+            "concept": "grief and loss",
+            "quote": "enduring grief and guilt"
+          }
+        ],
+        "description_sha256": "c9532792734ed22be17b84ac15239ac3adc48fdc7b42d70cb5eb1938d83365cf",
+        "model": "inclusionai/ling-3.1-flash:free"
+      }
+    },
+    {
+      "id": "book:grief-observed",
+      "domain": "book",
+      "title": "A Grief Observed",
+      "description": "C. S. Lewis reflects on mourning his wife Joy, describing life after her death and the questions it raises about faith.",
+      "source_url": "https://en.wikipedia.org/wiki/A_Grief_Observed",
+      "annotation": {
+        "facets": [
+          {
+            "concept": "grief and loss",
+            "quote": "mourning his wife Joy"
+          }
+        ],
+        "description_sha256": "5684ab08a80180beec16729b6cfe1c3fe4dd5b61fab68c157359d1710fe58fa5",
+        "model": "inclusionai/ling-3.1-flash:free"
+      }
+    },
+    {
+      "id": "music:tears-in-heaven",
+      "domain": "music",
+      "title": "Tears in Heaven",
+      "description": "Eric Clapton wrote this song with Will Jennings while grieving the death of his young son Conor.",
+      "source_url": "https://en.wikipedia.org/wiki/Tears_in_Heaven",
+      "annotation": {
+        "facets": [
+          {
+            "concept": "grief and loss",
+            "quote": "grieving the death of his young son Conor"
+          }
+        ],
+        "description_sha256": "b2fa1d50a9ad6388f51a1cac85218dda8f56f7ee903422a1cd455eca59b49fb6",
+        "model": "inclusionai/ling-3.1-flash:free"
+      }
+    },
+    {
+      "id": "movie:vendetta",
+      "domain": "movie",
+      "title": "V for Vendetta",
+      "description": "A masked rebel attempts to inspire a revolution against the totalitarian government controlling Britain.",
+      "source_url": "https://en.wikipedia.org/wiki/V_for_Vendetta_(film)",
+      "annotation": {
+        "facets": [
+          {
+            "concept": "resistance to authority",
+            "quote": "inspire a revolution against the totalitarian government"
+          }
+        ],
+        "description_sha256": "2beea9cddbaffb2d3f36df6beb4c04059ef69897247db237e8396933fcfeb325",
+        "model": "inclusionai/ling-3.1-flash:free"
+      }
+    },
+    {
+      "id": "book:1984",
+      "domain": "book",
+      "title": "Nineteen Eighty-Four",
+      "description": "Winston Smith secretly opposes the ruling Party while living under pervasive surveillance and the manipulation of historical truth.",
+      "source_url": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four",
+      "annotation": {
+        "facets": [
+          {
+            "concept": "resistance to authority",
+            "quote": "secretly opposes the ruling Party"
+          }
+        ],
+        "description_sha256": "1aed69022355f04bd6b0b813d0a9c6b145aa9ed31003364ad8a554d79fd1206b",
+        "model": "inclusionai/ling-3.1-flash:free"
+      }
+    },
+    {
+      "id": "music:get-up",
+      "domain": "music",
+      "title": "Get Up, Stand Up",
+      "description": "This Wailers song has accompanied human-rights concerts and performances supporting political protesters.",
+      "source_url": "https://en.wikipedia.org/wiki/Get_Up,_Stand_Up",
+      "annotation": {
+        "facets": [
+          {
+            "concept": "resistance to authority",
+            "quote": "supporting political protesters"
+          }
+        ],
+        "description_sha256": "af0ade6a2649220d9ed7d84ba21dfe333cd3436e8f33893e541be57dbecf07a9",
+        "model": "inclusionai/ling-3.1-flash:free"
+      }
+    },
+    {
+      "id": "movie:stand-by-me",
+      "domain": "movie",
+      "title": "Stand by Me",
+      "description": "Four boys journey to find a missing boy's body. Their friendship helps Gordie confront his insecurity and family troubles.",
+      "source_url": "https://en.wikipedia.org/wiki/Stand_by_Me_(film)",
+      "annotation": {
+        "facets": [
+          {
+            "concept": "friendship",
+            "quote": "Their friendship helps Gordie"
+          }
+        ],
+        "description_sha256": "39c21774064fcf3aecc5aea9139d4b2c547104fee0204d117ccdf857af7f1458",
+        "model": "inclusionai/ling-3.1-flash:free"
+      }
+    },
+    {
+      "id": "book:charlotte",
+      "domain": "book",
+      "title": "Charlotte's Web",
+      "description": "Wilbur, a pig, develops a friendship with Charlotte, a spider who works to save him from slaughter.",
+      "source_url": "https://en.wikipedia.org/wiki/Charlotte%27s_Web",
+      "annotation": {
+        "facets": [
+          {
+            "concept": "friendship",
+            "quote": "develops a friendship with Charlotte"
+          }
+        ],
+        "description_sha256": "404ef5177aa3b99a4da74442fc2563ec05a39deb41c84c91a81436620b92ed8f",
+        "model": "inclusionai/ling-3.1-flash:free"
+      }
+    },
+    {
+      "id": "music:friend",
+      "domain": "music",
+      "title": "You've Got a Friend",
+      "description": "Carole King's song, also recorded by James Taylor, centers on friendship and being there for another person.",
+      "source_url": "https://en.wikipedia.org/wiki/You%27ve_Got_a_Friend",
+      "annotation": {
+        "facets": [
+          {
+            "concept": "friendship",
+            "quote": "centers on friendship"
+          }
+        ],
+        "description_sha256": "d96f8bd260c1b1003292108bb538cab672d9e63dd1badcf0eacab03f236be7c3",
+        "model": "inclusionai/ling-3.1-flash:free"
+      }
+    }
+  ],
+  "annotation_run": {
+    "requested_model": "inclusionai/ling-3.1-flash:free",
+    "provider": "Command Code CLI",
+    "usage": {
+      "inputTokens": 18042,
+      "outputTokens": 2703,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "duration_ms": 88646,
+    "session_id": "d6e79918-656c-4ba7-8219-67a9d03451d9",
+    "created_utc": "2026-10-13T14:12:33.844713+00:00",
+    "prompt_sha256": "f50fd00ccf991fd8f2fa7ac958307d35d07bddc08f827c1a9bb5d5f64f4c1b84",
+    "source_sha256": "6e784c08ab9cf905c87d719f089b385d8f5e92c07b0446818d9e7e16077ad914",
+    "predicted_facets": 15,
+    "accepted_facets": 15,
+    "rejected": [],
+    "verification_scope": "Exact quotation and schema only; not semantic entailment"
+  }
+}

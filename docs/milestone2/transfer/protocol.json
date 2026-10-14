@@ -1,0 +1,22 @@
+{
+  "scope": "Development source-reading test, single analyst labels. Frozen locally before model extraction, not external preregistration.",
+  "source_sha256": "d0ed214089c17bbf6bee0d5c51e51d15abc22064d9108d18e1c845e84412b292",
+  "label_sha256": "1e24b45947741cdbc99db3dca6e2e6a164335a1057261a6f4636550f5ca18093",
+  "prompt_sha256": "3cd4f719eb6ae877edaea3c4ce73530aafba3f51f5143fca7e0191ce3e3693d5",
+  "model": "deepseek/deepseek-v4-flash",
+  "rubric": {
+    "inquiry": "Explicit investigation, discovery through searching, evaluating an unknown, or technical problem solving. A mystery genre alone is insufficient.",
+    "unease": "Explicit ominous, unsettling, hallucinatory or threatening presentation or atmosphere. Ordinary danger in an adventure is insufficient.",
+    "interiority": "Explicit focus on inner feelings, personal reflection, memory, identity or subjective fears. A character simply appearing is insufficient.",
+    "connection": "Explicit mutual support, caregiving, reconnection, belonging or human bonding. Merely naming a group is insufficient."
+  },
+  "bm25_queries": {
+    "inquiry": "investigation discovery searching evaluating unknown technical problem solving",
+    "unease": "ominous unsettling hallucinatory threatening tension atmosphere",
+    "interiority": "feelings personal reflection memory identity subjective fears",
+    "connection": "mutual support caregiving reconnection belonging human bonding helping"
+  },
+  "metrics": "Source-label micro precision/recall/F1 and macro NDCG@3 across 12 domain/criterion requests. No satisfaction metric.",
+  "failure_policy": "One call; no automatic retries or substitute model.",
+  "gold_untagged": "No positive support in the supplied passage, not absence from the complete work."
+}

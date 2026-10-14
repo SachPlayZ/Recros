@@ -1,0 +1,17 @@
+{
+  "configuration": "ml/config.mac_air.yaml",
+  "input_rating_rows": 900000,
+  "catalog_items": 222896,
+  "catalog_domains": {
+    "book": 6810,
+    "movie": 45433,
+    "music": 170653
+  },
+  "users": 6034,
+  "interactions": 899176,
+  "interaction_domains": {
+    "movie": 899176
+  },
+  "missing_catalog_targets": 675,
+  "note": "New ingestion smoke run on the first 900000 rating rows, not a random sample or an evaluation. No training was performed."
+}

@@ -1,0 +1,56 @@
+{
+  "source": "https://zenodo.org/records/19367236",
+  "release": "v2026.04",
+  "md5": "606f06e2d63ee1b5f3925442c1fe9ea6",
+  "sha256": "6bc9333514a9c96f36b73b0fc87c9581d23f4d29a47a424635c9054200b9de50",
+  "unique_prefixed_records": {
+    "movie": 1768,
+    "novel": 23,
+    "shortstory": 42,
+    "play": 53
+  },
+  "unique_prefixed_records_with_theme_sections": {
+    "movie": 1765,
+    "novel": 23,
+    "shortstory": 42,
+    "play": 53
+  },
+  "count_limit": "Only explicit movie/novel/shortstory/play prefixes; other IDs and novel chapters are not included. Presence is not independent label verification.",
+  "examples": [
+    {
+      "record": "movie: The Time Machine (1960)",
+      "file": "stories/film/film-scifi-1960s.st.txt",
+      "themes": [
+        "time machine",
+        "time travel",
+        "multi-species civilization",
+        "noble savage utopia",
+        "mole people",
+        "the future of human evolution",
+        "World War I",
+        "World War II",
+        "World War III",
+        "nuclear holocaust",
+        "volcanic cataclysm",
+        "subterranean civilization",
+        "life in Victorian Britain"
+      ]
+    },
+    {
+      "record": "novel: The Time Machine (1895)",
+      "file": "stories/literature/novel-various.st.txt",
+      "themes": [
+        "time machine",
+        "time travel",
+        "the future of human evolution",
+        "atrophied civilization",
+        "multi-species civilization",
+        "what if I could never go home",
+        "social inequality",
+        "four-dimensional space",
+        "utopia"
+      ]
+    }
+  ],
+  "license": "MIT; story descriptions have a CC BY-SA exception. Recheck LICENSE-EXCEPTION for redistribution."
+}

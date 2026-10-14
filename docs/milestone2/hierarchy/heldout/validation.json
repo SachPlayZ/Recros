@@ -1,0 +1,104 @@
+{
+  "protocol_sha256": "274be049eaca299152d310e9c418bdf4dffa6306162b05b0286f0a19e9b11fa0",
+  "extension_protocol_sha256": "c4b6f533f373f91a5bb675f40e209035db0696f6f9ebce577abaa2ac9152862b",
+  "chosen_alpha": 0,
+  "chosen_gamma": 0,
+  "alpha_trials": [
+    {
+      "alpha": 0,
+      "ndcg": 0.2292420488395847
+    },
+    {
+      "alpha": 0.25,
+      "ndcg": 0.21684245221369536
+    },
+    {
+      "alpha": 0.5,
+      "ndcg": 0.20237455448728886
+    },
+    {
+      "alpha": 0.75,
+      "ndcg": 0.15943328546489355
+    },
+    {
+      "alpha": 1,
+      "ndcg": 0.024015889161323425
+    }
+  ],
+  "chosen_ease_lambda": 10000,
+  "ease_trials": [
+    {
+      "lambda": 100,
+      "ndcg": 0.19010246738704506
+    },
+    {
+      "lambda": 1000,
+      "ndcg": 0.19725326099562396
+    },
+    {
+      "lambda": 10000,
+      "ndcg": 0.1997208074461448
+    }
+  ],
+  "gamma_trials": [
+    {
+      "gamma": 0,
+      "ndcg": {
+        "popularity": 0.2095843394895134,
+        "genre_content": 0.18239622156577695,
+        "itemknn": 0.2292420488395847,
+        "hybrid": 0.2292420488395847,
+        "marginal_imputation": 0.2292420488395847,
+        "flat_regret": 0.2292420488395847,
+        "hierarchy_regret": 0.2292420488395847,
+        "complete_annotation_diagnostic": 0.2292420488395847
+      },
+      "selection_mean": 0.2292420488395847
+    },
+    {
+      "gamma": 0.25,
+      "ndcg": {
+        "popularity": 0.2095843394895134,
+        "genre_content": 0.18239622156577695,
+        "itemknn": 0.2292420488395847,
+        "hybrid": 0.2292420488395847,
+        "marginal_imputation": 0.22405786355799306,
+        "flat_regret": 0.21309340480147754,
+        "hierarchy_regret": 0.2139552068968582,
+        "complete_annotation_diagnostic": 0.2220947623491243
+      },
+      "selection_mean": 0.21352430584916787
+    },
+    {
+      "gamma": 0.5,
+      "ndcg": {
+        "popularity": 0.2095843394895134,
+        "genre_content": 0.18239622156577695,
+        "itemknn": 0.2292420488395847,
+        "hybrid": 0.2292420488395847,
+        "marginal_imputation": 0.22342330542675598,
+        "flat_regret": 0.21504459029804932,
+        "hierarchy_regret": 0.21660023867620684,
+        "complete_annotation_diagnostic": 0.21951525218440354
+      },
+      "selection_mean": 0.21582241448712808
+    },
+    {
+      "gamma": 1,
+      "ndcg": {
+        "popularity": 0.2095843394895134,
+        "genre_content": 0.18239622156577695,
+        "itemknn": 0.2292420488395847,
+        "hybrid": 0.2292420488395847,
+        "marginal_imputation": 0.2261151456952391,
+        "flat_regret": 0.2171998594286621,
+        "hierarchy_regret": 0.21465380838846726,
+        "complete_annotation_diagnostic": 0.21403397438779972
+      },
+      "selection_mean": 0.21592683390856468
+    }
+  ],
+  "background_ratings": 2277985,
+  "available_movies": 682,
+  "selection_scope": "Validation users/window only; no test performance consulted."
+}
