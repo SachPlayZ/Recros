@@ -1,0 +1,756 @@
+{
+  "dataset": "MovieLens 100K",
+  "source": "https://grouplens.org/datasets/movielens/100k/",
+  "sha256": "50d2a982c66986937beb9ffb3aa76efe955bf3d5c6b761f4e3a7cd717c6a3229",
+  "ratings": 100000,
+  "users": 943,
+  "items": 1682,
+  "splits": {
+    "train": 60000,
+    "validation": 20003,
+    "test": 19997
+  },
+  "train_end_unix": 884673939,
+  "validation_end_unix": 889237269,
+  "protocol": "Global 60/20/20 time windows; refit on train+validation for test; frozen profiles; full available catalog minus history; rating>=4 relevant; unobserved treated as nonrelevant for offline metrics",
+  "candidate_availability": "Observed at least once before cutoff; excludes future-only items; historical genre metadata assumed stable",
+  "k": 10,
+  "rerank_pool": 100,
+  "score_normalization": "CF per-user maximum normalization; genre cosine in [0,1]; convex mixture; no offset",
+  "tail_definition": "Bottom 80% of available items by past positive count; item ID breaks boundary ties",
+  "selection": "Max validation coverage subject to <=5% relative NDCG loss vs chosen hybrid; tie break tail share then smaller budget",
+  "chosen_alpha": 0.3,
+  "chosen_budget": 0.1,
+  "validation_baselines": [
+    {
+      "alpha": 0.0,
+      "budget": 0.0,
+      "ndcg": {
+        "mean": 0.13021809284954447,
+        "ci95": [
+          0.09658814101329108,
+          0.16780348429290246
+        ],
+        "n": 111
+      },
+      "recall": {
+        "mean": 0.06711192250405372,
+        "ci95": [
+          0.04901843815443991,
+          0.08822719613909161
+        ],
+        "n": 111
+      },
+      "map": {
+        "mean": 0.07296939796939797,
+        "ci95": [
+          0.04838206063206064,
+          0.10164053339053337
+        ],
+        "n": 111
+      },
+      "precision": {
+        "mean": 0.11621621621621621,
+        "ci95": [
+          0.08378378378378377,
+          0.15225225225225228
+        ],
+        "n": 111
+      },
+      "tail_share": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 111
+      },
+      "ild": {
+        "mean": 0.8129183945850615,
+        "ci95": [
+          0.8037446970780303,
+          0.8218417107583773
+        ],
+        "n": 111
+      },
+      "users": 111,
+      "coverage": 0.06551952349437459,
+      "exposure_gini": 0.971164016432051,
+      "predicted_loss_max": 0.0,
+      "latency_ms_p50": 0.34737500027404167,
+      "latency_ms_p95": 0.38247900010901503,
+      "candidates_min": 952,
+      "candidates_max": 1506,
+      "skipped": {
+        "positive_targets_unavailable_at_cutoff": 39,
+        "fewer_than_3_past_positive_ratings": 162,
+        "no_eligible_positive_target": 6
+      }
+    },
+    {
+      "alpha": 0.15,
+      "budget": 0.0,
+      "ndcg": {
+        "mean": 0.1339412351328877,
+        "ci95": [
+          0.09961066839011141,
+          0.17331153168328442
+        ],
+        "n": 111
+      },
+      "recall": {
+        "mean": 0.06538830038569476,
+        "ci95": [
+          0.048332220292140314,
+          0.08578263815241459
+        ],
+        "n": 111
+      },
+      "map": {
+        "mean": 0.07708690833690833,
+        "ci95": [
+          0.051028510653510654,
+          0.10693858590733589
+        ],
+        "n": 111
+      },
+      "precision": {
+        "mean": 0.11711711711711711,
+        "ci95": [
+          0.08468468468468467,
+          0.15317567567567564
+        ],
+        "n": 111
+      },
+      "tail_share": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 111
+      },
+      "ild": {
+        "mean": 0.795392058725392,
+        "ci95": [
+          0.784764913723247,
+          0.8053684934934933
+        ],
+        "n": 111
+      },
+      "users": 111,
+      "coverage": 0.0641958967571145,
+      "exposure_gini": 0.9710733897365267,
+      "predicted_loss_max": 0.0,
+      "latency_ms_p50": 0.44383299973560497,
+      "latency_ms_p95": 0.4800414999408531,
+      "candidates_min": 952,
+      "candidates_max": 1506,
+      "skipped": {
+        "positive_targets_unavailable_at_cutoff": 39,
+        "fewer_than_3_past_positive_ratings": 162,
+        "no_eligible_positive_target": 6
+      }
+    },
+    {
+      "alpha": 0.3,
+      "budget": 0.0,
+      "ndcg": {
+        "mean": 0.13518421018231033,
+        "ci95": [
+          0.09905841223371795,
+          0.1753090014384722
+        ],
+        "n": 111
+      },
+      "recall": {
+        "mean": 0.06538156427504958,
+        "ci95": [
+          0.048381810475924464,
+          0.08566068561080178
+        ],
+        "n": 111
+      },
+      "map": {
+        "mean": 0.07863178654845321,
+        "ci95": [
+          0.05177842425759091,
+          0.10929460561752229
+        ],
+        "n": 111
+      },
+      "precision": {
+        "mean": 0.11891891891891893,
+        "ci95": [
+          0.0846846846846847,
+          0.15675675675675682
+        ],
+        "n": 111
+      },
+      "tail_share": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 111
+      },
+      "ild": {
+        "mean": 0.7691841841841842,
+        "ci95": [
+          0.7571805317221986,
+          0.7811675902092571
+        ],
+        "n": 111
+      },
+      "users": 111,
+      "coverage": 0.06485771012574454,
+      "exposure_gini": 0.9707669284108729,
+      "predicted_loss_max": 0.0,
+      "latency_ms_p50": 0.4449580001164577,
+      "latency_ms_p95": 0.4865834998781793,
+      "candidates_min": 952,
+      "candidates_max": 1506,
+      "skipped": {
+        "positive_targets_unavailable_at_cutoff": 39,
+        "fewer_than_3_past_positive_ratings": 162,
+        "no_eligible_positive_target": 6
+      }
+    }
+  ],
+  "validation_rerank": [
+    {
+      "alpha": 0.3,
+      "budget": 0.02,
+      "ndcg": {
+        "mean": 0.13634150167910694,
+        "ci95": [
+          0.10078691425190879,
+          0.1758039027796712
+        ],
+        "n": 111
+      },
+      "recall": {
+        "mean": 0.0667138414794198,
+        "ci95": [
+          0.04951860183945038,
+          0.08687613241302403
+        ],
+        "n": 111
+      },
+      "map": {
+        "mean": 0.07886568115734781,
+        "ci95": [
+          0.05253841415820582,
+          0.10930255478692973
+        ],
+        "n": 111
+      },
+      "precision": {
+        "mean": 0.11891891891891893,
+        "ci95": [
+          0.08558558558558559,
+          0.15495495495495498
+        ],
+        "n": 111
+      },
+      "tail_share": {
+        "mean": 0.036936936936936934,
+        "ci95": [
+          0.025225225225225228,
+          0.04954954954954955
+        ],
+        "n": 111
+      },
+      "ild": {
+        "mean": 0.7872887172887172,
+        "ci95": [
+          0.7770705229038561,
+          0.7981347478430811
+        ],
+        "n": 111
+      },
+      "users": 111,
+      "coverage": 0.06882859033752482,
+      "exposure_gini": 0.9703328742375732,
+      "predicted_loss_max": 0.019973593303326376,
+      "latency_ms_p50": 1.3035410001975833,
+      "latency_ms_p95": 1.5420209997500933,
+      "candidates_min": 952,
+      "candidates_max": 1506,
+      "skipped": {
+        "positive_targets_unavailable_at_cutoff": 39,
+        "fewer_than_3_past_positive_ratings": 162,
+        "no_eligible_positive_target": 6
+      }
+    },
+    {
+      "alpha": 0.3,
+      "budget": 0.05,
+      "ndcg": {
+        "mean": 0.13576834142506236,
+        "ci95": [
+          0.10050618166412974,
+          0.17516308656028287
+        ],
+        "n": 111
+      },
+      "recall": {
+        "mean": 0.06618389977300752,
+        "ci95": [
+          0.049172433157064634,
+          0.08610231633249749
+        ],
+        "n": 111
+      },
+      "map": {
+        "mean": 0.07877559106725773,
+        "ci95": [
+          0.052358233978025644,
+          0.10916949613303775
+        ],
+        "n": 111
+      },
+      "precision": {
+        "mean": 0.11801801801801803,
+        "ci95": [
+          0.0846846846846847,
+          0.15407657657657653
+        ],
+        "n": 111
+      },
+      "tail_share": {
+        "mean": 0.07567567567567567,
+        "ci95": [
+          0.05225225225225225,
+          0.1018018018018018
+        ],
+        "n": 111
+      },
+      "ild": {
+        "mean": 0.7813863863863864,
+        "ci95": [
+          0.7692535809619143,
+          0.7935613113113112
+        ],
+        "n": 111
+      },
+      "users": 111,
+      "coverage": 0.06684315023163467,
+      "exposure_gini": 0.9709112156497994,
+      "predicted_loss_max": 0.049727399937279704,
+      "latency_ms_p50": 2.1828749995620456,
+      "latency_ms_p95": 2.3407709995808546,
+      "candidates_min": 952,
+      "candidates_max": 1506,
+      "skipped": {
+        "positive_targets_unavailable_at_cutoff": 39,
+        "fewer_than_3_past_positive_ratings": 162,
+        "no_eligible_positive_target": 6
+      }
+    },
+    {
+      "alpha": 0.3,
+      "budget": 0.1,
+      "ndcg": {
+        "mean": 0.1351428349211274,
+        "ci95": [
+          0.09969488571609905,
+          0.17419495568095975
+        ],
+        "n": 111
+      },
+      "recall": {
+        "mean": 0.06543314902225678,
+        "ci95": [
+          0.04823772092131829,
+          0.08539962748395959
+        ],
+        "n": 111
+      },
+      "map": {
+        "mean": 0.07866297845464512,
+        "ci95": [
+          0.05213819176319176,
+          0.10916430939868438
+        ],
+        "n": 111
+      },
+      "precision": {
+        "mean": 0.11711711711711711,
+        "ci95": [
+          0.08378378378378379,
+          0.15405405405405403
+        ],
+        "n": 111
+      },
+      "tail_share": {
+        "mean": 0.08468468468468467,
+        "ci95": [
+          0.056756756756756746,
+          0.11351351351351352
+        ],
+        "n": 111
+      },
+      "ild": {
+        "mean": 0.7791408074741407,
+        "ci95": [
+          0.765684225892559,
+          0.7920598038514707
+        ],
+        "n": 111
+      },
+      "users": 111,
+      "coverage": 0.06882859033752482,
+      "exposure_gini": 0.9705642108024637,
+      "predicted_loss_max": 0.09923787562728559,
+      "latency_ms_p50": 2.255417000014859,
+      "latency_ms_p95": 2.4314790002790687,
+      "candidates_min": 952,
+      "candidates_max": 1506,
+      "skipped": {
+        "positive_targets_unavailable_at_cutoff": 39,
+        "fewer_than_3_past_positive_ratings": 162,
+        "no_eligible_positive_target": 6
+      }
+    }
+  ],
+  "test": {
+    "popularity": {
+      "ndcg": {
+        "mean": 0.15563863038685377,
+        "ci95": [
+          0.11018326994708932,
+          0.20522391879802987
+        ],
+        "n": 93
+      },
+      "recall": {
+        "mean": 0.10498729014013981,
+        "ci95": [
+          0.06764915866482261,
+          0.14931778845212496
+        ],
+        "n": 93
+      },
+      "map": {
+        "mean": 0.09699952352506115,
+        "ci95": [
+          0.05894080243357797,
+          0.13931141548614662
+        ],
+        "n": 93
+      },
+      "precision": {
+        "mean": 0.12365591397849462,
+        "ci95": [
+          0.08387096774193548,
+          0.16774193548387098
+        ],
+        "n": 93
+      },
+      "tail_share": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 93
+      },
+      "ild": {
+        "mean": 0.7976025487853445,
+        "ci95": [
+          0.7889542299596064,
+          0.8063186337258919
+        ],
+        "n": 93
+      },
+      "users": 93,
+      "coverage": 0.04579207920792079,
+      "exposure_gini": 0.9794115298626638,
+      "predicted_loss_max": 0.0,
+      "latency_ms_p50": 0.47070900018297834,
+      "latency_ms_p95": 0.5116167998494348,
+      "candidates_min": 1008,
+      "candidates_max": 1608,
+      "skipped": {
+        "positive_targets_unavailable_at_cutoff": 41,
+        "fewer_than_3_past_positive_ratings": 194,
+        "no_eligible_positive_target": 14
+      }
+    },
+    "content": {
+      "ndcg": {
+        "mean": 0.030859068549469217,
+        "ci95": [
+          0.012979293787176951,
+          0.05572344127881834
+        ],
+        "n": 93
+      },
+      "recall": {
+        "mean": 0.013293588595500375,
+        "ci95": [
+          0.0032734203729286706,
+          0.026707795059445052
+        ],
+        "n": 93
+      },
+      "map": {
+        "mean": 0.015607612220515446,
+        "ci95": [
+          0.004466376514763612,
+          0.03301715309779825
+        ],
+        "n": 93
+      },
+      "precision": {
+        "mean": 0.025806451612903226,
+        "ci95": [
+          0.010752688172043012,
+          0.04838709677419355
+        ],
+        "n": 93
+      },
+      "tail_share": {
+        "mean": 0.8107526881720434,
+        "ci95": [
+          0.7838440860215055,
+          0.8365591397849463
+        ],
+        "n": 93
+      },
+      "ild": {
+        "mean": 0.1685614723786767,
+        "ci95": [
+          0.1336686934630483,
+          0.20342670108664734
+        ],
+        "n": 93
+      },
+      "users": 93,
+      "coverage": 0.10396039603960396,
+      "exposure_gini": 0.9609017353348239,
+      "predicted_loss_max": 0.0,
+      "latency_ms_p50": 0.4851670000789454,
+      "latency_ms_p95": 0.529941999775474,
+      "candidates_min": 1008,
+      "candidates_max": 1608,
+      "skipped": {
+        "positive_targets_unavailable_at_cutoff": 41,
+        "fewer_than_3_past_positive_ratings": 194,
+        "no_eligible_positive_target": 14
+      }
+    },
+    "itemknn": {
+      "ndcg": {
+        "mean": 0.14327089609854046,
+        "ci95": [
+          0.09408969796939326,
+          0.1950325716266204
+        ],
+        "n": 93
+      },
+      "recall": {
+        "mean": 0.06146184837917803,
+        "ci95": [
+          0.039676127910938844,
+          0.08532366929684072
+        ],
+        "n": 93
+      },
+      "map": {
+        "mean": 0.0941615463389657,
+        "ci95": [
+          0.052342827274278886,
+          0.14029882445809863
+        ],
+        "n": 93
+      },
+      "precision": {
+        "mean": 0.12903225806451615,
+        "ci95": [
+          0.08172043010752689,
+          0.17849462365591398
+        ],
+        "n": 93
+      },
+      "tail_share": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 93
+      },
+      "ild": {
+        "mean": 0.8085395687546224,
+        "ci95": [
+          0.7991930719121579,
+          0.8180727015417875
+        ],
+        "n": 93
+      },
+      "users": 93,
+      "coverage": 0.0655940594059406,
+      "exposure_gini": 0.9717542318748005,
+      "predicted_loss_max": 0.0,
+      "latency_ms_p50": 0.3778750005949405,
+      "latency_ms_p95": 0.41165799993905233,
+      "candidates_min": 1008,
+      "candidates_max": 1608,
+      "skipped": {
+        "positive_targets_unavailable_at_cutoff": 41,
+        "fewer_than_3_past_positive_ratings": 194,
+        "no_eligible_positive_target": 14
+      }
+    },
+    "hybrid": {
+      "ndcg": {
+        "mean": 0.15468520668534297,
+        "ci95": [
+          0.1043155158984989,
+          0.20714403034605006
+        ],
+        "n": 93
+      },
+      "recall": {
+        "mean": 0.07679045020267838,
+        "ci95": [
+          0.05134406621704527,
+          0.10315558308846434
+        ],
+        "n": 93
+      },
+      "map": {
+        "mean": 0.10117013711099733,
+        "ci95": [
+          0.057481485037264614,
+          0.14896870199692777
+        ],
+        "n": 93
+      },
+      "precision": {
+        "mean": 0.13655913978494624,
+        "ci95": [
+          0.08817204301075268,
+          0.18709677419354837
+        ],
+        "n": 93
+      },
+      "tail_share": {
+        "mean": 0.002150537634408602,
+        "ci95": [
+          0.0,
+          0.006451612903225807
+        ],
+        "n": 93
+      },
+      "ild": {
+        "mean": 0.7676915855948115,
+        "ci95": [
+          0.7527090302668261,
+          0.781872823860727
+        ],
+        "n": 93
+      },
+      "users": 93,
+      "coverage": 0.06683168316831684,
+      "exposure_gini": 0.9709051953582455,
+      "predicted_loss_max": 0.0,
+      "latency_ms_p50": 0.4852920001212624,
+      "latency_ms_p95": 0.5229590005910723,
+      "candidates_min": 1008,
+      "candidates_max": 1608,
+      "skipped": {
+        "positive_targets_unavailable_at_cutoff": 41,
+        "fewer_than_3_past_positive_ratings": 194,
+        "no_eligible_positive_target": 14
+      }
+    },
+    "discovery": {
+      "ndcg": {
+        "mean": 0.14979586350983684,
+        "ci95": [
+          0.09897408685578485,
+          0.2041397353326338
+        ],
+        "n": 93
+      },
+      "recall": {
+        "mean": 0.06616513616388832,
+        "ci95": [
+          0.04296110051661686,
+          0.0918951843821664
+        ],
+        "n": 93
+      },
+      "map": {
+        "mean": 0.10097442680776014,
+        "ci95": [
+          0.05587439196108551,
+          0.15010694017750467
+        ],
+        "n": 93
+      },
+      "precision": {
+        "mean": 0.13225806451612904,
+        "ci95": [
+          0.08384408602150537,
+          0.1838709677419355
+        ],
+        "n": 93
+      },
+      "tail_share": {
+        "mean": 0.07849462365591398,
+        "ci95": [
+          0.04838709677419355,
+          0.10860215053763442
+        ],
+        "n": 93
+      },
+      "ild": {
+        "mean": 0.7814146327587188,
+        "ci95": [
+          0.760869794333504,
+          0.7985352093645105
+        ],
+        "n": 93
+      },
+      "users": 93,
+      "coverage": 0.06621287128712872,
+      "exposure_gini": 0.9710116576173746,
+      "predicted_loss_max": 0.06839544984060097,
+      "latency_ms_p50": 2.29108300027292,
+      "latency_ms_p95": 2.4976583998068236,
+      "candidates_min": 1008,
+      "candidates_max": 1608,
+      "skipped": {
+        "positive_targets_unavailable_at_cutoff": 41,
+        "fewer_than_3_past_positive_ratings": 194,
+        "no_eligible_positive_target": 14
+      }
+    }
+  },
+  "paired_ndcg_delta": {
+    "mean": -0.004889343175506139,
+    "ci95": [
+      -0.011141235311494002,
+      0.0011444844845043675
+    ],
+    "n": 93
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "machine": "arm64"
+  },
+  "limitations": [
+    "Single-domain pilot; no evidence of cross-domain transfer or SLM benefit",
+    "One global split; confidence intervals resample users, not datasets or time windows",
+    "Observed ratings are not randomized exposure; Gini/tail exposure are not provider fairness",
+    "Predicted utility bound does not bound actual NDCG loss",
+    "Latency is local scoring/reranking, excludes fit, HTTP, retrieval I/O and language inference"
+  ]
+}

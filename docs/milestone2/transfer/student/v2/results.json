@@ -1,0 +1,394 @@
+{
+  "parameter_count": 562464,
+  "device": "cpu",
+  "pretraining_steps": 1500,
+  "pretraining_seconds": 47.02090808300272,
+  "pretraining_final_mean_loss": 4.522852110862732,
+  "fine_tuning_steps": 3000,
+  "fine_tuning_best_step": 700,
+  "validation_teacher_f1": 0.23076923076923075,
+  "training_wall_seconds": 114.55820550000499,
+  "train_records": 135,
+  "validation_records": 33,
+  "evaluation_records": 18,
+  "evaluation_feature_decisions": 72,
+  "evaluation": {
+    "tiny_causal_lm": {
+      "tp": 3,
+      "fp": 8,
+      "fn": 22,
+      "precision": 0.2727272727272727,
+      "recall": 0.12,
+      "micro_f1": 0.16666666666666666
+    },
+    "tfidf_logistic_student": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 23,
+      "precision": 1.0,
+      "recall": 0.08,
+      "micro_f1": 0.14814814814814814
+    },
+    "deepseek_teacher": {
+      "tp": 21,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.84,
+      "micro_f1": 0.9130434782608696
+    }
+  },
+  "student_inference_seconds_for_18_records": 0.022903207995113917,
+  "by_domain": {
+    "movie": {
+      "tp": 1,
+      "fp": 2,
+      "fn": 8,
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111,
+      "micro_f1": 0.16666666666666666
+    },
+    "book": {
+      "tp": 1,
+      "fp": 1,
+      "fn": 9,
+      "precision": 0.5,
+      "recall": 0.1,
+      "micro_f1": 0.16666666666666669
+    },
+    "music": {
+      "tp": 1,
+      "fp": 5,
+      "fn": 5,
+      "precision": 0.16666666666666666,
+      "recall": 0.16666666666666666,
+      "micro_f1": 0.16666666666666666
+    }
+  },
+  "predictions": [
+    {
+      "id": "movie:ex-machina",
+      "predicted_features": [
+        "unease"
+      ],
+      "source_label_features": [
+        "inquiry"
+      ]
+    },
+    {
+      "id": "movie:coherence",
+      "predicted_features": [
+        "inquiry"
+      ],
+      "source_label_features": [
+        "unease"
+      ]
+    },
+    {
+      "id": "movie:witch",
+      "predicted_features": [],
+      "source_label_features": [
+        "unease"
+      ]
+    },
+    {
+      "id": "movie:lighthouse",
+      "predicted_features": [],
+      "source_label_features": [
+        "unease"
+      ]
+    },
+    {
+      "id": "movie:after-yang",
+      "predicted_features": [
+        "connection"
+      ],
+      "source_label_features": [
+        "inquiry",
+        "interiority",
+        "connection"
+      ]
+    },
+    {
+      "id": "movie:ghost-story",
+      "predicted_features": [],
+      "source_label_features": [
+        "interiority",
+        "connection"
+      ]
+    },
+    {
+      "id": "book:martian",
+      "predicted_features": [
+        "interiority"
+      ],
+      "source_label_features": [
+        "inquiry"
+      ]
+    },
+    {
+      "id": "book:piranesi",
+      "predicted_features": [],
+      "source_label_features": [
+        "inquiry",
+        "unease"
+      ]
+    },
+    {
+      "id": "book:annihilation",
+      "predicted_features": [],
+      "source_label_features": [
+        "inquiry",
+        "unease"
+      ]
+    },
+    {
+      "id": "book:house-of-leaves",
+      "predicted_features": [],
+      "source_label_features": [
+        "unease"
+      ]
+    },
+    {
+      "id": "book:hill-house",
+      "predicted_features": [
+        "inquiry"
+      ],
+      "source_label_features": [
+        "inquiry",
+        "unease"
+      ]
+    },
+    {
+      "id": "book:spaceborn",
+      "predicted_features": [],
+      "source_label_features": [
+        "interiority",
+        "connection"
+      ]
+    },
+    {
+      "id": "music:bury-a-friend",
+      "predicted_features": [
+        "inquiry",
+        "interiority"
+      ],
+      "source_label_features": [
+        "unease",
+        "interiority"
+      ]
+    },
+    {
+      "id": "music:everything-i-wanted",
+      "predicted_features": [
+        "unease"
+      ],
+      "source_label_features": [
+        "interiority",
+        "connection"
+      ]
+    },
+    {
+      "id": "music:red-right-hand",
+      "predicted_features": [
+        "connection"
+      ],
+      "source_label_features": [
+        "unease"
+      ]
+    },
+    {
+      "id": "music:lean-on-me",
+      "predicted_features": [
+        "inquiry"
+      ],
+      "source_label_features": [
+        "connection"
+      ]
+    },
+    {
+      "id": "music:space-oddity",
+      "predicted_features": [],
+      "source_label_features": []
+    },
+    {
+      "id": "music:dream-of-arrakis",
+      "predicted_features": [
+        "unease"
+      ],
+      "source_label_features": []
+    }
+  ],
+  "validation_history": [
+    {
+      "step": 0,
+      "validation_teacher_f1": 0,
+      "loss": 0.6858406066894531
+    },
+    {
+      "step": 100,
+      "validation_teacher_f1": 0.15686274509803924,
+      "loss": 0.278902530670166
+    },
+    {
+      "step": 200,
+      "validation_teacher_f1": 0.16326530612244897,
+      "loss": 0.09249106049537659
+    },
+    {
+      "step": 300,
+      "validation_teacher_f1": 0.046511627906976744,
+      "loss": 0.004521266091614962
+    },
+    {
+      "step": 400,
+      "validation_teacher_f1": 0.13333333333333333,
+      "loss": 0.005580621305853128
+    },
+    {
+      "step": 500,
+      "validation_teacher_f1": 0.047619047619047616,
+      "loss": 0.0012432878138497472
+    },
+    {
+      "step": 600,
+      "validation_teacher_f1": 0.04878048780487805,
+      "loss": 0.0008359208586625755
+    },
+    {
+      "step": 700,
+      "validation_teacher_f1": 0.23076923076923075,
+      "loss": 0.0008259934256784618
+    },
+    {
+      "step": 800,
+      "validation_teacher_f1": 0.1702127659574468,
+      "loss": 0.011551040224730968
+    },
+    {
+      "step": 900,
+      "validation_teacher_f1": 0.17391304347826086,
+      "loss": 0.00038359497557394207
+    },
+    {
+      "step": 1000,
+      "validation_teacher_f1": 0.13636363636363638,
+      "loss": 0.00036788248689845204
+    },
+    {
+      "step": 1100,
+      "validation_teacher_f1": 0.1818181818181818,
+      "loss": 0.00027272995794191957
+    },
+    {
+      "step": 1200,
+      "validation_teacher_f1": 0.2142857142857143,
+      "loss": 0.0002336937905056402
+    },
+    {
+      "step": 1300,
+      "validation_teacher_f1": 0.1818181818181818,
+      "loss": 0.00017475520144216716
+    },
+    {
+      "step": 1400,
+      "validation_teacher_f1": 0.125,
+      "loss": 0.00013679011317435652
+    },
+    {
+      "step": 1500,
+      "validation_teacher_f1": 0.12765957446808512,
+      "loss": 0.00015033167437650263
+    },
+    {
+      "step": 1600,
+      "validation_teacher_f1": 0.16666666666666666,
+      "loss": 0.00015768503362778574
+    },
+    {
+      "step": 1700,
+      "validation_teacher_f1": 0.12244897959183673,
+      "loss": 0.00013798859436064959
+    },
+    {
+      "step": 1800,
+      "validation_teacher_f1": 0.125,
+      "loss": 0.00012634209997486323
+    },
+    {
+      "step": 1900,
+      "validation_teacher_f1": 0.13043478260869565,
+      "loss": 0.00012798872194252908
+    },
+    {
+      "step": 2000,
+      "validation_teacher_f1": 0.16326530612244897,
+      "loss": 0.00033102036104537547
+    },
+    {
+      "step": 2100,
+      "validation_teacher_f1": 0.19607843137254902,
+      "loss": 0.00011650470696622506
+    },
+    {
+      "step": 2200,
+      "validation_teacher_f1": 0.13636363636363638,
+      "loss": 9.603615035302937e-05
+    },
+    {
+      "step": 2300,
+      "validation_teacher_f1": 0.22641509433962265,
+      "loss": 7.984743569977582e-05
+    },
+    {
+      "step": 2400,
+      "validation_teacher_f1": 0.1702127659574468,
+      "loss": 0.00014840555377304554
+    },
+    {
+      "step": 2500,
+      "validation_teacher_f1": 0.0975609756097561,
+      "loss": 5.625560152111575e-05
+    },
+    {
+      "step": 2600,
+      "validation_teacher_f1": 0.17777777777777776,
+      "loss": 0.0001506972621427849
+    },
+    {
+      "step": 2700,
+      "validation_teacher_f1": 0.18867924528301885,
+      "loss": 0.00014787411782890558
+    },
+    {
+      "step": 2800,
+      "validation_teacher_f1": 0.12765957446808512,
+      "loss": 8.919929678086191e-05
+    },
+    {
+      "step": 2900,
+      "validation_teacher_f1": 0.18867924528301885,
+      "loss": 6.925061461515725e-05
+    },
+    {
+      "step": 2999,
+      "validation_teacher_f1": 0.17543859649122806,
+      "loss": 6.125072832219303e-05
+    }
+  ],
+  "scope": "Exploratory tiny task language model; no independently measured user utility or general-purpose SLM capability.",
+  "limitations": [
+    "Small, query-selected, noisy teacher data.",
+    "Source-reading labels from one analyst; evaluation sample already used in development.",
+    "Movie/book student training, music transfer untrained.",
+    "No subjective experience or preference gain measured."
+  ],
+  "cached_teacher_evidence_gate_evaluation": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 22,
+    "precision": 1.0,
+    "recall": 0.12,
+    "micro_f1": 0.21428571428571425
+  }
+}

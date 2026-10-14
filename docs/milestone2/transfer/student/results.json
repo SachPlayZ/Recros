@@ -1,0 +1,289 @@
+{
+  "parameter_count": 562464,
+  "device": "cpu",
+  "pretraining_steps": 300,
+  "pretraining_seconds": 9.411730292005814,
+  "pretraining_final_mean_loss": 6.796566605567932,
+  "fine_tuning_steps": 500,
+  "fine_tuning_best_step": 300,
+  "validation_teacher_f1": 0.3255813953488372,
+  "training_wall_seconds": 21.514731875002326,
+  "train_records": 141,
+  "validation_records": 27,
+  "evaluation_records": 18,
+  "evaluation_feature_decisions": 72,
+  "evaluation": {
+    "tiny_causal_lm": {
+      "tp": 4,
+      "fp": 9,
+      "fn": 21,
+      "precision": 0.3076923076923077,
+      "recall": 0.16,
+      "micro_f1": 0.2105263157894737
+    },
+    "tfidf_logistic_student": {
+      "tp": 2,
+      "fp": 1,
+      "fn": 23,
+      "precision": 0.6666666666666666,
+      "recall": 0.08,
+      "micro_f1": 0.14285714285714285
+    },
+    "deepseek_teacher": {
+      "tp": 21,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.84,
+      "micro_f1": 0.9130434782608696
+    }
+  },
+  "student_inference_seconds_for_18_records": 0.022945958997297566,
+  "by_domain": {
+    "movie": {
+      "tp": 1,
+      "fp": 3,
+      "fn": 8,
+      "precision": 0.25,
+      "recall": 0.1111111111111111,
+      "micro_f1": 0.15384615384615383
+    },
+    "book": {
+      "tp": 3,
+      "fp": 1,
+      "fn": 7,
+      "precision": 0.75,
+      "recall": 0.3,
+      "micro_f1": 0.4285714285714285
+    },
+    "music": {
+      "tp": 0,
+      "fp": 5,
+      "fn": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0
+    }
+  },
+  "predictions": [
+    {
+      "id": "movie:ex-machina",
+      "predicted_features": [
+        "unease"
+      ],
+      "source_label_features": [
+        "inquiry"
+      ]
+    },
+    {
+      "id": "movie:coherence",
+      "predicted_features": [],
+      "source_label_features": [
+        "unease"
+      ]
+    },
+    {
+      "id": "movie:witch",
+      "predicted_features": [
+        "inquiry",
+        "connection"
+      ],
+      "source_label_features": [
+        "unease"
+      ]
+    },
+    {
+      "id": "movie:lighthouse",
+      "predicted_features": [],
+      "source_label_features": [
+        "unease"
+      ]
+    },
+    {
+      "id": "movie:after-yang",
+      "predicted_features": [
+        "connection"
+      ],
+      "source_label_features": [
+        "inquiry",
+        "interiority",
+        "connection"
+      ]
+    },
+    {
+      "id": "movie:ghost-story",
+      "predicted_features": [],
+      "source_label_features": [
+        "interiority",
+        "connection"
+      ]
+    },
+    {
+      "id": "book:martian",
+      "predicted_features": [],
+      "source_label_features": [
+        "inquiry"
+      ]
+    },
+    {
+      "id": "book:piranesi",
+      "predicted_features": [],
+      "source_label_features": [
+        "inquiry",
+        "unease"
+      ]
+    },
+    {
+      "id": "book:annihilation",
+      "predicted_features": [
+        "inquiry"
+      ],
+      "source_label_features": [
+        "inquiry",
+        "unease"
+      ]
+    },
+    {
+      "id": "book:house-of-leaves",
+      "predicted_features": [
+        "interiority"
+      ],
+      "source_label_features": [
+        "unease"
+      ]
+    },
+    {
+      "id": "book:hill-house",
+      "predicted_features": [
+        "inquiry"
+      ],
+      "source_label_features": [
+        "inquiry",
+        "unease"
+      ]
+    },
+    {
+      "id": "book:spaceborn",
+      "predicted_features": [
+        "interiority"
+      ],
+      "source_label_features": [
+        "interiority",
+        "connection"
+      ]
+    },
+    {
+      "id": "music:bury-a-friend",
+      "predicted_features": [],
+      "source_label_features": [
+        "unease",
+        "interiority"
+      ]
+    },
+    {
+      "id": "music:everything-i-wanted",
+      "predicted_features": [
+        "unease"
+      ],
+      "source_label_features": [
+        "interiority",
+        "connection"
+      ]
+    },
+    {
+      "id": "music:red-right-hand",
+      "predicted_features": [
+        "connection"
+      ],
+      "source_label_features": [
+        "unease"
+      ]
+    },
+    {
+      "id": "music:lean-on-me",
+      "predicted_features": [
+        "inquiry"
+      ],
+      "source_label_features": [
+        "connection"
+      ]
+    },
+    {
+      "id": "music:space-oddity",
+      "predicted_features": [
+        "inquiry",
+        "interiority"
+      ],
+      "source_label_features": []
+    },
+    {
+      "id": "music:dream-of-arrakis",
+      "predicted_features": [],
+      "source_label_features": []
+    }
+  ],
+  "validation_history": [
+    {
+      "step": 0,
+      "validation_teacher_f1": 0.3125,
+      "loss": 3.9177405834198
+    },
+    {
+      "step": 50,
+      "validation_teacher_f1": 0,
+      "loss": 0.938133716583252
+    },
+    {
+      "step": 100,
+      "validation_teacher_f1": 0,
+      "loss": 0.9785235524177551
+    },
+    {
+      "step": 150,
+      "validation_teacher_f1": 0.17777777777777778,
+      "loss": 0.8781770467758179
+    },
+    {
+      "step": 200,
+      "validation_teacher_f1": 0.18749999999999997,
+      "loss": 0.6286962628364563
+    },
+    {
+      "step": 250,
+      "validation_teacher_f1": 0.3243243243243243,
+      "loss": 0.5394132137298584
+    },
+    {
+      "step": 300,
+      "validation_teacher_f1": 0.3255813953488372,
+      "loss": 0.5769331455230713
+    },
+    {
+      "step": 350,
+      "validation_teacher_f1": 0.18181818181818185,
+      "loss": 0.1421644538640976
+    },
+    {
+      "step": 400,
+      "validation_teacher_f1": 0.14285714285714282,
+      "loss": 0.1266203075647354
+    },
+    {
+      "step": 450,
+      "validation_teacher_f1": 0.18604651162790697,
+      "loss": 0.16792982816696167
+    },
+    {
+      "step": 499,
+      "validation_teacher_f1": 0.20000000000000004,
+      "loss": 0.012278502807021141
+    }
+  ],
+  "scope": "Exploratory tiny task language model; no independently measured user utility or general-purpose SLM capability.",
+  "limitations": [
+    "Small, query-selected, noisy teacher data.",
+    "Source-reading labels from one analyst; evaluation sample already used in development.",
+    "Movie/book student training, music transfer untrained.",
+    "No subjective experience or preference gain measured."
+  ]
+}

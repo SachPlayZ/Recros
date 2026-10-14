@@ -1,0 +1,137 @@
+{
+  "audited_utc": "2026-10-13T16:01:18.461857+00:00",
+  "upstream_dataset_script_commit": "6fcda21ff19723dbc802f6855d1bcb82136268af",
+  "note": "Re-downloaded public sources, not recovered original trained artifacts. Hashes identify the local files; movie sources follow their latest public version.",
+  "files": [
+    {
+      "path": "movie_dataset/movies_metadata.csv",
+      "bytes": 34445126,
+      "rows": 45466,
+      "columns": [
+        "adult",
+        "belongs_to_collection",
+        "budget",
+        "genres",
+        "homepage",
+        "id",
+        "imdb_id",
+        "original_language",
+        "original_title",
+        "overview",
+        "popularity",
+        "poster_path",
+        "production_companies",
+        "production_countries",
+        "release_date",
+        "revenue",
+        "runtime",
+        "spoken_languages",
+        "status",
+        "tagline",
+        "title",
+        "video",
+        "vote_average",
+        "vote_count"
+      ],
+      "sha256": "37ec322786b136a24604564e55160be75f8937546f11cb1a990076971fa895fd",
+      "source_handle": "rounakbanik/the-movies-dataset",
+      "source_file": "movies_metadata.csv",
+      "source_url": "https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset"
+    },
+    {
+      "path": "movie_dataset/keywords.csv",
+      "bytes": 6231943,
+      "rows": 46419,
+      "columns": [
+        "id",
+        "keywords"
+      ],
+      "sha256": "428ef94a80255986ad71fd347855702e772ee776841f1e8923a618aa2d87a668",
+      "source_handle": "rounakbanik/the-movies-dataset",
+      "source_file": "keywords.csv",
+      "source_url": "https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset"
+    },
+    {
+      "path": "movie_dataset/links.csv",
+      "bytes": 989107,
+      "rows": 45843,
+      "columns": [
+        "movieId",
+        "imdbId",
+        "tmdbId"
+      ],
+      "sha256": "bd8562d4b10d04d080e16caaf8027cd07e47b5da6920128d39e31cd1dd8ffc5e",
+      "source_handle": "rounakbanik/the-movies-dataset",
+      "source_file": "links.csv",
+      "source_url": "https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset"
+    },
+    {
+      "path": "movie_dataset/rating.csv",
+      "bytes": 690353377,
+      "rows": 20000263,
+      "columns": [
+        "userId",
+        "movieId",
+        "rating",
+        "timestamp"
+      ],
+      "sha256": "9ec53ccb3e51c78fd31a451499f1c856c5c778766a7e7979683741ffb696adca",
+      "source_handle": "grouplens/movielens-20m-dataset",
+      "source_file": "rating.csv",
+      "source_url": "https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset"
+    },
+    {
+      "path": "music_dataset/data_music.csv",
+      "bytes": 29654587,
+      "rows": 170653,
+      "columns": [
+        "valence",
+        "year",
+        "acousticness",
+        "artists",
+        "danceability",
+        "duration_ms",
+        "energy",
+        "explicit",
+        "id",
+        "instrumentalness",
+        "key",
+        "liveness",
+        "loudness",
+        "mode",
+        "name",
+        "popularity",
+        "release_date",
+        "speechiness",
+        "tempo"
+      ],
+      "sha256": "c97c42349c2e97339ff908ab01163ec5a3264f02ec65e78cb961c85077ded7f8",
+      "source_handle": "vatsalmavani/spotify-dataset/versions/1",
+      "source_file": "data/data.csv",
+      "source_url": "https://www.kaggle.com/datasets/vatsalmavani/spotify-dataset"
+    },
+    {
+      "path": "book_dataset/book_data.csv",
+      "bytes": 4142211,
+      "rows": 6810,
+      "columns": [
+        "isbn13",
+        "isbn10",
+        "title",
+        "subtitle",
+        "authors",
+        "categories",
+        "thumbnail",
+        "description",
+        "published_year",
+        "average_rating",
+        "num_pages",
+        "ratings_count"
+      ],
+      "sha256": "64a19afd3df7170d153bb5b7e1afdfed4a05e2fe3ac163a168867596f2515e43",
+      "source_handle": "dylanjcastillo/7k-books-with-metadata/versions/3",
+      "source_file": "books.csv",
+      "source_url": "https://www.kaggle.com/datasets/dylanjcastillo/7k-books-with-metadata"
+    }
+  ]
+}

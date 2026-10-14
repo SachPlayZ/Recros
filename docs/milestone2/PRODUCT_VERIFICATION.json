@@ -1,0 +1,19 @@
+{
+  "date": "20261014T110810Z",
+  "tests_passed": 93,
+  "frozen_protocol_hashes": {
+    "docs/milestone2/results/policy/protocol.json": "2e4dd83d638f73515a2c7cd760c92760fef6fc3ba8727a7a6737bcdb3478c6df",
+    "docs/milestone2/transfer/protocol.json": "e378725a809740fd00da7e15e08ac04944d042186ab6b0bb77d349160a0ea2b8"
+  },
+  "browser_checks": [
+    "Automatic 5 movies + 5 books + 5 songs for Project Hail Mary",
+    "English/science-fiction movie filter with horror excluded preserves all 15 automatic suggestions and gives 15 refined suggestions below",
+    "Full-catalogue Interstellar search and selection gives 5+5+5",
+    "Preview mode; no simulated participant feedback"
+  ],
+  "deck": "Recros_milestone2_updated.pptx",
+  "slides": 14,
+  "label_hierarchy_status": "Proposed, not implemented or evaluated",
+  "source_vocabulary_status": "Novel Updates: 722 tags from 15 pages; page 10 missing",
+  "lto_status": "Author release downloaded and checksum verified; not merged into product index"
+}

@@ -1,0 +1,201 @@
+{
+  "protocol_sha256": "075d8e513dc8733abf1407153a44e083099aba06332d5bd2dae547a5e0c4a090",
+  "states": 276,
+  "unique_source_works": 46,
+  "exact_cut_count": 15456,
+  "bound_order_failures": 0,
+  "reference_bound_failures": 0,
+  "states_with_strict_hierarchy_tightening": 100,
+  "mean_exact_normalized_mmr": 0.24909420289855072,
+  "mean_flat_normalized_bound_same_item": 0.3179347826086957,
+  "mean_independent_normalized_bound_same_item": 0.4009661835748792,
+  "mean_flat_selection_coherent_regret": 0.2557367149758454,
+  "mean_interval_selection_coherent_regret": 0.2650966183574879,
+  "coverage": [
+    {
+      "threshold": 0,
+      "exact_count": 23,
+      "flat_count_same_recommendation": 23,
+      "independent_count_same_recommendation": 18
+    },
+    {
+      "threshold": 0.05,
+      "exact_count": 23,
+      "flat_count_same_recommendation": 23,
+      "independent_count_same_recommendation": 18
+    },
+    {
+      "threshold": 0.1,
+      "exact_count": 33,
+      "flat_count_same_recommendation": 33,
+      "independent_count_same_recommendation": 18
+    },
+    {
+      "threshold": 0.2,
+      "exact_count": 101,
+      "flat_count_same_recommendation": 91,
+      "independent_count_same_recommendation": 52
+    },
+    {
+      "threshold": 0.3,
+      "exact_count": 167,
+      "flat_count_same_recommendation": 152,
+      "independent_count_same_recommendation": 101
+    },
+    {
+      "threshold": 0.5,
+      "exact_count": 276,
+      "flat_count_same_recommendation": 229,
+      "independent_count_same_recommendation": 199
+    }
+  ],
+  "scale_timings": [
+    {
+      "facets": 32,
+      "replicate": 0,
+      "value": 27,
+      "cut_seconds": 0.000320167004247196,
+      "milp_seconds": 0.004854166007135063,
+      "networkx_seconds": 0.0015795829967828467,
+      "nodes": 98,
+      "edges": 211,
+      "equal": true
+    },
+    {
+      "facets": 32,
+      "replicate": 1,
+      "value": 33,
+      "cut_seconds": 0.0003247499989811331,
+      "milp_seconds": 0.005111541002406739,
+      "networkx_seconds": 0.0008832919993437827,
+      "nodes": 98,
+      "edges": 214,
+      "equal": true
+    },
+    {
+      "facets": 32,
+      "replicate": 2,
+      "value": 18,
+      "cut_seconds": 0.0003653329986263998,
+      "milp_seconds": 0.0007524159955210052,
+      "networkx_seconds": 0.0011865839987876825,
+      "nodes": 98,
+      "edges": 229,
+      "equal": true
+    },
+    {
+      "facets": 128,
+      "replicate": 0,
+      "value": 140,
+      "cut_seconds": 0.0007492080039810389,
+      "milp_seconds": 0.00566183400223963,
+      "networkx_seconds": 0.004561166002531536,
+      "nodes": 386,
+      "edges": 882,
+      "equal": true
+    },
+    {
+      "facets": 128,
+      "replicate": 1,
+      "value": 39,
+      "cut_seconds": 0.0007172499972512014,
+      "milp_seconds": 0.0013704169978154823,
+      "networkx_seconds": 0.003488124995783437,
+      "nodes": 386,
+      "edges": 915,
+      "equal": true
+    },
+    {
+      "facets": 128,
+      "replicate": 2,
+      "value": 98,
+      "cut_seconds": 0.0008187920029740781,
+      "milp_seconds": 0.005636667003273033,
+      "networkx_seconds": 0.004589584001223557,
+      "nodes": 386,
+      "edges": 902,
+      "equal": true
+    },
+    {
+      "facets": 512,
+      "replicate": 0,
+      "value": 416,
+      "cut_seconds": 0.002566832998127211,
+      "milp_seconds": 0.012209500004246365,
+      "networkx_seconds": 0.028626125000300817,
+      "nodes": 1538,
+      "edges": 3648,
+      "equal": true
+    },
+    {
+      "facets": 512,
+      "replicate": 1,
+      "value": 409,
+      "cut_seconds": 0.0024850420013535768,
+      "milp_seconds": 0.013162499999452848,
+      "networkx_seconds": 0.01945183300267672,
+      "nodes": 1538,
+      "edges": 3569,
+      "equal": true
+    },
+    {
+      "facets": 512,
+      "replicate": 2,
+      "value": 514,
+      "cut_seconds": 0.0024582920013926923,
+      "milp_seconds": 0.014671749995613936,
+      "networkx_seconds": 0.02790662500046892,
+      "nodes": 1538,
+      "edges": 3508,
+      "equal": true
+    },
+    {
+      "facets": 2048,
+      "replicate": 0,
+      "value": 1593,
+      "cut_seconds": 0.00902637500257697,
+      "milp_seconds": 0.04266529200685909,
+      "networkx_seconds": 0.11244304199499311,
+      "nodes": 6146,
+      "edges": 14621,
+      "equal": true
+    },
+    {
+      "facets": 2048,
+      "replicate": 1,
+      "value": 1129,
+      "cut_seconds": 0.008817083995381836,
+      "milp_seconds": 0.03431070900114719,
+      "networkx_seconds": 0.10655400000541704,
+      "nodes": 6146,
+      "edges": 14914,
+      "equal": true
+    },
+    {
+      "facets": 2048,
+      "replicate": 2,
+      "value": 1008,
+      "cut_seconds": 0.00875758299662266,
+      "milp_seconds": 0.034253833000548184,
+      "networkx_seconds": 0.10895212499599438,
+      "nodes": 6146,
+      "edges": 15063,
+      "equal": true
+    }
+  ],
+  "milp_failures": [],
+  "cut_total_seconds": 3.050960177235538,
+  "total_seconds": 3.9156403329980094,
+  "structural_fault_counterexample": {
+    "assumed_hierarchy_gap": 0,
+    "one_fault_upper_bound": 1,
+    "actual_violating_labels": [
+      0,
+      1
+    ],
+    "actual_gap": 1
+  },
+  "scope": "Scripted preferences and artificially masked closed-world LTO tag references. No human enjoyment, extraction correctness, or trained SLM improvement is measured.",
+  "demo_selection": "Post hoc largest bound-gap cases; descriptive illustrations only.",
+  "implementation": "Native SciPy integer max flow, with NetworkX exact fallback for large capacities. Native optimization added after the initial Python-backend run; same frozen states retained."
+}

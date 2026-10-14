@@ -1,0 +1,166 @@
+{
+  "created_utc": "2026-10-14T15:18:51.284267+00:00",
+  "primary_condition": "50% artificially missing labels, fixed nonzero gamma=.5",
+  "domains": [
+    {
+      "domain": "movie",
+      "test_profiles": 320,
+      "flat_mean_lookups": 6.8625,
+      "hierarchy_mean_lookups": 6.41875,
+      "relative_mean_reduction": 0.06466302367941712,
+      "nominal_savings": {
+        "mean": 0.44375,
+        "ci95": [
+          0.196796875,
+          0.75
+        ],
+        "n": 320
+      },
+      "profiles_saving": 19,
+      "flat_certified": 250,
+      "hierarchy_certified": 255,
+      "hierarchy_ndcg": 0.23217020650635956,
+      "flat_ndcg": 0.2311225915952181,
+      "reference_ndcg": 0.23847903291324216,
+      "ease_ndcg_same_pool": 0.23197850890686164,
+      "paired_ndcg": {
+        "mean": 0.0010476149111414014,
+        "ci95": [
+          -0.0005309601743130152,
+          0.0028552312264689237
+        ],
+        "n": 320
+      }
+    },
+    {
+      "domain": "book",
+      "test_profiles": 320,
+      "flat_mean_lookups": 15.315625,
+      "hierarchy_mean_lookups": 14.953125,
+      "relative_mean_reduction": 0.023668639053254448,
+      "nominal_savings": {
+        "mean": 0.3625,
+        "ci95": [
+          0.149921875,
+          0.61875
+        ],
+        "n": 320
+      },
+      "profiles_saving": 13,
+      "flat_certified": 168,
+      "hierarchy_certified": 174,
+      "hierarchy_ndcg": 0.5994280219219494,
+      "flat_ndcg": 0.5999309332412401,
+      "reference_ndcg": 0.6189615076089646,
+      "ease_ndcg_same_pool": 0.6368200260700622,
+      "paired_ndcg": {
+        "mean": -0.0005029113192908457,
+        "ci95": [
+          -0.0036990969767677732,
+          0.0025761803337796124
+        ],
+        "n": 320
+      }
+    },
+    {
+      "domain": "music",
+      "test_profiles": 181,
+      "flat_mean_lookups": 12.248618784530386,
+      "hierarchy_mean_lookups": 12.0939226519337,
+      "relative_mean_reduction": 0.012629679747406364,
+      "nominal_savings": {
+        "mean": 0.15469613259668508,
+        "ci95": [
+          0.03314917127071823,
+          0.30939226519337015
+        ],
+        "n": 181
+      },
+      "profiles_saving": 5,
+      "flat_certified": 129,
+      "hierarchy_certified": 129,
+      "hierarchy_ndcg": 0.15892664784901392,
+      "flat_ndcg": 0.15864465208227008,
+      "reference_ndcg": 0.1648910685009586,
+      "ease_ndcg_same_pool": 0.1813259886817166,
+      "paired_ndcg": {
+        "mean": 0.00028199576674386626,
+        "ci95": [
+          -0.003683380487174569,
+          0.0041676199746474496
+        ],
+        "n": 181
+      }
+    }
+  ],
+  "adjusted_intervals": {
+    "movie": {
+      "hierarchy_minus_flat_ndcg": {
+        "mean": 0.0010476149111414014,
+        "ci_bonferroni_98_33": [
+          -0.0009347192802878235,
+          0.0033217619363982904
+        ],
+        "profiles": 320,
+        "resamples": 20000,
+        "scope": "Supplemental descriptive correction across three domain contrasts; no models or primary outcomes changed."
+      },
+      "saved_annotation_lookups": {
+        "mean": 0.44375,
+        "ci_bonferroni_98_33": [
+          0.15,
+          0.840625
+        ],
+        "profiles": 320,
+        "resamples": 20000,
+        "scope": "Supplemental descriptive correction across three domain contrasts; no models or primary outcomes changed."
+      }
+    },
+    "book": {
+      "hierarchy_minus_flat_ndcg": {
+        "mean": -0.0005029113192908457,
+        "ci_bonferroni_98_33": [
+          -0.004239501850357848,
+          0.0032971398655416086
+        ],
+        "profiles": 320,
+        "resamples": 20000,
+        "scope": "Supplemental descriptive correction across three domain contrasts; no models or primary outcomes changed."
+      },
+      "saved_annotation_lookups": {
+        "mean": 0.3625,
+        "ci_bonferroni_98_33": [
+          0.11875,
+          0.68125
+        ],
+        "profiles": 320,
+        "resamples": 20000,
+        "scope": "Supplemental descriptive correction across three domain contrasts; no models or primary outcomes changed."
+      }
+    },
+    "music": {
+      "hierarchy_minus_flat_ndcg": {
+        "mean": 0.00028199576674386626,
+        "ci_bonferroni_98_33": [
+          -0.0046789668745255315,
+          0.005101242892321245
+        ],
+        "profiles": 181,
+        "resamples": 20000,
+        "scope": "Supplemental descriptive correction across three domain contrasts; no models or primary outcomes changed."
+      },
+      "saved_annotation_lookups": {
+        "mean": 0.15469613259668508,
+        "ci_bonferroni_98_33": [
+          0.0055248618784530384,
+          0.3701657458563536
+        ],
+        "profiles": 181,
+        "resamples": 20000,
+        "scope": "Supplemental descriptive correction across three domain contrasts; no models or primary outcomes changed."
+      }
+    }
+  },
+  "interpretation": "Independent within-domain tests, not linked-user cross-domain transfer. Metadata acquisition remains conditional on the declared additive utility and annotation reference.",
+  "ranking_policy": "Validation-selected gamma and fixed nonzero diagnostic kept separate. Per-item minimax-regret ordering is not a theorem of optimal five-item set relevance."
+}

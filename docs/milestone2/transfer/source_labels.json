@@ -1,0 +1,71 @@
+{
+  "scope": "Project-curated source-reading labels fixed before the model call; single analyst, not independent human satisfaction judgments. Labels apply only to supplied short paraphrases, not complete works.",
+  "rubric": {
+    "inquiry": "Explicit investigation, discovery through searching, evaluating an unknown, or technical problem solving. A mystery genre alone is insufficient.",
+    "unease": "Explicit ominous, unsettling, hallucinatory or threatening presentation or atmosphere. Ordinary danger in an adventure is insufficient.",
+    "interiority": "Explicit focus on inner feelings, personal reflection, memory, identity or subjective fears. A character simply appearing is insufficient.",
+    "connection": "Explicit mutual support, caregiving, reconnection, belonging or human bonding. Merely naming a group is insufficient."
+  },
+  "positive_labels": {
+    "movie:ex-machina": [
+      "inquiry"
+    ],
+    "movie:coherence": [
+      "unease"
+    ],
+    "movie:witch": [
+      "unease"
+    ],
+    "movie:lighthouse": [
+      "unease"
+    ],
+    "movie:after-yang": [
+      "inquiry",
+      "interiority",
+      "connection"
+    ],
+    "movie:ghost-story": [
+      "interiority",
+      "connection"
+    ],
+    "book:martian": [
+      "inquiry"
+    ],
+    "book:piranesi": [
+      "inquiry",
+      "unease"
+    ],
+    "book:annihilation": [
+      "inquiry",
+      "unease"
+    ],
+    "book:house-of-leaves": [
+      "unease"
+    ],
+    "book:hill-house": [
+      "inquiry",
+      "unease"
+    ],
+    "book:spaceborn": [
+      "interiority",
+      "connection"
+    ],
+    "music:bury-a-friend": [
+      "unease",
+      "interiority"
+    ],
+    "music:everything-i-wanted": [
+      "interiority",
+      "connection"
+    ],
+    "music:red-right-hand": [
+      "unease"
+    ],
+    "music:lean-on-me": [
+      "connection"
+    ],
+    "music:space-oddity": [],
+    "music:dream-of-arrakis": []
+  },
+  "source_sha256": "d0ed214089c17bbf6bee0d5c51e51d15abc22064d9108d18e1c845e84412b292"
+}

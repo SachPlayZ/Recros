@@ -1,0 +1,1279 @@
+{
+  "evidence_level": "Constructed mechanism probe, NOT user evaluation",
+  "assumptions": [
+    "Complete finite world set",
+    "Truthful deterministic observations",
+    "Exact specified utilities",
+    "Deterministic item recommendations",
+    "Normalized hypothetical costs, NOT money or time"
+  ],
+  "abstention_loss": 0.45,
+  "cases": [
+    {
+      "case": "both_known",
+      "world_count": 1,
+      "plans": {
+        "0": {
+          "kind": "recommend",
+          "item": "item_A",
+          "loss": 0.0,
+          "witness": {
+            "world": "preference=0;item_assignment=0",
+            "alternative": "item_A",
+            "regret": 0.0
+          },
+          "worlds": [
+            "preference=0;item_assignment=0"
+          ]
+        },
+        "1": {
+          "kind": "recommend",
+          "item": "item_A",
+          "loss": 0.0,
+          "witness": {
+            "world": "preference=0;item_assignment=0",
+            "alternative": "item_A",
+            "regret": 0.0
+          },
+          "worlds": [
+            "preference=0;item_assignment=0"
+          ]
+        },
+        "2": {
+          "kind": "recommend",
+          "item": "item_A",
+          "loss": 0.0,
+          "witness": {
+            "world": "preference=0;item_assignment=0",
+            "alternative": "item_A",
+            "regret": 0.0
+          },
+          "worlds": [
+            "preference=0;item_assignment=0"
+          ]
+        }
+      },
+      "exhaustive_replays": {
+        "0": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          }
+        ],
+        "1": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          }
+        ],
+        "2": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "case": "preference_unknown",
+      "world_count": 2,
+      "plans": {
+        "0": {
+          "kind": "abstain",
+          "loss": 0.45,
+          "best_recommendation": {
+            "kind": "recommend",
+            "item": "neutral_item",
+            "loss": 0.5,
+            "witness": {
+              "world": "preference=0;item_assignment=0",
+              "alternative": "item_A",
+              "regret": 0.5
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=1;item_assignment=0"
+          ]
+        },
+        "1": {
+          "kind": "ask_user",
+          "action": "ask_preference",
+          "cost": 0.04,
+          "loss": 0.04,
+          "branches": {
+            "prefer_theme_0": {
+              "kind": "recommend",
+              "item": "item_A",
+              "loss": 0.0,
+              "witness": {
+                "world": "preference=0;item_assignment=0",
+                "alternative": "item_A",
+                "regret": 0.0
+              },
+              "worlds": [
+                "preference=0;item_assignment=0"
+              ]
+            },
+            "prefer_theme_1": {
+              "kind": "recommend",
+              "item": "item_B",
+              "loss": 0.0,
+              "witness": {
+                "world": "preference=1;item_assignment=0",
+                "alternative": "item_B",
+                "regret": 0.0
+              },
+              "worlds": [
+                "preference=1;item_assignment=0"
+              ]
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=1;item_assignment=0"
+          ]
+        },
+        "2": {
+          "kind": "ask_user",
+          "action": "ask_preference",
+          "cost": 0.04,
+          "loss": 0.04,
+          "branches": {
+            "prefer_theme_0": {
+              "kind": "recommend",
+              "item": "item_A",
+              "loss": 0.0,
+              "witness": {
+                "world": "preference=0;item_assignment=0",
+                "alternative": "item_A",
+                "regret": 0.0
+              },
+              "worlds": [
+                "preference=0;item_assignment=0"
+              ]
+            },
+            "prefer_theme_1": {
+              "kind": "recommend",
+              "item": "item_B",
+              "loss": 0.0,
+              "witness": {
+                "world": "preference=1;item_assignment=0",
+                "alternative": "item_B",
+                "regret": 0.0
+              },
+              "worlds": [
+                "preference=1;item_assignment=0"
+              ]
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=1;item_assignment=0"
+          ]
+        }
+      },
+      "exhaustive_replays": {
+        "0": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          }
+        ],
+        "1": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [
+              {
+                "action": "ask_preference",
+                "observation": "prefer_theme_0"
+              }
+            ],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.04,
+            "total_loss": 0.04
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [
+              {
+                "action": "ask_preference",
+                "observation": "prefer_theme_1"
+              }
+            ],
+            "terminal": "recommend",
+            "item": "item_B",
+            "terminal_loss": 0.0,
+            "action_cost": 0.04,
+            "total_loss": 0.04
+          }
+        ],
+        "2": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [
+              {
+                "action": "ask_preference",
+                "observation": "prefer_theme_0"
+              }
+            ],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.04,
+            "total_loss": 0.04
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [
+              {
+                "action": "ask_preference",
+                "observation": "prefer_theme_1"
+              }
+            ],
+            "terminal": "recommend",
+            "item": "item_B",
+            "terminal_loss": 0.0,
+            "action_cost": 0.04,
+            "total_loss": 0.04
+          }
+        ]
+      }
+    },
+    {
+      "case": "item_fact_unknown",
+      "world_count": 2,
+      "plans": {
+        "0": {
+          "kind": "abstain",
+          "loss": 0.45,
+          "best_recommendation": {
+            "kind": "recommend",
+            "item": "neutral_item",
+            "loss": 0.5,
+            "witness": {
+              "world": "preference=0;item_assignment=0",
+              "alternative": "item_A",
+              "regret": 0.5
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1"
+          ]
+        },
+        "1": {
+          "kind": "inspect_evidence",
+          "action": "inspect_item_fact",
+          "cost": 0.02,
+          "loss": 0.02,
+          "branches": {
+            "assignment_0": {
+              "kind": "recommend",
+              "item": "item_A",
+              "loss": 0.0,
+              "witness": {
+                "world": "preference=0;item_assignment=0",
+                "alternative": "item_A",
+                "regret": 0.0
+              },
+              "worlds": [
+                "preference=0;item_assignment=0"
+              ]
+            },
+            "assignment_1": {
+              "kind": "recommend",
+              "item": "item_B",
+              "loss": 0.0,
+              "witness": {
+                "world": "preference=0;item_assignment=1",
+                "alternative": "item_B",
+                "regret": 0.0
+              },
+              "worlds": [
+                "preference=0;item_assignment=1"
+              ]
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1"
+          ]
+        },
+        "2": {
+          "kind": "inspect_evidence",
+          "action": "inspect_item_fact",
+          "cost": 0.02,
+          "loss": 0.02,
+          "branches": {
+            "assignment_0": {
+              "kind": "recommend",
+              "item": "item_A",
+              "loss": 0.0,
+              "witness": {
+                "world": "preference=0;item_assignment=0",
+                "alternative": "item_A",
+                "regret": 0.0
+              },
+              "worlds": [
+                "preference=0;item_assignment=0"
+              ]
+            },
+            "assignment_1": {
+              "kind": "recommend",
+              "item": "item_B",
+              "loss": 0.0,
+              "witness": {
+                "world": "preference=0;item_assignment=1",
+                "alternative": "item_B",
+                "regret": 0.0
+              },
+              "worlds": [
+                "preference=0;item_assignment=1"
+              ]
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1"
+          ]
+        }
+      },
+      "exhaustive_replays": {
+        "0": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          }
+        ],
+        "1": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [
+              {
+                "action": "inspect_item_fact",
+                "observation": "assignment_0"
+              }
+            ],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.02,
+            "total_loss": 0.02
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [
+              {
+                "action": "inspect_item_fact",
+                "observation": "assignment_1"
+              }
+            ],
+            "terminal": "recommend",
+            "item": "item_B",
+            "terminal_loss": 0.0,
+            "action_cost": 0.02,
+            "total_loss": 0.02
+          }
+        ],
+        "2": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [
+              {
+                "action": "inspect_item_fact",
+                "observation": "assignment_0"
+              }
+            ],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.02,
+            "total_loss": 0.02
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [
+              {
+                "action": "inspect_item_fact",
+                "observation": "assignment_1"
+              }
+            ],
+            "terminal": "recommend",
+            "item": "item_B",
+            "terminal_loss": 0.0,
+            "action_cost": 0.02,
+            "total_loss": 0.02
+          }
+        ]
+      }
+    },
+    {
+      "case": "both_unknown",
+      "world_count": 4,
+      "plans": {
+        "0": {
+          "kind": "abstain",
+          "loss": 0.45,
+          "best_recommendation": {
+            "kind": "recommend",
+            "item": "neutral_item",
+            "loss": 0.5,
+            "witness": {
+              "world": "preference=0;item_assignment=0",
+              "alternative": "item_A",
+              "regret": 0.5
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1",
+            "preference=1;item_assignment=0",
+            "preference=1;item_assignment=1"
+          ]
+        },
+        "1": {
+          "kind": "abstain",
+          "loss": 0.45,
+          "best_recommendation": {
+            "kind": "recommend",
+            "item": "neutral_item",
+            "loss": 0.5,
+            "witness": {
+              "world": "preference=0;item_assignment=0",
+              "alternative": "item_A",
+              "regret": 0.5
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1",
+            "preference=1;item_assignment=0",
+            "preference=1;item_assignment=1"
+          ]
+        },
+        "2": {
+          "kind": "ask_user",
+          "action": "ask_preference",
+          "cost": 0.04,
+          "loss": 0.06,
+          "branches": {
+            "prefer_theme_0": {
+              "kind": "inspect_evidence",
+              "action": "inspect_item_fact",
+              "cost": 0.02,
+              "loss": 0.02,
+              "branches": {
+                "assignment_0": {
+                  "kind": "recommend",
+                  "item": "item_A",
+                  "loss": 0.0,
+                  "witness": {
+                    "world": "preference=0;item_assignment=0",
+                    "alternative": "item_A",
+                    "regret": 0.0
+                  },
+                  "worlds": [
+                    "preference=0;item_assignment=0"
+                  ]
+                },
+                "assignment_1": {
+                  "kind": "recommend",
+                  "item": "item_B",
+                  "loss": 0.0,
+                  "witness": {
+                    "world": "preference=0;item_assignment=1",
+                    "alternative": "item_B",
+                    "regret": 0.0
+                  },
+                  "worlds": [
+                    "preference=0;item_assignment=1"
+                  ]
+                }
+              },
+              "worlds": [
+                "preference=0;item_assignment=0",
+                "preference=0;item_assignment=1"
+              ]
+            },
+            "prefer_theme_1": {
+              "kind": "inspect_evidence",
+              "action": "inspect_item_fact",
+              "cost": 0.02,
+              "loss": 0.02,
+              "branches": {
+                "assignment_0": {
+                  "kind": "recommend",
+                  "item": "item_B",
+                  "loss": 0.0,
+                  "witness": {
+                    "world": "preference=1;item_assignment=0",
+                    "alternative": "item_B",
+                    "regret": 0.0
+                  },
+                  "worlds": [
+                    "preference=1;item_assignment=0"
+                  ]
+                },
+                "assignment_1": {
+                  "kind": "recommend",
+                  "item": "item_A",
+                  "loss": 0.0,
+                  "witness": {
+                    "world": "preference=1;item_assignment=1",
+                    "alternative": "item_A",
+                    "regret": 0.0
+                  },
+                  "worlds": [
+                    "preference=1;item_assignment=1"
+                  ]
+                }
+              },
+              "worlds": [
+                "preference=1;item_assignment=0",
+                "preference=1;item_assignment=1"
+              ]
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1",
+            "preference=1;item_assignment=0",
+            "preference=1;item_assignment=1"
+          ]
+        }
+      },
+      "exhaustive_replays": {
+        "0": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          }
+        ],
+        "1": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          }
+        ],
+        "2": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [
+              {
+                "action": "ask_preference",
+                "observation": "prefer_theme_0"
+              },
+              {
+                "action": "inspect_item_fact",
+                "observation": "assignment_0"
+              }
+            ],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.06,
+            "total_loss": 0.06
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [
+              {
+                "action": "ask_preference",
+                "observation": "prefer_theme_0"
+              },
+              {
+                "action": "inspect_item_fact",
+                "observation": "assignment_1"
+              }
+            ],
+            "terminal": "recommend",
+            "item": "item_B",
+            "terminal_loss": 0.0,
+            "action_cost": 0.06,
+            "total_loss": 0.06
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [
+              {
+                "action": "ask_preference",
+                "observation": "prefer_theme_1"
+              },
+              {
+                "action": "inspect_item_fact",
+                "observation": "assignment_0"
+              }
+            ],
+            "terminal": "recommend",
+            "item": "item_B",
+            "terminal_loss": 0.0,
+            "action_cost": 0.06,
+            "total_loss": 0.06
+          },
+          {
+            "world": "preference=1;item_assignment=1",
+            "trace": [
+              {
+                "action": "ask_preference",
+                "observation": "prefer_theme_1"
+              },
+              {
+                "action": "inspect_item_fact",
+                "observation": "assignment_1"
+              }
+            ],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.06,
+            "total_loss": 0.06
+          }
+        ]
+      }
+    },
+    {
+      "case": "uncertain_but_ranking_stable",
+      "world_count": 4,
+      "plans": {
+        "0": {
+          "kind": "recommend",
+          "item": "item_A",
+          "loss": 0.0,
+          "witness": {
+            "world": "preference=0;item_assignment=0",
+            "alternative": "item_A",
+            "regret": 0.0
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1",
+            "preference=1;item_assignment=0",
+            "preference=1;item_assignment=1"
+          ]
+        },
+        "1": {
+          "kind": "recommend",
+          "item": "item_A",
+          "loss": 0.0,
+          "witness": {
+            "world": "preference=0;item_assignment=0",
+            "alternative": "item_A",
+            "regret": 0.0
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1",
+            "preference=1;item_assignment=0",
+            "preference=1;item_assignment=1"
+          ]
+        },
+        "2": {
+          "kind": "recommend",
+          "item": "item_A",
+          "loss": 0.0,
+          "witness": {
+            "world": "preference=0;item_assignment=0",
+            "alternative": "item_A",
+            "regret": 0.0
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1",
+            "preference=1;item_assignment=0",
+            "preference=1;item_assignment=1"
+          ]
+        }
+      },
+      "exhaustive_replays": {
+        "0": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          },
+          {
+            "world": "preference=1;item_assignment=1",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          }
+        ],
+        "1": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          },
+          {
+            "world": "preference=1;item_assignment=1",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          }
+        ],
+        "2": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          },
+          {
+            "world": "preference=1;item_assignment=1",
+            "trace": [],
+            "terminal": "recommend",
+            "item": "item_A",
+            "terminal_loss": 0.0,
+            "action_cost": 0.0,
+            "total_loss": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "case": "item_evidence_unavailable",
+      "world_count": 4,
+      "plans": {
+        "0": {
+          "kind": "abstain",
+          "loss": 0.45,
+          "best_recommendation": {
+            "kind": "recommend",
+            "item": "neutral_item",
+            "loss": 0.5,
+            "witness": {
+              "world": "preference=0;item_assignment=0",
+              "alternative": "item_A",
+              "regret": 0.5
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1",
+            "preference=1;item_assignment=0",
+            "preference=1;item_assignment=1"
+          ]
+        },
+        "1": {
+          "kind": "abstain",
+          "loss": 0.45,
+          "best_recommendation": {
+            "kind": "recommend",
+            "item": "neutral_item",
+            "loss": 0.5,
+            "witness": {
+              "world": "preference=0;item_assignment=0",
+              "alternative": "item_A",
+              "regret": 0.5
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1",
+            "preference=1;item_assignment=0",
+            "preference=1;item_assignment=1"
+          ]
+        },
+        "2": {
+          "kind": "abstain",
+          "loss": 0.45,
+          "best_recommendation": {
+            "kind": "recommend",
+            "item": "neutral_item",
+            "loss": 0.5,
+            "witness": {
+              "world": "preference=0;item_assignment=0",
+              "alternative": "item_A",
+              "regret": 0.5
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1",
+            "preference=1;item_assignment=0",
+            "preference=1;item_assignment=1"
+          ]
+        }
+      },
+      "exhaustive_replays": {
+        "0": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          }
+        ],
+        "1": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          }
+        ],
+        "2": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "case": "information_too_costly",
+      "world_count": 4,
+      "plans": {
+        "0": {
+          "kind": "abstain",
+          "loss": 0.45,
+          "best_recommendation": {
+            "kind": "recommend",
+            "item": "neutral_item",
+            "loss": 0.5,
+            "witness": {
+              "world": "preference=0;item_assignment=0",
+              "alternative": "item_A",
+              "regret": 0.5
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1",
+            "preference=1;item_assignment=0",
+            "preference=1;item_assignment=1"
+          ]
+        },
+        "1": {
+          "kind": "abstain",
+          "loss": 0.45,
+          "best_recommendation": {
+            "kind": "recommend",
+            "item": "neutral_item",
+            "loss": 0.5,
+            "witness": {
+              "world": "preference=0;item_assignment=0",
+              "alternative": "item_A",
+              "regret": 0.5
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1",
+            "preference=1;item_assignment=0",
+            "preference=1;item_assignment=1"
+          ]
+        },
+        "2": {
+          "kind": "abstain",
+          "loss": 0.45,
+          "best_recommendation": {
+            "kind": "recommend",
+            "item": "neutral_item",
+            "loss": 0.5,
+            "witness": {
+              "world": "preference=0;item_assignment=0",
+              "alternative": "item_A",
+              "regret": 0.5
+            }
+          },
+          "worlds": [
+            "preference=0;item_assignment=0",
+            "preference=0;item_assignment=1",
+            "preference=1;item_assignment=0",
+            "preference=1;item_assignment=1"
+          ]
+        }
+      },
+      "exhaustive_replays": {
+        "0": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          }
+        ],
+        "1": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          }
+        ],
+        "2": [
+          {
+            "world": "preference=0;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=0;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=0",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          },
+          {
+            "world": "preference=1;item_assignment=1",
+            "trace": [],
+            "terminal": "abstain",
+            "item": null,
+            "terminal_loss": 0.45,
+            "action_cost": 0.0,
+            "total_loss": 0.45
+          }
+        ]
+      }
+    }
+  ]
+}

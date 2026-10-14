@@ -1,0 +1,15 @@
+{
+  "selection": "Two paragraphs per domain; fixed SHA256 order with public seed recros-independent-reading-20261014.",
+  "selected_ids": [
+    "movie:ghost-story",
+    "movie:witch",
+    "book:piranesi",
+    "book:house-of-leaves",
+    "music:lean-on-me",
+    "music:red-right-hand"
+  ],
+  "model_predictions_sha256": "919571a8a43377fd19a62714a8bd6bc3460d8f419ec6d724a59b6983870ff379",
+  "source_paragraphs_sha256": "cff25be06bc2e0bcd9c688187c79ae66b9cf4ef38fe6e2227a26be77eb882e97",
+  "scope": "Model outputs hidden in form; one participant, supplied-text interpretation only. No liking labels.",
+  "reference_label_provenance": "The original eighteen reference sets were authored by the Codex assistant, not a human judge."
+}

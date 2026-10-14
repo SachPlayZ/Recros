@@ -1,0 +1,14 @@
+{
+  "parent_protocol_sha256": "274be049eaca299152d310e9c418bdf4dffa6306162b05b0286f0a19e9b11fa0",
+  "created_utc": "2026-10-14T13:58:01.959908+00:00",
+  "timing": "Before any validation or test method scores are computed",
+  "addition": "EASE, Steck 2019, as an additional strong collaborative baseline",
+  "source": "https://arxiv.org/abs/1905.03375",
+  "ease_lambda_grid": [
+    100,
+    1000,
+    10000
+  ],
+  "selection": "Best validation-user full-available-catalog NDCG@5; refit on pre-test background; same last-20 positive profile and fixed hybrid candidate pool at test",
+  "preserved": "Original candidate retrieval, gamma selection, primary comparison, users, masks, cutoffs and lookup protocol remain unchanged"
+}

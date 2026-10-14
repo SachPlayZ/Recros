@@ -1,0 +1,18 @@
+{
+  "provenance": "Twelve real works selected by the project for a mechanism demo. Descriptions are brief original paraphrases of the linked Wikipedia articles, checked October 13, 2026. The selection emphasizes four themes and is not a representative test dataset. No lyrics, review labels or popularity measurements are included.",
+  "synthetic": false,
+  "items": [
+    {"id":"movie:2001","domain":"movie","title":"2001: A Space Odyssey","description":"Scientists and astronauts travel to Jupiter to investigate an alien monolith, accompanied by the computer HAL.","source_url":"https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey"},
+    {"id":"book:rama","domain":"book","title":"Rendezvous with Rama","description":"Human explorers intercept a huge alien spacecraft entering the Solar System and investigate its unfamiliar interior.","source_url":"https://en.wikipedia.org/wiki/Rendezvous_with_Rama"},
+    {"id":"music:space-oddity","domain":"music","title":"Space Oddity","description":"David Bowie's song follows the fictional astronaut Major Tom, whose spacecraft loses contact with Ground Control.","source_url":"https://en.wikipedia.org/wiki/Space_Oddity"},
+    {"id":"movie:manchester","domain":"movie","title":"Manchester by the Sea","description":"Lee Chandler faces bereavement and responsibility for his nephew while struggling with enduring grief and guilt over his past.","source_url":"https://en.wikipedia.org/wiki/Manchester_by_the_Sea_(film)"},
+    {"id":"book:grief-observed","domain":"book","title":"A Grief Observed","description":"C. S. Lewis reflects on mourning his wife Joy, describing life after her death and the questions it raises about faith.","source_url":"https://en.wikipedia.org/wiki/A_Grief_Observed"},
+    {"id":"music:tears-in-heaven","domain":"music","title":"Tears in Heaven","description":"Eric Clapton wrote this song with Will Jennings while grieving the death of his young son Conor.","source_url":"https://en.wikipedia.org/wiki/Tears_in_Heaven"},
+    {"id":"movie:vendetta","domain":"movie","title":"V for Vendetta","description":"A masked rebel attempts to inspire a revolution against the totalitarian government controlling Britain.","source_url":"https://en.wikipedia.org/wiki/V_for_Vendetta_(film)"},
+    {"id":"book:1984","domain":"book","title":"Nineteen Eighty-Four","description":"Winston Smith secretly opposes the ruling Party while living under pervasive surveillance and the manipulation of historical truth.","source_url":"https://en.wikipedia.org/wiki/Nineteen_Eighty-Four"},
+    {"id":"music:get-up","domain":"music","title":"Get Up, Stand Up","description":"This Wailers song has accompanied human-rights concerts and performances supporting political protesters.","source_url":"https://en.wikipedia.org/wiki/Get_Up,_Stand_Up"},
+    {"id":"movie:stand-by-me","domain":"movie","title":"Stand by Me","description":"Four boys journey to find a missing boy's body. Their friendship helps Gordie confront his insecurity and family troubles.","source_url":"https://en.wikipedia.org/wiki/Stand_by_Me_(film)"},
+    {"id":"book:charlotte","domain":"book","title":"Charlotte's Web","description":"Wilbur, a pig, develops a friendship with Charlotte, a spider who works to save him from slaughter.","source_url":"https://en.wikipedia.org/wiki/Charlotte%27s_Web"},
+    {"id":"music:friend","domain":"music","title":"You've Got a Friend","description":"Carole King's song, also recorded by James Taylor, centers on friendship and being there for another person.","source_url":"https://en.wikipedia.org/wiki/You%27ve_Got_a_Friend"}
+  ]
+}

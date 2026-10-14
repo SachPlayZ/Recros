@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Recros · Before the recommendation</title>
+  <link rel="stylesheet" href="/assets/decision.css">
+</head>
+<body><main>
+  <header><a class="brand" href="/lab">RECROS / RESEARCH LAB</a><span class="tag">Movies · Books · Songs</span></header>
+  <section class="intro"><p class="eyebrow">A recommendation should survive a question.</p>
+    <h1>What do we need<br>to know first?</h1>
+    <p class="lead">Liking a film doesn’t tell us which song you’ll want next. Explore how asking about your taste and checking an item’s evidence can work together.</p>
+  </section>
+  <div class="notice"><strong>A controlled prototype.</strong> Two candidates, two possible themes, 12 sourced works. The planner reasons exactly within this small model. Your actual taste may be richer.<br><strong>Don’t recognize these works?</strong> <a href="/familiar">Start with familiar works from the full catalog</a> before attempting a personal trial.</div>
+  <p id="error" role="alert" hidden></p>
+  <form id="setup" class="panel">
+    <div class="section-title"><span class="number">01</span><h2>Set the scene</h2></div>
+    <div class="controls">
+      <label>Mode<select id="mode"><option value="demo">Explore the mechanism</option><option value="personal">Personal trial · save my ratings locally</option></select></label>
+      <label>Starting work<select id="seed" required></select></label>
+      <label>Recommend a<select id="target"><option value="music">Song</option><option value="book">Book</option><option value="movie">Movie</option></select></label>
+    </div>
+    <p id="source-description" class="muted"></p>
+    <div id="demo-options" class="controls">
+      <label>Information available at the start<select id="condition"><option value="both_unknown">Preference and item evidence both missing</option><option value="preference_unknown">Item evidence known; preference missing</option><option value="item_fact_unknown">Preference known; item evidence missing</option><option value="both_known">Both already known</option></select></label>
+      <label>Information-action budget<select id="budget"><option value="2">2 actions</option><option value="1">1 action</option><option value="0">0 actions</option></select></label>
+      <label id="initial-wrap" hidden>Initial target preference<select id="initial"></select></label>
+    </div>
+    <div id="personal-options" hidden>
+      <p>Choose a work you know, if possible. Answers and ratings stay in the local app database. Nothing from this trial is sent to a model service. Several trials by you still count as <strong>one participant</strong>.</p>
+      <div class="controls"><label>Your familiarity with the starting work<select id="source-familiarity"><option value="unfamiliar">I haven’t encountered it</option><option value="familiar">I know about it</option><option value="consumed">I have watched / read / heard it</option></select></label>
+        <label>How much do you like it?<select id="source-liking"><option value="">No opinion</option><option value="1">1 · Not at all</option><option value="2">2</option><option value="3">3 · Neutral</option><option value="4">4</option><option value="5">5 · Very much</option></select></label></div>
+    </div>
+    <button id="start" type="submit" disabled>Start a trial →</button>
+  </form>
+  <section id="trial" hidden aria-live="polite"></section>
+  <section id="rating-section" class="panel" hidden>
+    <div class="section-title"><span class="number">03</span><h2>How useful was the result to you?</h2></div>
+    <p>Rate your interest in each work based on what you know now. These are self-reported interests, not evidence that you enjoyed consuming the work. You have seen the recommendation, so this is not a blinded comparison.</p>
+    <form id="ratings"><div id="rating-cards" class="grid"></div>
+      <label>Did the two theme choices capture what you wanted?<select id="theme-fit" required><option value="">Choose…</option><option value="yes">Yes</option><option value="partly">Partly</option><option value="no">No</option></select></label>
+      <label>What did we miss? (optional)<textarea id="feedback" maxlength="1500" rows="3" placeholder="A mood, a reason you liked the source, a mismatch…"></textarea></label>
+      <button type="submit">Save ratings on this Mac</button><span id="saved" role="status"></span>
+    </form>
+  </section>
+  <footer><p>Item themes were annotated offline using DeepSeek through Command Code. The live decision planner uses no model call. Quote checks establish that a passage exists; they do not establish that its interpretation is correct.</p><a href="/lab">Evidence connections</a> · <a href="/">Original recommender</a></footer>
+</main><script src="/assets/decision.js"></script></body>
+</html>

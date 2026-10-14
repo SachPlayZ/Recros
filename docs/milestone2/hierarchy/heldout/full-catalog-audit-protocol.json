@@ -1,0 +1,15 @@
+{
+  "parent_protocol_sha256": "274be049eaca299152d310e9c418bdf4dffa6306162b05b0286f0a19e9b11fa0",
+  "created_utc": "2026-10-14T14:00:12.807048+00:00",
+  "timing": "Declared while first test run is in progress, before reading its results",
+  "reason": "Avoid presenting same-pool comparisons as full-catalog superiority over baselines",
+  "methods": [
+    "popularity",
+    "genre_content",
+    "itemknn",
+    "hybrid",
+    "ease"
+  ],
+  "evaluation": "Same frozen test users, historical fit, chosen validation parameters, available unseen matched-film catalog; no 16-item retrieval truncation for baselines",
+  "scope": "Secondary audit. Primary same-candidate-pool hierarchy comparison remains unchanged. No retuning."
+}

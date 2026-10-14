@@ -9,7 +9,7 @@ from typing import Any
 try:
     import lightgbm as lgb
     import numpy as np
-except ImportError:  # pragma: no cover - the API falls back until ML deps are installed.
+except (ImportError, OSError):  # Optional native libraries (e.g. libomp) may also be absent.
     lgb = None
     np = None
 

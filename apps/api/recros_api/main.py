@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import json
 from pathlib import Path
 from typing import Any
 
@@ -22,15 +23,30 @@ from .db import (
     revoke_token,
     user_exists,
 )
-from .recommender import get_profile, recommend, record_event, update_profile
+from .recommender import get_profile, recommend_with_trace, record_event, update_profile
 from .ranker import ranker_status
 from .schemas import Credentials, Feedback, ProfileUpdate
+from .bridges import CONCEPTS, bridge_candidates
+from .decision_routes import router as decision_router, init_trials
+from .familiarity import router as familiarity_router, init_familiarity
+from .personal_case import router as personal_case_router
+from .transfer_routes import router as transfer_router
+from .source_review import router as source_review_router
+from .catalog_routes import router as catalog_discovery_router, init_discovery
+from .hierarchy_routes import router as hierarchy_router
 
 
 ROOT = Path(__file__).resolve().parents[3]
 WEB_DIR = Path(os.getenv("RECROS_WEB_DIR", ROOT / "apps" / "web"))
 
 app = FastAPI(title="Recros", version="0.1.0")
+app.include_router(decision_router)
+app.include_router(familiarity_router)
+app.include_router(personal_case_router)
+app.include_router(transfer_router)
+app.include_router(source_review_router)
+app.include_router(catalog_discovery_router)
+app.include_router(hierarchy_router)
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 bearer = HTTPBearer(auto_error=False)
 
@@ -38,6 +54,9 @@ bearer = HTTPBearer(auto_error=False)
 @app.on_event("startup")
 def startup() -> None:
     init_db()
+    init_trials()
+    init_familiarity()
+    init_discovery()
 
 
 def require_user(user_id: int, current_user_id: int) -> None:
@@ -63,6 +82,68 @@ def health() -> dict[str, Any]:
         users = conn.execute("SELECT COUNT(*) FROM users").fetchone()[0]
     status = ranker_status()
     return {"status": "ok", "items": str(items), "users": str(users), "ranker": status}
+
+
+@app.get('/lab')
+def lab():
+    return FileResponse(WEB_DIR / 'lab.html')
+
+
+@app.get('/decision')
+def decision_lab():
+    return FileResponse(WEB_DIR / 'decision.html')
+
+
+@app.get('/familiar')
+def familiar_works():
+    return FileResponse(WEB_DIR / 'familiar.html')
+
+
+@app.get('/personal-case/{token}')
+def personal_case_page(token: str):
+    return FileResponse(WEB_DIR / 'personal-case.html')
+
+
+@app.get('/explore')
+def evidence_discovery_page():
+    return FileResponse(WEB_DIR / 'explore.html')
+
+
+@app.get('/evidence')
+def bounded_evidence_lab():
+    return FileResponse(WEB_DIR / 'evidence.html')
+
+
+@app.get('/hierarchy')
+def hierarchy_research_page():
+    return FileResponse(WEB_DIR / 'hierarchy.html')
+
+
+@app.get('/source-review/{token}')
+def source_review_page(token:str):
+    return FileResponse(WEB_DIR / 'source-review.html')
+
+
+@app.get('/api/lab/catalog')
+def lab_catalog():
+    path = ROOT / 'demo' / 'catalog.real.deepseek.annotated.json'
+    if not path.exists():
+        raise HTTPException(503, 'Cached language-model annotations have not been generated')
+    return json.loads(path.read_text())
+
+
+@app.get('/api/lab/bridges')
+def lab_bridges(seed: str, target: str = 'book', remove: str | None = None):
+    if target not in {'movie', 'book', 'music'} or (remove and remove not in CONCEPTS):
+        raise HTTPException(422, 'Unknown target domain or concept')
+    catalog = lab_catalog()
+    try:
+        items = bridge_candidates(catalog['items'], seed, target, remove)
+    except ValueError as exc:
+        raise HTTPException(404, str(exc)) from exc
+    return {'items': items, 'synthetic': catalog['synthetic'],
+            'model': catalog['annotation_run']['requested_model'],
+            'mode': 'cached model annotations; deterministic online scoring'}
 
 
 @app.post("/api/users")
@@ -123,7 +204,14 @@ def profile_put(user_id: int, payload: ProfileUpdate, current_user_id: int = Dep
 @app.get("/api/users/{user_id}/recommendations")
 def recommendations(user_id: int, limit: int = Query(12, ge=1, le=40), domain: str = "all", current_user_id: int = Depends(current_user)) -> dict:
     require_user(user_id, current_user_id)
-    return {"items": recommend(user_id, limit, domain), "profile": get_profile(user_id)}
+    return {**recommend_with_trace(user_id, limit, domain), "profile": get_profile(user_id)}
+
+
+@app.get("/api/users/{user_id}/compare")
+def compare(user_id: int, limit: int = Query(12, ge=1, le=40), domain: str = "all", current_user_id: int = Depends(current_user)) -> dict:
+    require_user(user_id, current_user_id)
+    return {policy: recommend_with_trace(user_id, limit, domain, policy)
+            for policy in ('relevance', 'discovery')}
 
 
 @app.post("/api/users/{user_id}/feedback")

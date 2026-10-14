@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Recros · Evidence lab</title>
+  <style>
+    :root{color-scheme:light;font-family:system-ui,sans-serif;color:#193831;background:#f6f5ef}
+    *{box-sizing:border-box}body{margin:0}main{max-width:1050px;margin:auto;padding:40px 24px}
+    header{border-bottom:1px solid #bfcbc4;margin-bottom:26px;padding-bottom:20px}h1{font-size:clamp(30px,5vw,50px);letter-spacing:-.04em;margin:8px 0}h2{font-size:22px;margin:0 0 12px}
+    p{line-height:1.6}.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:12px}.muted{color:#536961}.notice{background:#e8eee7;padding:14px 18px;border-left:4px solid #3b7159}
+    .controls{display:flex;flex-wrap:wrap;gap:18px;margin:26px 0}label{display:flex;flex-direction:column;gap:7px;font-weight:600;flex:1;min-width:200px}
+    select{font:inherit;padding:11px;border:1px solid #91a598;border-radius:5px;background:white;color:inherit;width:100%}
+    .seed{padding:20px;background:#fff;border:1px solid #cdd5cc;margin-bottom:24px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+    article{background:white;padding:22px;border:1px solid #cdd5cc;border-radius:7px}article h3{font-size:20px;margin:10px 0}.score{font-size:12px;font-weight:650;color:#42684f}
+    blockquote{margin:8px 0 16px;padding-left:12px;border-left:2px solid #bdcfc0;font-size:14px;line-height:1.5}button{font:inherit;background:#245743;color:white;border:0;padding:9px 13px;border-radius:4px;cursor:pointer}
+    button:focus-visible,select:focus-visible{outline:3px solid #df9c34;outline-offset:3px}.empty{color:#717a72;font-size:14px}.meta{font-size:13px;overflow-wrap:anywhere;margin-top:25px}a{color:inherit}
+    article strong{display:block;margin-top:16px}
+  </style>
+</head>
+<body><main>
+  <header><span class="eyebrow">Recros / Milestone 2</span><h1>Follow a theme across domains.</h1><p>Choose something you like. Inspect the source evidence behind a book, movie, or music connection.</p></header>
+  <p class="notice"><strong>A small, curated catalog.</strong> These 12 real works have sourced summaries and cached language-model annotations. We selected them to demonstrate thematic connections. This is not a representative dataset or an evaluation of user preferences.</p>
+  <div class="controls"><label>A starting point<select id="seed"></select></label><label>Explore another domain<select id="target"><option value="book">Books</option><option value="music">Songs</option><option value="movie">Movies</option></select></label><label>Remove a theme to test its effect<select id="remove"><option value="">Keep all themes</option></select></label></div>
+  <div class="seed" id="source"></div><h2>Connections and their evidence</h2><div class="grid" id="results" aria-live="polite"></div>
+  <p class="meta muted" id="model"></p><p class="meta muted">The connection score is Jaccard overlap between model-assigned concepts. Exact quotes verify that evidence exists in the descriptions; they do not prove that the interpretation is correct. Removing a theme is a scoring ablation, not a claim about causality or your real preferences.</p>
+  <p><a href="/decision">Try the decision lab: ask, inspect, recommend or abstain →</a></p>
+  <p><a href="/">Open the original recommender →</a></p>
+</main><script src="/assets/lab.js"></script></body></html>

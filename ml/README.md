@@ -59,3 +59,42 @@ Then retry training. If it still fails, see [LightGBM macOS install notes](https
 
 - Default `ml/config.yaml` is tuned for ~**8–16 GB** unified memory (samples ratings and caps training rows).
 - If the machine swaps heavily, switch to `ml/config.mac_air.yaml` or lower `ingest.max_ratings_rows` and `training.max_training_rows` in `ml/config.yaml`.
+
+## October 14 research tools
+
+The book/song extension uses separately downloaded public interaction sources.
+It preserves the earlier movie run. See the
+[three-domain report](../docs/milestone2/hierarchy/domains/RESULT.md) for frozen
+protocols, split limitations and full-catalog baseline comparisons.
+
+```bash
+.venv-research/bin/python scripts/fetch_domain_holdout.py
+PYTHONPATH=ml/src:apps/api .venv-research/bin/python -m recros_ml.research.domain_holdout prepare book
+PYTHONPATH=ml/src:apps/api .venv-research/bin/python -m recros_ml.research.domain_holdout validate book
+PYTHONPATH=ml/src:apps/api .venv-research/bin/python -m recros_ml.research.domain_holdout test book
+# Repeat with music. Completed protocols and runs refuse overwrite.
+```
+
+Run from the repository root with the existing research environment:
+
+```bash
+# Exact constructed mechanism probe (no inference)
+PYTHONPATH=ml/src:apps/api .venv-research/bin/python -m recros_ml.research.decision_probe
+
+# Replay the frozen 24-task comparison, including cached DeepSeek responses
+PYTHONPATH=ml/src:apps/api .venv-research/bin/python -m recros_ml.research.policy_benchmark
+
+# Build familiar-work search from already recovered local data
+.venv-research/bin/python scripts/build_familiar_catalog.py
+
+# Summarize local personal-trial records; output stays beside the ignored DB
+RECROS_DB=apps/api/data/milestone2-demo.db PYTHONPATH=ml/src:apps/api \
+  .venv-research/bin/python -m recros_ml.research.personal_trial_report
+```
+
+See [decision lab](../docs/milestone2/DECISION_LAB.md) and
+[representation audit](../docs/milestone2/REPRESENTATION_AUDIT.md).
+The controlled policy result is a three-way tie among exact planning, information
+gain and DeepSeek. It does not establish an SLM advantage or human preference gain.
+Do not mix the scripted cases with the movie-rating benchmark or count local demo
+records as participant responses.
