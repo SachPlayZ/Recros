@@ -22,6 +22,7 @@ from .db import (
     revoke_token,
     user_exists,
 )
+from .embeddings import embedding_status
 from .recommender import get_profile, recommend, record_event, update_profile
 from .ranker import ranker_status
 from .schemas import Credentials, Feedback, ProfileUpdate
@@ -62,7 +63,7 @@ def health() -> dict[str, Any]:
         items = conn.execute("SELECT COUNT(*) FROM items").fetchone()[0]
         users = conn.execute("SELECT COUNT(*) FROM users").fetchone()[0]
     status = ranker_status()
-    return {"status": "ok", "items": str(items), "users": str(users), "ranker": status}
+    return {"status": "ok", "items": str(items), "users": str(users), "ranker": status, "embeddings": embedding_status()}
 
 
 @app.post("/api/users")

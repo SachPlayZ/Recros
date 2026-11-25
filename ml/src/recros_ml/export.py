@@ -35,6 +35,7 @@ def main() -> None:
         (art_dir / "train_meta.json", bundle / "train_meta.json"),
         (art_dir / "eval_metrics.json", bundle / "eval_metrics.json"),
         (art_dir / "val_users.json", bundle / "val_users.json"),
+        (art_dir / "embedding_eval.json", bundle / "embedding_eval.json"),
     ]
     for src, dst in copies:
         if src.exists():
@@ -43,12 +44,23 @@ def main() -> None:
         else:
             log.warning("Skip missing optional file %s", src)
 
+    embedding_bundle = art_dir / "embedding_bundle_latest"
+    for name in ("embeddings.npy", "item_keys.json", "manifest.json"):
+        src = embedding_bundle / name
+        dst = bundle / f"embedding_{name}" if name == "manifest.json" else bundle / name
+        if src.exists():
+            log.info("Copy %s -> %s", src.name, dst.name)
+            shutil.copy2(src, dst)
+        else:
+            log.warning("Skip missing embedding file %s", src)
+
     manifest = {
         "version": stamp,
         "created_utc": stamp,
         "repo_root": cfg["_repo_root"],
         "config_path": cfg["_config_path"],
-        "files": [src.name for src, _ in copies if src.exists()],
+        "files": [src.name for src, _ in copies if src.exists()]
+        + [name for name in ("embeddings.npy", "item_keys.json", "embedding_manifest.json") if (bundle / name).exists()],
     }
     (bundle / "manifest.json").write_text(json.dumps(manifest, indent=2))
 

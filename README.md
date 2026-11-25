@@ -24,7 +24,7 @@ PYTHONPATH=apps/api .venv-api/bin/uvicorn recros_api.main:app --reload
 
 Open [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-The app stores local state in `apps/api/data/recros.db` (ignored by git). The seeder reads the downloaded CSV datasets. Users can choose domains, genres, moods, and exploration level; recommendations are scored across domains and updated from like/save/skip feedback.
+The app stores local state in `apps/api/data/recros.db` (ignored by git). The seeder reads the downloaded CSV datasets. Users can choose domains, genres, moods, and exploration level; recommendations combine semantic embeddings, the ratings-trained LightGBM ranker, metadata, popularity, novelty, and diversity, then update from like/save/skip feedback.
 
 ## Auth and operations
 
@@ -58,5 +58,6 @@ The container persists its SQLite database in the `recros_data` volume and serve
 
 - `apps/api`: FastAPI API, SQLite schema, content-first recommender, and dataset seeder.
 - `apps/web`: browser UI for onboarding and recommendations.
+- `apps/mcp`: Claude-compatible MCP server with catalog search, item details, and favorite-based recommendations.
 - `ml`: existing offline LightGBM training pipeline, kept for the next ranking iteration.
 - `run_recros.sh`: one-command local runner after installing `.venv-api`.

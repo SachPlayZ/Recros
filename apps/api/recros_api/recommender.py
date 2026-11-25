@@ -7,6 +7,7 @@ from collections import Counter, defaultdict
 from typing import Any
 
 from .db import get_conn
+from .embeddings import get_embedding_index
 from .ranker import get_ranker
 
 
@@ -147,7 +148,13 @@ def _genre_set(value: str) -> set[str]:
     return {x.strip().lower() for x in (value or "").split("|") if x.strip()}
 
 
-def _reason(row: Any, profile: dict[str, Any], genre_match: int, liked_words: Counter[str]) -> str:
+def _reason(
+    row: Any,
+    profile: dict[str, Any],
+    genre_match: int,
+    liked_words: Counter[str],
+    semantic_score: float = 0.0,
+) -> str:
     if genre_match:
         matched = [g for g in row["genres"].split("|") if g.lower() in {x.lower() for x in profile["genres"]}]
         return f"Matches your {matched[0].lower()} taste"
@@ -156,6 +163,8 @@ def _reason(row: Any, profile: dict[str, Any], genre_match: int, liked_words: Co
         overlap = item_words & {x.lower() for x in liked_words}
         if overlap:
             return f"Because you liked {next(iter(overlap)).lower()} picks"
+    if semantic_score >= 0.45:
+        return "Semantically close to your favorite themes"
     if row["domain"] in profile["preferred_domains"]:
         return f"A strong {row['domain']} pick for your mix"
     if profile["exploration"] > 0.65:
@@ -163,13 +172,26 @@ def _reason(row: Any, profile: dict[str, Any], genre_match: int, liked_words: Co
     return "Popular with people exploring this space"
 
 
-def recommend(user_id: int, limit: int = 12, domain: str = "all") -> list[dict[str, Any]]:
+def recommend(
+    user_id: int,
+    limit: int = 12,
+    domain: str = "all",
+    allowed_domains: set[str] | list[str] | None = None,
+) -> list[dict[str, Any]]:
     profile = get_profile(user_id)
-    hidden, _liked, seen, liked_words, liked_creators = _feedback_context(user_id)
+    hidden, liked, seen, liked_words, liked_creators = _feedback_context(user_id)
+    hidden = hidden | {str(item_id) for item_id in profile["seed_item_ids"]}
     profile_genres = {x.lower() for x in profile["genres"]}
     profile_words = _list_words(profile["themes"] + profile["moods"] + profile["disliked_terms"])
     disliked_words = _list_words(profile["disliked_terms"])
     requested_domains = {domain} if domain in {"movie", "music", "book"} else None
+    if allowed_domains is not None:
+        allowed_domains = {str(value).strip().lower() for value in allowed_domains}
+        invalid_domains = allowed_domains - {"movie", "music", "book"}
+        if invalid_domains:
+            raise ValueError("allowed_domains must contain only movie, book, or music")
+        if not allowed_domains:
+            return []
 
     with get_conn() as conn:
         clauses = []
@@ -177,6 +199,10 @@ def recommend(user_id: int, limit: int = 12, domain: str = "all") -> list[dict[s
         if requested_domains:
             clauses.append("domain = ?")
             params.append(domain)
+        if allowed_domains:
+            placeholders = ",".join("?" for _ in allowed_domains)
+            clauses.append(f"domain IN ({placeholders})")
+            params.extend(sorted(allowed_domains))
         if hidden:
             clauses.append("id NOT IN (%s)" % ",".join("?" for _ in hidden))
             params.extend(sorted(hidden))
@@ -186,6 +212,13 @@ def recommend(user_id: int, limit: int = 12, domain: str = "all") -> list[dict[s
     ranker = get_ranker()
     genre_profile = _genre_profile(user_id, profile)
     model_scores = ranker.score(rows, genre_profile) if ranker and rows else None
+    embedding_index = get_embedding_index()
+    profile_item_ids = sorted(set(str(item_id) for item_id in profile["seed_item_ids"]) | liked)
+    semantic_scores = (
+        embedding_index.scores(rows, profile_item_ids)
+        if embedding_index and rows and profile_item_ids
+        else [0.0] * len(rows)
+    )
     scored: list[tuple[float, Any, str]] = []
     domain_weights = {d: (1.0 if d in profile["preferred_domains"] else 0.35) for d in ("movie", "music", "book")}
     for index, row in enumerate(rows):
@@ -212,14 +245,34 @@ def recommend(user_id: int, limit: int = 12, domain: str = "all") -> list[dict[s
             + (0.15 if row["id"] not in seen else 0.0)
         )
         model_score = model_scores[index] if model_scores is not None else 0.0
-        score = model_score * 5.0 + heuristic_score * 0.3 if model_scores is not None else heuristic_score
-        scored.append((score, row, _reason(row, profile, genre_match, liked_words)))
+        semantic_score = max(0.0, float(semantic_scores[index]))
+        model_component = model_score * 5.0 + heuristic_score * 0.3 if model_scores is not None else heuristic_score
+        score = model_component + semantic_score * 2.0
+        scored.append((score, row, _reason(row, profile, genre_match, liked_words, semantic_score)))
 
     scored.sort(key=lambda item: item[0], reverse=True)
     selected: list[dict[str, Any]] = []
     domain_counts: Counter[str] = Counter()
-    max_per_domain = max(2, math.ceil(limit * 0.6))
+    single_domain_request = (allowed_domains is not None and len(allowed_domains) == 1) or (
+        requested_domains is not None and len(requested_domains) == 1
+    )
+    max_per_domain = limit if single_domain_request else max(2, math.ceil(limit * 0.6))
+    available_domains = {row["domain"] for _score, row, _reason_text in scored}
+    required_domains = (
+        sorted(available_domains)
+        if domain == "all" and limit >= len(available_domains) >= 2
+        else []
+    )
+    if required_domains:
+        for required_domain in required_domains:
+            for score, row, reason in scored:
+                if row["domain"] == required_domain:
+                    selected.append(_item(row, reason, score))
+                    domain_counts[required_domain] += 1
+                    break
     for score, row, reason in scored:
+        if any(item["id"] == row["id"] for item in selected):
+            continue
         if domain_counts[row["domain"]] >= max_per_domain:
             continue
         selected.append(_item(row, reason, score))
