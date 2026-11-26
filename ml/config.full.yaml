@@ -49,7 +49,6 @@ lightgbm:
 
 evaluation:
   k_list: [5, 10, 20]
-  ranking_candidates_per_user: 100
 
 logging:
   lightgbm_eval_period: 10

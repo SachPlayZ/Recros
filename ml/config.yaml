@@ -46,7 +46,6 @@ lightgbm:
 
 evaluation:
   k_list: [5, 10, 20]
-  ranking_candidates_per_user: 100
 
 # Frequent logs during long steps (features loop + LightGBM eval prints).
 logging:
