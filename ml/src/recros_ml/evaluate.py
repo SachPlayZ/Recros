@@ -6,7 +6,6 @@ import logging
 from collections import defaultdict
 from pathlib import Path
 
-import lightgbm as lgb
 import numpy as np
 import pandas as pd
 
@@ -42,8 +41,10 @@ def recall_at_k(relevances: np.ndarray, k: int) -> float:
 
 
 def average_precision_at_k(relevances: np.ndarray, k: int) -> float:
-    rel = np.asarray(relevances, dtype=float)[:k]
-    if rel.sum() == 0:
+    all_rel = np.asarray(relevances, dtype=float)
+    denominator = min(k, int((all_rel > 0).sum()))
+    rel = all_rel[:k]
+    if denominator <= 0:
         return 0.0
     precisions = []
     hits = 0
@@ -51,10 +52,11 @@ def average_precision_at_k(relevances: np.ndarray, k: int) -> float:
         if rel[i] > 0:
             hits += 1
             precisions.append(hits / (i + 1))
-    return float(np.mean(precisions)) if precisions else 0.0
+    return float(sum(precisions) / denominator)
 
 
 def main() -> None:
+    import lightgbm as lgb
     parser = argparse.ArgumentParser(description="Offline ranking metrics on held-out users.")
     parser.add_argument("--config", type=str, default="ml/config.yaml")
     add_log_arguments(parser)
@@ -83,7 +85,6 @@ def main() -> None:
 
     ks = [int(k) for k in cfg["evaluation"]["k_list"]]
     k_max = max(ks)
-    cap = int(cfg["evaluation"]["ranking_candidates_per_user"])
 
     ndcgs: dict[int, list[float]] = defaultdict(list)
     recalls: dict[int, list[float]] = defaultdict(list)
@@ -100,9 +101,12 @@ def main() -> None:
     novelty_scores: list[float] = []
 
     users_evaluated = 0
-    log.info("Computing ranking metrics per user (cap=%s k_max=%s)...", cap, k_max)
+    log.info("Computing ranking metrics per user (all unique pair candidates; k_max=%s)...", k_max)
     for _uid, part in val_df.groupby("user_id"):
-        part = part.sort_values("score", ascending=False).head(cap)
+        # Repeated negative sampling must not create repeated recommendation IDs.
+        part = part.sort_values("score", ascending=False).drop_duplicates("item_key")
+        # Keep all candidate labels for metric denominators. Truncating after
+        # sorting would hide missed positives and inflate recall/NDCG.
         rel = part["label"].to_numpy(dtype=float)
         if rel.sum() == 0:
             continue
@@ -130,11 +134,15 @@ def main() -> None:
     total_dom_hits = sum(domain_hits.values()) or 1
     cross_dom_ratio = 1.0 - (domain_hits.get("movie", 0) / total_dom_hits)
 
-    metrics: dict[str, float | int] = {
+    metrics: dict[str, float | int | str] = {
         "val_users_evaluated": users_evaluated,
         "cross_domain_fraction_non_movie": float(cross_dom_ratio),
         "avg_unique_domains_topk": float(np.mean(unique_dom_per_user)) if unique_dom_per_user else 0.0,
     }
+    metrics["protocol_warning"] = (
+        "Legacy bootstrap diagnostic only: profiles use all ratings, and book/music "
+        "labels are synthetic. Not a temporal test or evidence of cross-domain preference accuracy."
+    )
     for k in ks:
         metrics[f"ndcg@{k}"] = float(np.mean(ndcgs[k])) if ndcgs[k] else 0.0
         metrics[f"recall@{k}"] = float(np.mean(recalls[k])) if recalls[k] else 0.0

@@ -16,6 +16,11 @@ datasets:
   music_tracks: music_dataset/data_music.csv
   books: book_dataset/book_data.csv
 
+embeddings:
+  provider: local
+  model: BAAI/bge-small-en-v1.5
+  batch_size: 64
+
 split:
   val_user_fraction: 0.1
   random_seed: 42
@@ -44,9 +49,7 @@ lightgbm:
 
 evaluation:
   k_list: [5, 10, 20]
-  ranking_candidates_per_user: 100
 
 logging:
   lightgbm_eval_period: 10
   feature_progress_every_users: 500
-

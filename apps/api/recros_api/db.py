@@ -145,3 +145,8 @@ def revoke_token(user_id: int) -> None:
 def email_exists(email: str) -> bool:
     with get_conn() as conn:
         return conn.execute("SELECT 1 FROM users WHERE email = ?", (email,)).fetchone() is not None
+
+
+def delete_user(user_id: int) -> None:
+    with get_conn() as conn:
+        conn.execute("DELETE FROM users WHERE id = ?", (user_id,))

@@ -2,6 +2,8 @@
 
 Runs entirely on CPU. Tested layout: **Python 3.11+**, repo root = directory that contains `ml/` and the `*_dataset/` folders from the Kaggle downloads (`./scripts/fetch_datasets.sh`) (paths in `ml/config.yaml`).
 
+The final pipeline is hybrid: a free local semantic embedding model generates item vectors, ratings train the LightGBM personalization ranker, and the API fuses semantic similarity, learned ranking, metadata, popularity, novelty, and domain diversity.
+
 ## One-shot run (Mac M4 Air friendly)
 
 From the **repository root**:
@@ -34,9 +36,10 @@ When switching between `config.yaml` and `config.mac_air.yaml`, let **`ingest` r
 cd /path/to/Recros
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -e ml/
+pip install -e 'ml[embeddings]'
 
 python -m recros_ml.ingest --config ml/config.yaml
+python -m recros_ml.build_embeddings --config ml/config.yaml
 python -m recros_ml.build_features --config ml/config.yaml
 python -m recros_ml.train --config ml/config.yaml
 python -m recros_ml.evaluate --config ml/config.yaml
@@ -54,6 +57,10 @@ brew install libomp
 ```
 
 Then retry training. If it still fails, see [LightGBM macOS install notes](https://github.com/microsoft/LightGBM/tree/master/python-package).
+
+### Embedding providers
+
+The default is `BAAI/bge-small-en-v1.5`, downloaded once and run locally. It needs no API key. To use a paid provider later, set `embeddings.provider: openai`, set `embeddings.model`, and export `OPENAI_API_KEY` before running the embedding step. The API only loads the exported NumPy vectors, not the embedding model.
 
 ## RAM notes
 

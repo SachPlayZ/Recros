@@ -27,11 +27,15 @@ fi
 source .venv/bin/activate
 
 python -m pip install -U pip setuptools wheel -q
-pip install -e ml/
+pip install -e 'ml[embeddings]'
 
 echo "Using config: ${CFG}"
 log_step "recros_ml.ingest"
 python -m recros_ml.ingest --config "${CFG}"
+log_step "recros_ml.build_embeddings"
+python -m recros_ml.build_embeddings --config "${CFG}"
+log_step "recros_ml.evaluate_embeddings"
+python -m recros_ml.evaluate_embeddings --config "${CFG}"
 log_step "recros_ml.build_features"
 python -m recros_ml.build_features --config "${CFG}"
 log_step "recros_ml.train"
